@@ -1,5 +1,10 @@
-import pandas as pd 
-from pipeline.sample import test_data
+import os
+import sys
+import pandas as pd
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+from utils.provenance import tracker
 
 #I only included these cleaning processes: convert to right data type, data validation (age only), handle missing values, handle inconsistent format, remove duplicates
 
@@ -11,7 +16,10 @@ from pipeline.sample import test_data
   
 #I separated each into functions per attribute
 
-df = pd.DataFrame(test_data)
+csv_path = Path(__file__).resolve().parents[2] / 'data' / 'raw' / 'adult_data_20_uncleaned.csv'
+print(f"Loading data from: {csv_path}")
+df = pd.read_csv(csv_path, skipinitialspace=True)
+df.columns = df.columns.str.strip()
 
 
 def clean_demographics(df):
@@ -32,6 +40,7 @@ def clean_demographics(df):
 #---Sex Cleaning---
     def sex_cleaning(df):
         df = df.copy()
+        original_sex = df['sex'].copy()
     #Convert to right data type, remove space, standardize format 
         df['sex'] = df['sex'].astype(str).str.strip().str.lower()
     #Fix inconsistent labels
@@ -43,12 +52,19 @@ def clean_demographics(df):
         }
     #Handle other values / missing values
         df['sex'] = df['sex'].map(sex_map).fillna('unknown')
+        
+        # Log only changed rows
+        for idx in df.index:
+            if original_sex.iloc[idx] != df['sex'].iloc[idx]:
+                tracker.log_row_change('sex_cleaning', idx, 'sex', original_sex.iloc[idx], df['sex'].iloc[idx])
+        
         return df
 
 
 #---Race Cleaning---
     def race_cleaning(df):
         df = df.copy()
+        original_race = df['race'].copy()
     #Convert to string, remove space, fix capitalization 
         df['race'] = df['race'].astype(str).str.strip().str.lower()       
     #Convert to right label (similar to IN(%word%) of SQL)
@@ -67,12 +83,19 @@ def clean_demographics(df):
         }
     #Handle other values / missing values
         df['race'] = df['race'].map(race_map).fillna('Other')
+        
+        # Log only changed rows
+        for idx in df.index:
+            if original_race.iloc[idx] != df['race'].iloc[idx]:
+                tracker.log_row_change('race_cleaning', idx, 'race', original_race.iloc[idx], df['race'].iloc[idx])
+        
         return df
 
 
 #---Marital Status Cleaning---
     def marital_cleaning(df):
         df = df.copy()
+        original_marital = df['marital-status'].copy()
     #Convert to string, remove space, fix capitalization
         df['marital-status'] = df['marital-status'].astype(str).str.strip().str.lower()
     #Convert to right label (similar to IN(%word%) of SQL)
@@ -92,6 +115,12 @@ def clean_demographics(df):
         }
     #Handle other values / missing values
         df['marital-status'] = df['marital-status'].map(marital_map).fillna('unknown')
+        
+        # Log only changed rows
+        for idx in df.index:
+            if original_marital.iloc[idx] != df['marital-status'].iloc[idx]:
+                tracker.log_row_change('marital_cleaning', idx, 'marital-status', original_marital.iloc[idx], df['marital-status'].iloc[idx])
+        
         return df
 
 #---Removing Duplicate Records---
@@ -116,3 +145,8 @@ print(df)
 print("\nCleaned dataset:")
 clean_df = clean_demographics(df)
 print(clean_df)
+
+tracker.save_logs()
+
+os.makedirs('data/cleaned', exist_ok=True)
+clean_df.to_csv('data/cleaned/adult_data_cleaned.csv', index=False)
