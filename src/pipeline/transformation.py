@@ -22,120 +22,130 @@ df = pd.read_csv(csv_path, skipinitialspace=True)
 df.columns = df.columns.str.strip()
 
 
-def clean_demographics(df):
-    df = df.copy()
-
 #---Age Cleaning---
-    def age_cleaning(df):
-        df = df.copy()
+@tracker.track('age_cleaning', include_args=False)
+def age_cleaning(df):
+    """Clean age column: convert to int, handle missing values, validate range 0-120."""
+    df = df.copy()
     #Converting to right data type
-        df['age'] = pd.to_numeric(df['age'], errors = 'coerce').astype('Int64')
+    df['age'] = pd.to_numeric(df['age'], errors = 'coerce').astype('Int64')
     #Handle missing values (fill it with median)
-        df['age'] = df['age'].fillna(df['age'].median())
+    df['age'] = df['age'].fillna(df['age'].median())
     #Data Validation (only age 0-120)
-        df = df[(df['age'] >= 0) & (df['age'] <= 120)]
-        return df
+    df = df[(df['age'] >= 0) & (df['age'] <= 120)]
+    return df
 
 
 #---Sex Cleaning---
-    def sex_cleaning(df):
-        df = df.copy()
-        original_sex = df['sex'].copy()
+@tracker.track('sex_cleaning', include_args=False)
+def sex_cleaning(df):
+    """Clean sex column: standardize format and fix inconsistent labels."""
+    df = df.copy()
+    original_sex = df['sex'].copy()
     #Convert to right data type, remove space, standardize format 
-        df['sex'] = df['sex'].astype(str).str.strip().str.lower()
+    df['sex'] = df['sex'].astype(str).str.strip().str.lower()
     #Fix inconsistent labels
-        sex_map = {
-            'm': 'Male',
-            'male': 'Male',
-            'f': 'Female',
-            'female': 'Female'
-        }
+    sex_map = {
+        'm': 'Male',
+        'male': 'Male',
+        'f': 'Female',
+        'female': 'Female'
+    }
     #Handle other values / missing values
-        df['sex'] = df['sex'].map(sex_map).fillna('unknown')
-        
-        # Log only changed rows
-        for idx in df.index:
-            if original_sex.iloc[idx] != df['sex'].iloc[idx]:
-                tracker.log_row_change('sex_cleaning', idx, 'sex', original_sex.iloc[idx], df['sex'].iloc[idx])
-        
-        return df
+    df['sex'] = df['sex'].map(sex_map).fillna('unknown')
+    
+    # Log only changed rows
+    for idx in df.index:
+        if original_sex.iloc[idx] != df['sex'].iloc[idx]:
+            tracker.log_row_change('sex_cleaning', idx, 'sex', original_sex.iloc[idx], df['sex'].iloc[idx])
+    
+    return df
 
 
 #---Race Cleaning---
-    def race_cleaning(df):
-        df = df.copy()
-        original_race = df['race'].copy()
+@tracker.track('race_cleaning', include_args=False)
+def race_cleaning(df):
+    """Clean race column: standardize format and fix inconsistent labels."""
+    df = df.copy()
+    original_race = df['race'].copy()
     #Convert to string, remove space, fix capitalization 
-        df['race'] = df['race'].astype(str).str.strip().str.lower()       
+    df['race'] = df['race'].astype(str).str.strip().str.lower()       
     #Convert to right label (similar to IN(%word%) of SQL)
-        df.loc[df['race'].str.contains('amer'), 'race'] = 'amer-indian-eskimo'
-        df.loc[df['race'].str.contains('indian'), 'race'] = 'amer-indian-eskimo'
-        df.loc[df['race'].str.contains('eskimo'), 'race'] = 'amer-indian-eskimo'
-        df.loc[df['race'].str.contains('asian'), 'race'] = 'asian-pac-islander'
-        df.loc[df['race'].str.contains('pac'), 'race'] = 'asian-pac-islander'
-        df.loc[df['race'].str.contains('islander'), 'race'] = 'asian-pac-islander'
+    df.loc[df['race'].str.contains('amer'), 'race'] = 'amer-indian-eskimo'
+    df.loc[df['race'].str.contains('indian'), 'race'] = 'amer-indian-eskimo'
+    df.loc[df['race'].str.contains('eskimo'), 'race'] = 'amer-indian-eskimo'
+    df.loc[df['race'].str.contains('asian'), 'race'] = 'asian-pac-islander'
+    df.loc[df['race'].str.contains('pac'), 'race'] = 'asian-pac-islander'
+    df.loc[df['race'].str.contains('islander'), 'race'] = 'asian-pac-islander'
     #Fix inconsistent labels
-        race_map = {
-            'amer-indian-eskimo': 'Amer-Indian-Eskimo',
-            'asian-pac-islander': 'Asian-Pac-Islander',
-            'black': 'Black',
-            'white': 'White'
-        }
+    race_map = {
+        'amer-indian-eskimo': 'Amer-Indian-Eskimo',
+        'asian-pac-islander': 'Asian-Pac-Islander',
+        'black': 'Black',
+        'white': 'White'
+    }
     #Handle other values / missing values
-        df['race'] = df['race'].map(race_map).fillna('Other')
-        
-        # Log only changed rows
-        for idx in df.index:
-            if original_race.iloc[idx] != df['race'].iloc[idx]:
-                tracker.log_row_change('race_cleaning', idx, 'race', original_race.iloc[idx], df['race'].iloc[idx])
-        
-        return df
+    df['race'] = df['race'].map(race_map).fillna('Other')
+    
+    # Log only changed rows
+    for idx in df.index:
+        if original_race.iloc[idx] != df['race'].iloc[idx]:
+            tracker.log_row_change('race_cleaning', idx, 'race', original_race.iloc[idx], df['race'].iloc[idx])
+    
+    return df
 
 
 #---Marital Status Cleaning---
-    def marital_cleaning(df):
-        df = df.copy()
-        original_marital = df['marital-status'].copy()
+@tracker.track('marital_cleaning', include_args=False)
+def marital_cleaning(df):
+    """Clean marital-status column: standardize format and fix inconsistent labels."""
+    df = df.copy()
+    original_marital = df['marital-status'].copy()
     #Convert to string, remove space, fix capitalization
-        df['marital-status'] = df['marital-status'].astype(str).str.strip().str.lower()
+    df['marital-status'] = df['marital-status'].astype(str).str.strip().str.lower()
     #Convert to right label (similar to IN(%word%) of SQL)
-        df.loc[df['marital-status'].str.contains('af'), 'marital-status'] = 'married-af-spouse'
-        df.loc[df['marital-status'].str.contains('civ'), 'marital-status'] = 'married-civ-spouse'
-        df.loc[df['marital-status'].str.contains('absent'), 'marital-status'] = 'married-spouse-absent'
-        df.loc[df['marital-status'].str.contains('never'), 'marital-status'] = 'never-married'
+    df.loc[df['marital-status'].str.contains('af'), 'marital-status'] = 'married-af-spouse'
+    df.loc[df['marital-status'].str.contains('civ'), 'marital-status'] = 'married-civ-spouse'
+    df.loc[df['marital-status'].str.contains('absent'), 'marital-status'] = 'married-spouse-absent'
+    df.loc[df['marital-status'].str.contains('never'), 'marital-status'] = 'never-married'
     #Fix inconsistent labels
-        marital_map = {
-            'divorced': 'Divorced',  
-            'married-af-spouse': 'Married-AF-spouse',
-            'married-civ-spouse': 'Married-civ-spouse',
-            'married-spouse-absent': 'Married-spouse-absent',
-            'never-married': 'Never-married',
-            'separated': 'Separated',
-            'widowed': 'Widowed'
-        }
+    marital_map = {
+        'divorced': 'Divorced',  
+        'married-af-spouse': 'Married-AF-spouse',
+        'married-civ-spouse': 'Married-civ-spouse',
+        'married-spouse-absent': 'Married-spouse-absent',
+        'never-married': 'Never-married',
+        'separated': 'Separated',
+        'widowed': 'Widowed'
+    }
     #Handle other values / missing values
-        df['marital-status'] = df['marital-status'].map(marital_map).fillna('unknown')
-        
-        # Log only changed rows
-        for idx in df.index:
-            if original_marital.iloc[idx] != df['marital-status'].iloc[idx]:
-                tracker.log_row_change('marital_cleaning', idx, 'marital-status', original_marital.iloc[idx], df['marital-status'].iloc[idx])
-        
-        return df
+    df['marital-status'] = df['marital-status'].map(marital_map).fillna('unknown')
+    
+    # Log only changed rows
+    for idx in df.index:
+        if original_marital.iloc[idx] != df['marital-status'].iloc[idx]:
+            tracker.log_row_change('marital_cleaning', idx, 'marital-status', original_marital.iloc[idx], df['marital-status'].iloc[idx])
+    
+    return df
+
 
 #---Removing Duplicate Records---
-    def remove_duplicate(df):
-        df = df.copy()
-        df = df.drop_duplicates()
-        return df
-    
+@tracker.track('remove_duplicate', include_args=False)
+def remove_duplicate(df):
+    """Remove duplicate records from the DataFrame."""
+    df = df.copy()
+    df = df.drop_duplicates()
+    return df
 
+
+@tracker.track('clean_demographics', include_args=False)
+def clean_demographics(df):
+    """Apply all cleaning operations to demographics data."""
     df = age_cleaning(df)
     df = sex_cleaning(df)
     df = race_cleaning(df)
     df = marital_cleaning(df)
     df = remove_duplicate(df)
-
     return df
 
 

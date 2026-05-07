@@ -30,6 +30,7 @@ class ProvenanceTracker:
             'operation': operation_type,
             'details': details
         }
+        self.logs.append(log_entry)
     def log_row_change(self, operation_type, row_index, column, old_value, new_value, timestamp=None):
         """
         Log a specific row-level change.
