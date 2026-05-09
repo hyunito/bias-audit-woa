@@ -1,16 +1,8 @@
 import os
 import sys
 import pandas as pd
+from src.utils.provenance import tracker
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from utils.provenance import tracker
-
-# Outlier Detection method used:
-    #age --> Interquartile Range (IQR); any age that falls below the lower bound or above the upper bound is mathematically flagged as an outlier.
-    #sex, race, marital-status --> Removes categories appearing less than the others (e.g. only appears 1%).
-
-
-# --- 1. NUMERICAL OUTLIERS (age) ---
 @tracker.track('num_outlier_removal', include_args=False)
 def num_outlier(df):
     """Remove age outliers using Interquartile Range (IQR) method."""
@@ -33,7 +25,6 @@ def num_outlier(df):
     return df_cleaned
 
 
-# --- 2. CATEGORICAL OUTLIERS (sex, race, marital-status) ---
 @tracker.track('cat_outlier_removal', include_args=False)
 def cat_outlier(df, cat_threshold=0.01):
     """Remove categorical outliers based on frequency threshold."""
@@ -67,16 +58,22 @@ def outlier_demographics(df, cat_threshold=0.01):
     return df_cleaned
 
 
-# Load the cleaned dataset from transformation.py
-df = pd.read_csv('data/cleaned/adult_data_cleaned.csv')
-      
-cleaned_df = outlier_demographics(df, cat_threshold=0.15)    #value is 0.15/15% because sample data is small
+def run_outlier_removal():
+    # Load the cleaned dataset from transformation.py
+    df = pd.read_csv('data/cleaned/adult_data_cleaned.csv')
+          
+    cleaned_df = outlier_demographics(df, cat_threshold=0.15)    #value is 0.15/15% because sample data is small
+        
+    print("\nCleaned Dataset (Outliers Removed):")
+    print(cleaned_df)
+
+    # Save the final dataset
+    os.makedirs('data/cleaned', exist_ok=True)
+    cleaned_df.to_csv('data/cleaned/adult_data_final.csv', index=False)
+
+    tracker.save_logs()
     
-print("\nCleaned Dataset (Outliers Removed):")
-print(cleaned_df)
+    return cleaned_df
 
-# Save the final dataset
-os.makedirs('data/cleaned', exist_ok=True)
-cleaned_df.to_csv('data/cleaned/adult_data_no_outliers.csv', index=False)
-
-tracker.save_logs()
+if __name__ == "__main__":
+    run_outlier_removal()
