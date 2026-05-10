@@ -40,9 +40,11 @@ def make_dirty():
     
     #marital-status column
     df['marital-status'] = df['marital-status'].astype(str)
-    df.loc[np.random.choice(n, int(n*0.03), replace=False), 'marital-status'] = 'Married'
-    df.loc[np.random.choice(n, int(n*0.03), replace=False), 'marital-status'] = 'Never Married'
-    
+    idx = np.random.choice(n, int(n*0.03), replace=False)
+    df.loc[idx, 'marital-status'] = df.loc[idx, 'marital-status'].str.lower()
+    idx = np.random.choice(n, int(n*0.03), replace=False)
+    df.loc[idx, 'marital-status'] = df.loc[idx, 'marital-status'].str.upper()
+
     #occupation column
     df.loc[np.random.choice(n, int(n*0.05), replace=False), 'occupation'] = np.nan
     df.loc[np.random.choice(n, int(n*0.02), replace=False), 'occupation'] = 'Unknown'
@@ -93,8 +95,8 @@ def make_dirty():
         df.loc[np.random.choice(usa_idx, int(len(usa_idx)*0.05), replace=False), 'native-country'] = 'united-states'
     
     
-    #duplicates = df.sample(n=int(n*0.05), replace=True)
-    #df = pd.concat([df, duplicates], ignore_index=True)
+    duplicates = df.sample(n=int(n*0.05), replace=True)
+    df = pd.concat([df, duplicates], ignore_index=True)
     
     
     df.to_csv('data/raw/adult_data_dirty.csv', index=False)

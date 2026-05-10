@@ -1,8 +1,6 @@
 import pandas as pd
 import numpy as np
-from src.utils.provenance import tracker
 
-@tracker.track('handle_missing_data', include_args=False)
 def handle_missing(df):
     """
     Handle missing values in the dataset.
@@ -17,7 +15,6 @@ def handle_missing(df):
     df = df.replace('Unknown', np.nan)
     return df
 
-@tracker.track('remove_missing_rows', include_args=False)
 def missing_rows(df):
     """
     Removes rows missing 3 or more columns.
@@ -27,7 +24,6 @@ def missing_rows(df):
     df = df.dropna(thresh=thresh)
     return df
 
-@tracker.track('remove_missing_target', include_args=False)
 def remove_missing_target(df):
     """
     Removes rows where the target variable ('income') is missing.

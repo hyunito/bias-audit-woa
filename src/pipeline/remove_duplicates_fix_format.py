@@ -1,6 +1,5 @@
 import pandas as pd
-from src.utils.provenance import tracker
-@tracker.track('remove_duplicates_fix_format', include_args=False)
+
 def remove_duplicates(df):
     """
     Remove exact duplicated rows from the dataset.
@@ -14,6 +13,7 @@ def fix_format(df):
     """
     Type cast certain columns and fix formatting like number commas and typos.
     """
+    print("fix_format started")
     # 2. Fix number formats with commas and type cast
     numeric_cols = ['age', 'fnlwgt', 'education-num', 'capital-gain', 'capital-lose', 'hours-per-week']
     for col in numeric_cols:

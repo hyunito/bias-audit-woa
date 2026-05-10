@@ -1,9 +1,7 @@
 import os
 import sys
 import pandas as pd
-from src.utils.provenance import tracker
 
-@tracker.track('num_outlier_removal', include_args=False)
 def num_outlier(df):
     """Remove age outliers using Interquartile Range (IQR) method."""
     df_cleaned = df.copy()
@@ -17,15 +15,11 @@ def num_outlier(df):
         
         # Identify outliers
         outliers = df_cleaned[(df_cleaned['age'] < lower_bound) | (df_cleaned['age'] > upper_bound)]
-        for idx in outliers.index:
-            tracker.log_row_change('num_outlier_removal', idx, 'age', df_cleaned.loc[idx, 'age'], 'removed')
-        
+    
         # Keep only rows within the IQR bounds
         df_cleaned = df_cleaned[(df_cleaned['age'] >= lower_bound) & (df_cleaned['age'] <= upper_bound)]
     return df_cleaned
 
-
-@tracker.track('cat_outlier_removal', include_args=False)
 def cat_outlier(df, cat_threshold=0.01):
     """Remove categorical outliers based on frequency threshold."""
     df_cleaned = df.copy()
@@ -42,15 +36,10 @@ def cat_outlier(df, cat_threshold=0.01):
             # Identify rows to remove
             if rare_labels:
                 to_remove = df_cleaned[df_cleaned[col].isin(rare_labels)]
-                for idx in to_remove.index:
-                    tracker.log_row_change('cat_outlier_removal', idx, col, df_cleaned.loc[idx, col], 'removed')
-                
                 # Remove rows that contain those rare labels
                 df_cleaned = df_cleaned[~df_cleaned[col].isin(rare_labels)]
     return df_cleaned
 
-
-@tracker.track('outlier_demographics', include_args=False)
 def outlier_demographics(df, cat_threshold=0.01):
     """Remove both numerical and categorical outliers from demographics data."""
     df_cleaned = num_outlier(df)
@@ -71,8 +60,6 @@ def run_outlier_removal():
     os.makedirs('data/cleaned', exist_ok=True)
     cleaned_df.to_csv('data/cleaned/adult_data_final.csv', index=False)
 
-    tracker.save_logs()
-    
     return cleaned_df
 
 if __name__ == "__main__":
