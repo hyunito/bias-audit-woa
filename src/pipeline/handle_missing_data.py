@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
+from src.pipeline.tracker_setup import tracker
 
+@tracker.track("Handle Missing Data")
 def handle_missing(df):
     """
     Handle missing values in the dataset.

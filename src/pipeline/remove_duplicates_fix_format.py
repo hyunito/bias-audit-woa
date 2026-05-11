@@ -1,5 +1,7 @@
 import pandas as pd
+from src.pipeline.tracker_setup import tracker
 
+@tracker.track("Remove Duplicates")
 def remove_duplicates(df):
     """
     Remove exact duplicated rows from the dataset.

@@ -3,6 +3,7 @@ import pandas as pd
 from src.pipeline.remove_duplicates_fix_format import remove_duplicates
 from src.pipeline.handle_missing_data import handle_missing
 from src.pipeline.outlier_remover import outlier_demographics
+from src.pipeline.tracker_setup import tracker
 
 def run_pipeline():
 
@@ -28,6 +29,8 @@ def run_pipeline():
     os.makedirs('data/cleaned', exist_ok=True)
     output_path = 'data/cleaned/adult_data_cleaned.csv'
     df.to_csv(output_path, index=False)
+    
+    tracker.export_to_json(filepath="data/provenance/provenance_metadata.json")
         
     print(f"\nPipeline execution completed successfully! Cleaned dataset saved to {output_path}")
 

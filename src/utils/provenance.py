@@ -1,7 +1,7 @@
 import pandas as pd
 import datetime
 import functools
-
+import json
 class ProvenanceMetadataTracker:
     """
     A wrapper class for data transformations that generates summary statistics 
@@ -17,6 +17,15 @@ class ProvenanceMetadataTracker:
         :param target_variable: String name of the binary outcome column.
                                 Example: 'loan_approval'
         """
+        valid_types = {'categorical', 'continuous'}
+        for attr in protected_attributes:
+            attr_type = attr.get('type')
+            if attr_type not in valid_types:
+                raise ValueError(
+                    f"Invalid type '{attr_type}' for protected attribute '{attr.get('name', 'Unknown')}'. "
+                    f"Type must be either 'categorical' or 'continuous'."
+                )
+
         self.protected_attributes = protected_attributes
         self.target_variable = target_variable
         self.metadata_records = []
@@ -34,6 +43,7 @@ class ProvenanceMetadataTracker:
                 # Replace string placeholders
                 df_meta[col] = df_meta[col].replace(missing_vals, "Unknown")
                 # Fill actual NaN/None
+                df_meta[col] = df_meta[col].astype(object)
                 df_meta[col] = df_meta[col].fillna("Unknown")
                 # Convert back to string if it was mixed
                 df_meta[col] = df_meta[col].astype(str)
@@ -160,3 +170,17 @@ class ProvenanceMetadataTracker:
         """
         self.metadata_records.append(record)
         print(f"Generated Provenance Metadata for: {record['transformation_name']}")
+
+    def export_to_json(self, filepath="provenance_metadata.json"):
+        """
+        Exports the tracked metadata records to a JSON file.
+        """
+        import os
+        # Ensure the directory exists
+        directory = os.path.dirname(filepath)
+        if directory and not os.path.exists(directory):
+            os.makedirs(directory)
+            
+        with open(filepath, 'w') as f:
+            json.dump(self.metadata_records, f, indent=4)
+        print(f"Successfully exported {len(self.metadata_records)} provenance records to {filepath}")
