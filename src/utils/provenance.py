@@ -2,6 +2,7 @@ import pandas as pd
 import datetime
 import functools
 import json
+import os
 class ProvenanceMetadataTracker:
     """
     A wrapper class for data transformations that generates summary statistics 
@@ -14,8 +15,8 @@ class ProvenanceMetadataTracker:
         :param protected_attributes: List of dicts defining metadata schema.
                                      Example: [{'name': 'race', 'type': 'categorical'}, 
                                                {'name': 'age', 'type': 'continuous'}]
-        :param target_variable: String name of the binary outcome column.
-                                Example: 'loan_approval'
+        :param target_variable: Dict containing target column details or a string name.
+                                Example: {'name': 'income', 'positive': '>50K', 'negative': '<=50K'}
         """
         valid_types = {'categorical', 'continuous'}
         for attr in protected_attributes:
@@ -40,12 +41,8 @@ class ProvenanceMetadataTracker:
         
         for col in columns:
             if col in df_meta.columns:
-                # Replace string placeholders
                 df_meta[col] = df_meta[col].replace(missing_vals, "Unknown")
-                # Fill actual NaN/None
                 df_meta[col] = df_meta[col].astype(object)
-                df_meta[col] = df_meta[col].fillna("Unknown")
-                # Convert back to string if it was mixed
                 df_meta[col] = df_meta[col].astype(str)
         return df_meta
 
@@ -57,15 +54,13 @@ class ProvenanceMetadataTracker:
             if attr.get('type') == 'continuous':
                 col = attr['name']
                 if col in df_meta.columns:
-                    # Ensure we ignore "Unknown" values while binning
+               
                     is_unknown = df_meta[col] == "Unknown"
                     numeric_series = pd.to_numeric(df_meta.loc[~is_unknown, col], errors='coerce')
                     
-                    # Group into discrete ranges
-                    binned_series = pd.cut(numeric_series, bins=5).astype(str)
+                    binned_series = pd.qcut(numeric_series, q=5, duplicates='drop')
                     df_meta.loc[~is_unknown, col] = binned_series
                     
-                    # Clean up any 'nan' resulting from unparseable values mapped to NaN by to_numeric
                     df_meta[col] = df_meta[col].replace(["nan", "NaN"], "Unknown")
         return df_meta
 
@@ -81,12 +76,11 @@ class ProvenanceMetadataTracker:
         df_meta = self._standardize_missing(df, attrs)
         df_meta = self._bin_continuous(df_meta)
         
-        # Cross-tabulation / Group by all protected attributes
         groups = df_meta.groupby(attrs)
         
         intersectional_demographics = {}
         for name, group in groups:
-            # Flatten the multi-index name into an intersectional group string
+            
             if isinstance(name, tuple):
                 group_key = "|".join([f"{k}:{v}" for k, v in zip(attrs, name)])
             else:
@@ -95,16 +89,30 @@ class ProvenanceMetadataTracker:
             total_count = len(group)
             
             favorable = 0
-            if self.target_variable in df.columns:
-                target_series = group[self.target_variable]
-                # Filter for favorable outcomes (target_variable == 1)
-                favorable = int(((target_series == 1) | (target_series == '1') | (target_series == 1.0) | (target_series == True)).sum())
+            unfavorable = 0
+            
+            target_col = self.target_variable.get('name') if isinstance(self.target_variable, dict) else self.target_variable
+            
+            if target_col in df.columns:
+                target_series = group[target_col]
                 
-            selection_rate = favorable / total_count if total_count > 0 else 0.0
+                if isinstance(self.target_variable, dict):
+                    pos_val = self.target_variable.get('positive')
+                    neg_val = self.target_variable.get('negative')
+                    favorable = int((target_series == pos_val).sum())
+                    unfavorable = int((target_series == neg_val).sum())
+                else:
+                    
+                    favorable = int(((target_series == 1) | (target_series == '1') | (target_series == 1.0) | (target_series == True)).sum())
+                    unfavorable = int(((target_series == 0) | (target_series == '0') | (target_series == 0.0) | (target_series == False)).sum())
+                
+            valid_outcomes = favorable + unfavorable
+            selection_rate = favorable / total_count
             
             intersectional_demographics[group_key] = {
                 "total_count": total_count,
                 "favorable_outcomes": favorable,
+                "unfavorable_outcomes": unfavorable,
                 "selection_rate": selection_rate
             }
             
@@ -118,7 +126,7 @@ class ProvenanceMetadataTracker:
         def decorator(func):
             @functools.wraps(func)
             def wrapper(*args, **kwargs):
-                # Attempt to find the input DataFrame from arguments
+                
                 input_df = None
                 if args and isinstance(args[0], pd.DataFrame):
                     input_df = args[0]
@@ -128,26 +136,25 @@ class ProvenanceMetadataTracker:
                             input_df = val
                             break
                             
-                # Ethical Constraint Check BEFORE processing
-                if input_df is not None and self.target_variable in input_df.columns:
-                    unique_targets = input_df[self.target_variable].dropna().unique()
+                target_col = self.target_variable.get('name') if isinstance(self.target_variable, dict) else self.target_variable
+                if input_df is not None and target_col in input_df.columns:
+                    unique_targets = input_df[target_col].dropna().unique()
+                    
+                    unique_targets = [val for val in unique_targets if val != "Unknown"]
                     if len(unique_targets) > 2:
-                        error_msg = f"Fairness metrics (SPD/DI) require a binary target. Target variable '{self.target_variable}' contains more than 2 unique values."
+                        error_msg = f"Fairness metrics (SPD/DI) require a binary target. Target variable '{target_col}' contains more than 2 unique values (excluding 'Unknown')."
                         print(f"Ethical Constraint Error: {error_msg}")
                         raise ValueError(error_msg)
 
-                # Execute the transformation function
                 result_df = func(*args, **kwargs)
                 
-                # Identify the output DataFrame
                 df_to_analyze = None
                 if isinstance(result_df, pd.DataFrame):
                     df_to_analyze = result_df
                 elif input_df is not None:
-                    # In case the function modified df in-place and didn't return it
+                    
                     df_to_analyze = input_df
                 
-                # Package results into a single JSON object
                 if df_to_analyze is not None:
                     snapshot = self._generate_snapshot(df_to_analyze)
                     
@@ -166,7 +173,6 @@ class ProvenanceMetadataTracker:
     def _handle_metadata(self, record):
         """
         Stores metadata as a JSON object internally.
-        NOTE: Kept local until signal is given to export to PostgreSQL JSONB.
         """
         self.metadata_records.append(record)
         print(f"Generated Provenance Metadata for: {record['transformation_name']}")
@@ -175,8 +181,6 @@ class ProvenanceMetadataTracker:
         """
         Exports the tracked metadata records to a JSON file.
         """
-        import os
-        # Ensure the directory exists
         directory = os.path.dirname(filepath)
         if directory and not os.path.exists(directory):
             os.makedirs(directory)

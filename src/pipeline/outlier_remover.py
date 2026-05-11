@@ -41,28 +41,14 @@ def cat_outlier(df, cat_threshold=0.01):
                 df_cleaned = df_cleaned[~df_cleaned[col].isin(rare_labels)]
     return df_cleaned
 
-@tracker.track("Remove Outliers")
-def outlier_demographics(df, cat_threshold=0.01):
-    """Remove both numerical and categorical outliers from demographics data."""
-    df_cleaned = num_outlier(df)
-    df_cleaned = cat_outlier(df_cleaned, cat_threshold)
-    return df_cleaned
-
-
-def run_outlier_removal():
-    # Load the cleaned dataset from transformation.py
-    df = pd.read_csv('data/cleaned/adult_data_cleaned.csv')
+def run_outlier_removal(df):
           
-    cleaned_df = outlier_demographics(df, cat_threshold=0.15)    #value is 0.15/15% because sample data is small
-        
-    print("\nCleaned Dataset (Outliers Removed):")
-    print(cleaned_df)
+    print("\nStep 3: Removing outliers...")
+    df = num_outlier(df)
+    cleaned_df = cat_outlier(df, cat_threshold=0.01)
+    print(f"Shape after step 3: {df.shape}")
 
-    # Save the final dataset
     os.makedirs('data/cleaned', exist_ok=True)
     cleaned_df.to_csv('data/cleaned/adult_data_final.csv', index=False)
 
     return cleaned_df
-
-if __name__ == "__main__":
-    run_outlier_removal()

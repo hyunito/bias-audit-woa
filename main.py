@@ -1,9 +1,7 @@
 import os
 import pandas as pd
-from src.pipeline.remove_duplicates_fix_format import remove_duplicates
-from src.pipeline.handle_missing_data import handle_missing
-from src.pipeline.outlier_remover import outlier_demographics
 from src.pipeline.tracker_setup import tracker
+from src.pipeline.remove_duplicates_fix_format import process_format_and_duplicates
 
 def run_pipeline():
 
@@ -13,17 +11,9 @@ def run_pipeline():
     print(f"Loading raw data from {raw_data_path}...")
     df = pd.read_csv(raw_data_path)
     print(f"Initial Shape: {df.shape}")
-    print("\nStep 1: Removing duplicates and fixing format...")
-    df = remove_duplicates(df)
-    print(f"Shape after step 1: {df.shape}")
-    
-    print("\nStep 2: Handling missing data...")
-    df = handle_missing(df)
-    print(f"Shape after step 2: {df.shape}")
-    
-    print("\nStep 3: Removing outliers...")
-    df = outlier_demographics(df)
-    print(f"Shape after step 3: {df.shape}")
+    print("\nExecuting Pipeline Chain...")
+    df = process_format_and_duplicates(df)
+
     
     print("\nSaving cleaned dataset...")
     os.makedirs('data/cleaned', exist_ok=True)

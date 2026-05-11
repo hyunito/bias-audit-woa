@@ -1,6 +1,7 @@
 import numpy as np
 import math
 import random
+from src.models.fitness import calculate_bias_fitness
 
 class MetadataWOAAuditor:
     def __init__(self, metadata_logs, privileged_group_key, num_whales=10, max_iter=50):
@@ -27,30 +28,17 @@ class MetadataWOAAuditor:
 
     def calculate_fitness(self, log_index, target_group_key):
         """
-        The Fitness Function: f(X) = |SPD| + |1 - DI|
-        Calculates how 'biased' a specific pipeline stage is.
+        Wraps the external calculate_bias_fitness function.
         """
-        # 1. Discretize the continuous position to an integer index
+        # Discretize the continuous position to an integer index
         idx = int(np.round(np.clip(log_index, self.lb, self.ub)))
         snapshot = self.metadata_logs[idx]["intersectional_demographics"]
         
-        # 2. Extract Data
-        priv_data = snapshot.get(self.privileged_group, {'total_count': 1, 'total_approve': 1})
-        target_data = snapshot.get(target_group_key, {'total_count': 1, 'total_approve': 1})
-        
-        # 3. Calculate Selection Rates (Probability of positive outcome)
-        # Added a small epsilon (1e-5) to prevent division by zero errors
-        rate_priv = target_data['total_approve'] / (target_data['total_count'] + 1e-5)
-        rate_target = priv_data['total_approve'] / (priv_data['total_count'] + 1e-5)
-        
-        # 4. Calculate Metrics
-        spd = abs(rate_target - rate_priv)
-        di = rate_target / (rate_priv + 1e-5)
-        
-        # 5. Thesis Fitness Formula
-        fitness_score = spd + abs(1 - di)
-        
-        return fitness_score
+        return calculate_bias_fitness(
+            snapshot=snapshot,
+            privileged_group_key=self.privileged_group,
+            target_group_key=target_group_key
+        )
 
     def run_audit(self, target_group_key):
         """
@@ -114,7 +102,6 @@ class MetadataWOAAuditor:
         }
 
 
-# Simulated JSONB Database logs
 mock_jsonb_logs = [
     {
         "transformation_name": "RAW_DATA",

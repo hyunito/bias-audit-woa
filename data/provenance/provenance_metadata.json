@@ -1,1229 +1,3133 @@
 [
     {
-        "timestamp": "2026-05-11T10:10:07.279295",
+        "timestamp": "2026-05-11T20:20:35.998299",
         "transformation_name": "Remove Duplicates",
         "intersectional_demographics": {
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Divorced": {
-                "total_count": 53,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Married-civ-spouse": {
-                "total_count": 109,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Married-spouse-absent": {
-                "total_count": 6,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Never-married": {
-                "total_count": 91,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Separated": {
-                "total_count": 11,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Widowed": {
-                "total_count": 11,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(798.2, 999.0]|marital-status:Divorced": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(798.2, 999.0]|marital-status:Married-civ-spouse": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(798.2, 999.0]|marital-status:Never-married": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:Unknown|marital-status:Divorced": {
-                "total_count": 5,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:Unknown|marital-status:Married-civ-spouse": {
-                "total_count": 5,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:Unknown|marital-status:Married-spouse-absent": {
-                "total_count": 3,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:Unknown|marital-status:Never-married": {
-                "total_count": 10,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:Unknown|marital-status:Widowed": {
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:DIVORCED": {
                 "total_count": 1,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
                 "selection_rate": 0.0
             },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Divorced": {
-                "total_count": 69,
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 2,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
                 "selection_rate": 0.0
             },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Married-civ-spouse": {
-                "total_count": 475,
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 1,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
                 "selection_rate": 0.0
             },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Married-spouse-absent": {
-                "total_count": 39,
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 6,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.16666666666666666
+            },
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
                 "selection_rate": 0.0
             },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Never-married": {
-                "total_count": 356,
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 42,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 41,
+                "selection_rate": 0.023809523809523808
+            },
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:never-married": {
+                "total_count": 1,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
                 "selection_rate": 0.0
             },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Separated": {
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 11,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 10,
+                "selection_rate": 0.09090909090909091
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 34,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 29,
+                "selection_rate": 0.14705882352941177
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 25,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 24,
+                "selection_rate": 0.04
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:divorced": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:married-civ-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 15,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 12,
+                "selection_rate": 0.2
+            },
+            "race:Amer-Indian-Eskimo|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
                 "total_count": 18,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 14,
+                "selection_rate": 0.2222222222222222
             },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Widowed": {
-                "total_count": 24,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(798.2, 999.0]|marital-status:Divorced": {
+            "race:Amer-Indian-Eskimo|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
                 "total_count": 1,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
                 "selection_rate": 0.0
             },
-            "race:Asian-Pac-Islander|age:(798.2, 999.0]|marital-status:Married-civ-spouse": {
-                "total_count": 9,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(798.2, 999.0]|marital-status:Never-married": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:Unknown|marital-status:Divorced": {
-                "total_count": 5,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:Unknown|marital-status:Married-civ-spouse": {
-                "total_count": 24,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:Unknown|marital-status:Married-spouse-absent": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:Unknown|marital-status:Never-married": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:Unknown|marital-status:Separated": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Divorced": {
-                "total_count": 459,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Married-af-spouse": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Married-civ-spouse": {
-                "total_count": 791,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Married-spouse-absent": {
-                "total_count": 59,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Never-married": {
-                "total_count": 1258,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Separated": {
-                "total_count": 244,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Widowed": {
-                "total_count": 125,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(798.2, 999.0]|marital-status:Divorced": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(798.2, 999.0]|marital-status:Married-civ-spouse": {
-                "total_count": 10,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(798.2, 999.0]|marital-status:Never-married": {
-                "total_count": 12,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(798.2, 999.0]|marital-status:Separated": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Divorced": {
-                "total_count": 24,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Married-civ-spouse": {
-                "total_count": 36,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Married-spouse-absent": {
-                "total_count": 3,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Never-married": {
-                "total_count": 76,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Separated": {
-                "total_count": 13,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Widowed": {
-                "total_count": 3,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Divorced": {
-                "total_count": 25,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Married-civ-spouse": {
-                "total_count": 98,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Married-spouse-absent": {
-                "total_count": 12,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Never-married": {
-                "total_count": 95,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Separated": {
-                "total_count": 13,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Widowed": {
-                "total_count": 6,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(798.2, 999.0]|marital-status:Married-civ-spouse": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(798.2, 999.0]|marital-status:Married-spouse-absent": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(798.2, 999.0]|marital-status:Never-married": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:Unknown|marital-status:Divorced": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:Unknown|marital-status:Married-civ-spouse": {
-                "total_count": 6,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:Unknown|marital-status:Married-spouse-absent": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:Unknown|marital-status:Never-married": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:Unknown|marital-status:Widowed": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Divorced": {
-                "total_count": 3565,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Married-af-spouse": {
-                "total_count": 22,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Married-civ-spouse": {
-                "total_count": 12620,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Married-spouse-absent": {
-                "total_count": 276,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Never-married": {
-                "total_count": 8258,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Separated": {
-                "total_count": 683,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Widowed": {
-                "total_count": 781,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Divorced": {
-                "total_count": 39,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Married-civ-spouse": {
-                "total_count": 123,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Married-spouse-absent": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Never-married": {
-                "total_count": 88,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Separated": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Widowed": {
-                "total_count": 3,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Divorced": {
-                "total_count": 193,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Married-civ-spouse": {
-                "total_count": 667,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Married-spouse-absent": {
-                "total_count": 13,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Never-married": {
-                "total_count": 409,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Separated": {
-                "total_count": 26,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Widowed": {
-                "total_count": 38,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            }
-        }
-    },
-    {
-        "timestamp": "2026-05-11T10:10:07.536702",
-        "transformation_name": "Handle Missing Data",
-        "intersectional_demographics": {
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Divorced": {
-                "total_count": 53,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Married-civ-spouse": {
-                "total_count": 109,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Married-spouse-absent": {
-                "total_count": 6,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Never-married": {
-                "total_count": 91,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Separated": {
-                "total_count": 11,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(-6.004, 195.8]|marital-status:Widowed": {
-                "total_count": 11,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(798.2, 999.0]|marital-status:Divorced": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(798.2, 999.0]|marital-status:Married-civ-spouse": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:(798.2, 999.0]|marital-status:Never-married": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:Unknown|marital-status:Divorced": {
-                "total_count": 5,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:Unknown|marital-status:Married-civ-spouse": {
-                "total_count": 5,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:Unknown|marital-status:Married-spouse-absent": {
-                "total_count": 3,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:Unknown|marital-status:Never-married": {
-                "total_count": 10,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Amer-Indian-Eskimo|age:Unknown|marital-status:Widowed": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Divorced": {
-                "total_count": 69,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Married-civ-spouse": {
-                "total_count": 475,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Married-spouse-absent": {
-                "total_count": 39,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Never-married": {
-                "total_count": 356,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Separated": {
-                "total_count": 18,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(-6.004, 195.8]|marital-status:Widowed": {
-                "total_count": 24,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(798.2, 999.0]|marital-status:Divorced": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(798.2, 999.0]|marital-status:Married-civ-spouse": {
-                "total_count": 9,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(798.2, 999.0]|marital-status:Never-married": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:Unknown|marital-status:Divorced": {
-                "total_count": 5,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:Unknown|marital-status:Married-civ-spouse": {
-                "total_count": 24,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:Unknown|marital-status:Married-spouse-absent": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:Unknown|marital-status:Never-married": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:Unknown|marital-status:Separated": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Divorced": {
-                "total_count": 459,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Married-af-spouse": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Married-civ-spouse": {
-                "total_count": 791,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Married-spouse-absent": {
-                "total_count": 59,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Never-married": {
-                "total_count": 1258,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Separated": {
-                "total_count": 244,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(-6.004, 195.8]|marital-status:Widowed": {
-                "total_count": 125,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(798.2, 999.0]|marital-status:Divorced": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(798.2, 999.0]|marital-status:Married-civ-spouse": {
-                "total_count": 10,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(798.2, 999.0]|marital-status:Never-married": {
-                "total_count": 12,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(798.2, 999.0]|marital-status:Separated": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Divorced": {
-                "total_count": 24,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Married-civ-spouse": {
-                "total_count": 36,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Married-spouse-absent": {
-                "total_count": 3,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Never-married": {
-                "total_count": 76,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Separated": {
-                "total_count": 13,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:Unknown|marital-status:Widowed": {
-                "total_count": 3,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Divorced": {
-                "total_count": 25,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Married-civ-spouse": {
-                "total_count": 98,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Married-spouse-absent": {
-                "total_count": 12,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Never-married": {
-                "total_count": 95,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Separated": {
-                "total_count": 13,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(-6.004, 195.8]|marital-status:Widowed": {
-                "total_count": 6,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(798.2, 999.0]|marital-status:Married-civ-spouse": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(798.2, 999.0]|marital-status:Married-spouse-absent": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:(798.2, 999.0]|marital-status:Never-married": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:Unknown|marital-status:Divorced": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:Unknown|marital-status:Married-civ-spouse": {
-                "total_count": 6,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:Unknown|marital-status:Married-spouse-absent": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:Unknown|marital-status:Never-married": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Other|age:Unknown|marital-status:Widowed": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Divorced": {
-                "total_count": 3565,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Married-af-spouse": {
-                "total_count": 22,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Married-civ-spouse": {
-                "total_count": 12620,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Married-spouse-absent": {
-                "total_count": 276,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Never-married": {
-                "total_count": 8258,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Separated": {
-                "total_count": 683,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(-6.004, 195.8]|marital-status:Widowed": {
-                "total_count": 781,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Divorced": {
-                "total_count": 39,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Married-civ-spouse": {
-                "total_count": 123,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Married-spouse-absent": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Never-married": {
-                "total_count": 88,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Separated": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(798.2, 999.0]|marital-status:Widowed": {
-                "total_count": 3,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Divorced": {
-                "total_count": 193,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Married-civ-spouse": {
-                "total_count": 667,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Married-spouse-absent": {
-                "total_count": 13,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Never-married": {
-                "total_count": 409,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Separated": {
-                "total_count": 26,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:Unknown|marital-status:Widowed": {
-                "total_count": 38,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            }
-        }
-    },
-    {
-        "timestamp": "2026-05-11T10:10:07.666529",
-        "transformation_name": "Remove Outliers",
-        "intersectional_demographics": {
-            "race:Asian-Pac-Islander|age:(16.938, 29.4]|marital-status:Divorced": {
-                "total_count": 4,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(16.938, 29.4]|marital-status:Married-civ-spouse": {
-                "total_count": 43,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(16.938, 29.4]|marital-status:Married-spouse-absent": {
-                "total_count": 11,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(16.938, 29.4]|marital-status:Never-married": {
-                "total_count": 235,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(16.938, 29.4]|marital-status:Separated": {
-                "total_count": 3,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(29.4, 41.8]|marital-status:Divorced": {
-                "total_count": 29,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(29.4, 41.8]|marital-status:Married-civ-spouse": {
-                "total_count": 192,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(29.4, 41.8]|marital-status:Married-spouse-absent": {
-                "total_count": 9,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(29.4, 41.8]|marital-status:Never-married": {
-                "total_count": 88,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(29.4, 41.8]|marital-status:Separated": {
-                "total_count": 10,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(29.4, 41.8]|marital-status:Widowed": {
-                "total_count": 3,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(41.8, 54.2]|marital-status:Divorced": {
-                "total_count": 27,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(41.8, 54.2]|marital-status:Married-civ-spouse": {
-                "total_count": 159,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(41.8, 54.2]|marital-status:Married-spouse-absent": {
-                "total_count": 16,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(41.8, 54.2]|marital-status:Never-married": {
-                "total_count": 19,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(41.8, 54.2]|marital-status:Separated": {
-                "total_count": 4,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(41.8, 54.2]|marital-status:Widowed": {
-                "total_count": 9,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(54.2, 66.6]|marital-status:Divorced": {
-                "total_count": 6,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(54.2, 66.6]|marital-status:Married-civ-spouse": {
-                "total_count": 64,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(54.2, 66.6]|marital-status:Married-spouse-absent": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(54.2, 66.6]|marital-status:Never-married": {
-                "total_count": 4,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(54.2, 66.6]|marital-status:Separated": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(54.2, 66.6]|marital-status:Widowed": {
-                "total_count": 6,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(66.6, 79.0]|marital-status:Divorced": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(66.6, 79.0]|marital-status:Married-civ-spouse": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(66.6, 79.0]|marital-status:Never-married": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Asian-Pac-Islander|age:(66.6, 79.0]|marital-status:Widowed": {
-                "total_count": 6,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(16.938, 29.4]|marital-status:Divorced": {
-                "total_count": 26,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(16.938, 29.4]|marital-status:Married-civ-spouse": {
-                "total_count": 105,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(16.938, 29.4]|marital-status:Married-spouse-absent": {
-                "total_count": 12,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(16.938, 29.4]|marital-status:Never-married": {
-                "total_count": 724,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(16.938, 29.4]|marital-status:Separated": {
-                "total_count": 25,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(16.938, 29.4]|marital-status:Widowed": {
-                "total_count": 1,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(29.4, 41.8]|marital-status:Divorced": {
-                "total_count": 173,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(29.4, 41.8]|marital-status:Married-civ-spouse": {
-                "total_count": 257,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(29.4, 41.8]|marital-status:Married-spouse-absent": {
-                "total_count": 22,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(29.4, 41.8]|marital-status:Never-married": {
-                "total_count": 372,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(29.4, 41.8]|marital-status:Separated": {
-                "total_count": 111,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(29.4, 41.8]|marital-status:Widowed": {
+            "race:Amer-Indian-Eskimo|age:(33.0, 41.0]|marital-status:Never-married": {
                 "total_count": 17,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 16,
+                "selection_rate": 0.058823529411764705
             },
-            "race:Black|age:(41.8, 54.2]|marital-status:Divorced": {
-                "total_count": 185,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(41.8, 54.2]|marital-status:Married-civ-spouse": {
-                "total_count": 292,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(41.8, 54.2]|marital-status:Married-spouse-absent": {
-                "total_count": 19,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(41.8, 54.2]|marital-status:Never-married": {
-                "total_count": 119,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(41.8, 54.2]|marital-status:Separated": {
-                "total_count": 82,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(41.8, 54.2]|marital-status:Widowed": {
-                "total_count": 35,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(54.2, 66.6]|marital-status:Divorced": {
-                "total_count": 63,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(54.2, 66.6]|marital-status:Married-civ-spouse": {
-                "total_count": 110,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(54.2, 66.6]|marital-status:Married-spouse-absent": {
-                "total_count": 5,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(54.2, 66.6]|marital-status:Never-married": {
-                "total_count": 30,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(54.2, 66.6]|marital-status:Separated": {
-                "total_count": 19,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(54.2, 66.6]|marital-status:Widowed": {
-                "total_count": 49,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(66.6, 79.0]|marital-status:Divorced": {
-                "total_count": 8,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(66.6, 79.0]|marital-status:Married-civ-spouse": {
-                "total_count": 21,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(66.6, 79.0]|marital-status:Never-married": {
-                "total_count": 2,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:Black|age:(66.6, 79.0]|marital-status:Separated": {
+            "race:Amer-Indian-Eskimo|age:(33.0, 41.0]|marital-status:Separated": {
                 "total_count": 3,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
                 "selection_rate": 0.0
             },
-            "race:Black|age:(66.6, 79.0]|marital-status:Widowed": {
-                "total_count": 19,
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 17,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 16,
+                "selection_rate": 0.058823529411764705
+            },
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 32,
+                "favorable_outcomes": 9,
+                "unfavorable_outcomes": 23,
+                "selection_rate": 0.28125
+            },
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Married-spouse-absent": {
+                "total_count": 2,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
                 "selection_rate": 0.0
             },
-            "race:White|age:(16.938, 29.4]|marital-status:Divorced": {
-                "total_count": 314,
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 4,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
                 "selection_rate": 0.0
             },
-            "race:White|age:(16.938, 29.4]|marital-status:Married-civ-spouse": {
-                "total_count": 1528,
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 1,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
                 "selection_rate": 0.0
             },
-            "race:White|age:(16.938, 29.4]|marital-status:Married-spouse-absent": {
-                "total_count": 49,
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 3,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
                 "selection_rate": 0.0
             },
-            "race:White|age:(16.938, 29.4]|marital-status:Never-married": {
-                "total_count": 5609,
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:divorced": {
+                "total_count": 1,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
                 "selection_rate": 0.0
             },
-            "race:White|age:(16.938, 29.4]|marital-status:Separated": {
-                "total_count": 149,
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:married-civ-spouse": {
+                "total_count": 1,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
                 "selection_rate": 0.0
             },
-            "race:White|age:(16.938, 29.4]|marital-status:Widowed": {
-                "total_count": 10,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(29.4, 41.8]|marital-status:Divorced": {
-                "total_count": 1343,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(29.4, 41.8]|marital-status:Married-civ-spouse": {
-                "total_count": 4512,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(29.4, 41.8]|marital-status:Married-spouse-absent": {
-                "total_count": 88,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(29.4, 41.8]|marital-status:Never-married": {
-                "total_count": 1770,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(29.4, 41.8]|marital-status:Separated": {
-                "total_count": 279,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(29.4, 41.8]|marital-status:Widowed": {
-                "total_count": 61,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(41.8, 54.2]|marital-status:Divorced": {
-                "total_count": 1361,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(41.8, 54.2]|marital-status:Married-civ-spouse": {
-                "total_count": 4088,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(41.8, 54.2]|marital-status:Married-spouse-absent": {
-                "total_count": 90,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(41.8, 54.2]|marital-status:Never-married": {
-                "total_count": 577,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(41.8, 54.2]|marital-status:Separated": {
-                "total_count": 190,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(41.8, 54.2]|marital-status:Widowed": {
-                "total_count": 167,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(54.2, 66.6]|marital-status:Divorced": {
-                "total_count": 450,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(54.2, 66.6]|marital-status:Married-civ-spouse": {
-                "total_count": 1885,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(54.2, 66.6]|marital-status:Married-spouse-absent": {
-                "total_count": 28,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(54.2, 66.6]|marital-status:Never-married": {
-                "total_count": 150,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(54.2, 66.6]|marital-status:Separated": {
-                "total_count": 51,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(54.2, 66.6]|marital-status:Widowed": {
-                "total_count": 309,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(66.6, 79.0]|marital-status:Divorced": {
-                "total_count": 64,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(66.6, 79.0]|marital-status:Married-civ-spouse": {
-                "total_count": 426,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(66.6, 79.0]|marital-status:Married-spouse-absent": {
-                "total_count": 13,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(66.6, 79.0]|marital-status:Never-married": {
-                "total_count": 46,
-                "favorable_outcomes": 0,
-                "selection_rate": 0.0
-            },
-            "race:White|age:(66.6, 79.0]|marital-status:Separated": {
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Divorced": {
                 "total_count": 7,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 7,
                 "selection_rate": 0.0
             },
-            "race:White|age:(66.6, 79.0]|marital-status:Widowed": {
-                "total_count": 194,
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 16,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 13,
+                "selection_rate": 0.1875
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
                 "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
                 "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Separated": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 8,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:married-civ-spouse": {
+                "total_count": 2,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.5
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 21,
+                "favorable_outcomes": 6,
+                "unfavorable_outcomes": 15,
+                "selection_rate": 0.2857142857142857
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 156,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 154,
+                "selection_rate": 0.01282051282051282
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:Separated": {
+                "total_count": 1,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:never-married": {
+                "total_count": 7,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 7,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 11,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 10,
+                "selection_rate": 0.09090909090909091
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 87,
+                "favorable_outcomes": 30,
+                "unfavorable_outcomes": 57,
+                "selection_rate": 0.3448275862068966
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:Married-spouse-absent": {
+                "total_count": 9,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.1111111111111111
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 6,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.16666666666666666
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 106,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 102,
+                "selection_rate": 0.03773584905660377
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 5,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.2
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:married-civ-spouse": {
+                "total_count": 4,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.25
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:never-married": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:DIVORCED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 19,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 17,
+                "selection_rate": 0.10526315789473684
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 4,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.5
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 120,
+                "favorable_outcomes": 60,
+                "unfavorable_outcomes": 60,
+                "selection_rate": 0.5
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 7,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.2857142857142857
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 46,
+                "favorable_outcomes": 9,
+                "unfavorable_outcomes": 37,
+                "selection_rate": 0.1956521739130435
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 6,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.16666666666666666
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Widowed": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:married-civ-spouse": {
+                "total_count": 6,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.3333333333333333
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:never-married": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 24,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 21,
+                "selection_rate": 0.125
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 5,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.6
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:MARRIED-SPOUSE-ABSENT": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 120,
+                "favorable_outcomes": 64,
+                "unfavorable_outcomes": 56,
+                "selection_rate": 0.5333333333333333
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Married-spouse-absent": {
+                "total_count": 13,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 12,
+                "selection_rate": 0.07692307692307693
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 14,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 14,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 8,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:divorced": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:married-civ-spouse": {
+                "total_count": 4,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.5
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:never-married": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 11,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 11,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 3,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:MARRIED-SPOUSE-ABSENT": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 106,
+                "favorable_outcomes": 49,
+                "unfavorable_outcomes": 57,
+                "selection_rate": 0.46226415094339623
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 2,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.5
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 17,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 14,
+                "selection_rate": 0.17647058823529413
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Separated": {
+                "total_count": 1,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 12,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.25
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:married-civ-spouse": {
+                "total_count": 2,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.5
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:DIVORCED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 12,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 10,
+                "selection_rate": 0.16666666666666666
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 43,
+                "favorable_outcomes": 8,
+                "unfavorable_outcomes": 35,
+                "selection_rate": 0.18604651162790697
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 9,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 12,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 12,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 452,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 448,
+                "selection_rate": 0.008849557522123894
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:SEPARATED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Separated": {
+                "total_count": 13,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 12,
+                "selection_rate": 0.07692307692307693
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Widowed": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:married-civ-spouse": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:never-married": {
+                "total_count": 13,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 13,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:separated": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:DIVORCED": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 46,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 43,
+                "selection_rate": 0.06521739130434782
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 130,
+                "favorable_outcomes": 33,
+                "unfavorable_outcomes": 97,
+                "selection_rate": 0.25384615384615383
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Married-spouse-absent": {
+                "total_count": 8,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 10,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.1
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 370,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 365,
+                "selection_rate": 0.013513513513513514
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:SEPARATED": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 34,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 34,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:divorced": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:married-civ-spouse": {
+                "total_count": 3,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.6666666666666666
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:never-married": {
+                "total_count": 10,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 10,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:separated": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:DIVORCED": {
+                "total_count": 6,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.16666666666666666
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 114,
+                "favorable_outcomes": 9,
+                "unfavorable_outcomes": 105,
+                "selection_rate": 0.07894736842105263
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 4,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.25
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 163,
+                "favorable_outcomes": 58,
+                "unfavorable_outcomes": 105,
+                "selection_rate": 0.3558282208588957
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 15,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 15,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 175,
+                "favorable_outcomes": 10,
+                "unfavorable_outcomes": 165,
+                "selection_rate": 0.05714285714285714
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:SEPARATED": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 69,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 68,
+                "selection_rate": 0.014492753623188406
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Widowed": {
+                "total_count": 15,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 15,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:divorced": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:married-civ-spouse": {
+                "total_count": 4,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.5
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:never-married": {
+                "total_count": 6,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 6,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:DIVORCED": {
+                "total_count": 5,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.2
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 141,
+                "favorable_outcomes": 15,
+                "unfavorable_outcomes": 126,
+                "selection_rate": 0.10638297872340426
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 13,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.38461538461538464
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:MARRIED-SPOUSE-ABSENT": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Married-AF-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 211,
+                "favorable_outcomes": 101,
+                "unfavorable_outcomes": 110,
+                "selection_rate": 0.4786729857819905
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Married-spouse-absent": {
+                "total_count": 14,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 12,
+                "selection_rate": 0.14285714285714285
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 94,
+                "favorable_outcomes": 7,
+                "unfavorable_outcomes": 87,
+                "selection_rate": 0.07446808510638298
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:SEPARATED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 69,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 67,
+                "selection_rate": 0.028985507246376812
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 22,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 22,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:divorced": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:married-civ-spouse": {
+                "total_count": 7,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.42857142857142855
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:never-married": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:DIVORCED": {
+                "total_count": 3,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.3333333333333333
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 85,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 80,
+                "selection_rate": 0.058823529411764705
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 10,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 7,
+                "selection_rate": 0.3
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 168,
+                "favorable_outcomes": 61,
+                "unfavorable_outcomes": 107,
+                "selection_rate": 0.3630952380952381
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 7,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 7,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 51,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 49,
+                "selection_rate": 0.0392156862745098
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Separated": {
+                "total_count": 35,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 34,
+                "selection_rate": 0.02857142857142857
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:WIDOWED": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 76,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 75,
+                "selection_rate": 0.013157894736842105
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:divorced": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:married-civ-spouse": {
+                "total_count": 4,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.75
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:never-married": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:MARRIED-SPOUSE-ABSENT": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 14,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 13,
+                "selection_rate": 0.07142857142857142
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 40,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 40,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:Separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:never-married": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 9,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 31,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 28,
+                "selection_rate": 0.0967741935483871
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:Married-spouse-absent": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 31,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 31,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:married-civ-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:never-married": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 1,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 16,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 11,
+                "selection_rate": 0.3125
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 7,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.2857142857142857
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 6,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 6,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 22,
+                "favorable_outcomes": 8,
+                "unfavorable_outcomes": 14,
+                "selection_rate": 0.36363636363636365
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:DIVORCED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 3,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.3333333333333333
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 10,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.2
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:DIVORCED": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 118,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 113,
+                "selection_rate": 0.0423728813559322
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 21,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 18,
+                "selection_rate": 0.14285714285714285
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Married-AF-spouse": {
+                "total_count": 4,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.5
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 622,
+                "favorable_outcomes": 108,
+                "unfavorable_outcomes": 514,
+                "selection_rate": 0.17363344051446947
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 30,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 28,
+                "selection_rate": 0.06666666666666667
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 124,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 123,
+                "selection_rate": 0.008064516129032258
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 3977,
+                "favorable_outcomes": 26,
+                "unfavorable_outcomes": 3951,
+                "selection_rate": 0.006537591149107368
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:SEPARATED": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Separated": {
+                "total_count": 74,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 72,
+                "selection_rate": 0.02702702702702703
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:WIDOWED": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Widowed": {
+                "total_count": 9,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:divorced": {
+                "total_count": 6,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 6,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:married-civ-spouse": {
+                "total_count": 16,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 13,
+                "selection_rate": 0.1875
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:never-married": {
+                "total_count": 132,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 132,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:DIVORCED": {
+                "total_count": 16,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 15,
+                "selection_rate": 0.0625
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 524,
+                "favorable_outcomes": 30,
+                "unfavorable_outcomes": 494,
+                "selection_rate": 0.05725190839694656
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:MARRIED-AF-SPOUSE": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 53,
+                "favorable_outcomes": 22,
+                "unfavorable_outcomes": 31,
+                "selection_rate": 0.41509433962264153
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:MARRIED-SPOUSE-ABSENT": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Married-AF-spouse": {
+                "total_count": 9,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 6,
+                "selection_rate": 0.3333333333333333
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 2111,
+                "favorable_outcomes": 709,
+                "unfavorable_outcomes": 1402,
+                "selection_rate": 0.3358597820937944
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Married-spouse-absent": {
+                "total_count": 52,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 50,
+                "selection_rate": 0.038461538461538464
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 50,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 45,
+                "selection_rate": 0.1
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 1868,
+                "favorable_outcomes": 110,
+                "unfavorable_outcomes": 1758,
+                "selection_rate": 0.058886509635974305
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:SEPARATED": {
+                "total_count": 8,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 139,
+                "favorable_outcomes": 8,
+                "unfavorable_outcomes": 131,
+                "selection_rate": 0.05755395683453238
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Widowed": {
+                "total_count": 18,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 16,
+                "selection_rate": 0.1111111111111111
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:divorced": {
+                "total_count": 12,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 11,
+                "selection_rate": 0.08333333333333333
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:married-civ-spouse": {
+                "total_count": 53,
+                "favorable_outcomes": 13,
+                "unfavorable_outcomes": 40,
+                "selection_rate": 0.24528301886792453
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:married-spouse-absent": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:never-married": {
+                "total_count": 55,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 51,
+                "selection_rate": 0.07272727272727272
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:separated": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:DIVORCED": {
+                "total_count": 27,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 23,
+                "selection_rate": 0.14814814814814814
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 868,
+                "favorable_outcomes": 75,
+                "unfavorable_outcomes": 793,
+                "selection_rate": 0.08640552995391705
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 98,
+                "favorable_outcomes": 48,
+                "unfavorable_outcomes": 50,
+                "selection_rate": 0.4897959183673469
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:MARRIED-SPOUSE-ABSENT": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Married-AF-spouse": {
+                "total_count": 5,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.6
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 2805,
+                "favorable_outcomes": 1375,
+                "unfavorable_outcomes": 1430,
+                "selection_rate": 0.49019607843137253
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 50,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 46,
+                "selection_rate": 0.08
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 30,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 27,
+                "selection_rate": 0.1
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 839,
+                "favorable_outcomes": 109,
+                "unfavorable_outcomes": 730,
+                "selection_rate": 0.1299165673420739
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:SEPARATED": {
+                "total_count": 5,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.2
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 171,
+                "favorable_outcomes": 15,
+                "unfavorable_outcomes": 156,
+                "selection_rate": 0.08771929824561403
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:WIDOWED": {
+                "total_count": 3,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.3333333333333333
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Widowed": {
+                "total_count": 40,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 37,
+                "selection_rate": 0.075
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:divorced": {
+                "total_count": 29,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 29,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:married-civ-spouse": {
+                "total_count": 69,
+                "favorable_outcomes": 35,
+                "unfavorable_outcomes": 34,
+                "selection_rate": 0.5072463768115942
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:never-married": {
+                "total_count": 32,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 29,
+                "selection_rate": 0.09375
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:separated": {
+                "total_count": 5,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.2
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:DIVORCED": {
+                "total_count": 37,
+                "favorable_outcomes": 7,
+                "unfavorable_outcomes": 30,
+                "selection_rate": 0.1891891891891892
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 1031,
+                "favorable_outcomes": 154,
+                "unfavorable_outcomes": 877,
+                "selection_rate": 0.14936954413191075
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 96,
+                "favorable_outcomes": 51,
+                "unfavorable_outcomes": 45,
+                "selection_rate": 0.53125
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:MARRIED-SPOUSE-ABSENT": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 3021,
+                "favorable_outcomes": 1702,
+                "unfavorable_outcomes": 1319,
+                "selection_rate": 0.5633896060906984
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Married-spouse-absent": {
+                "total_count": 73,
+                "favorable_outcomes": 12,
+                "unfavorable_outcomes": 61,
+                "selection_rate": 0.1643835616438356
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 14,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 12,
+                "selection_rate": 0.14285714285714285
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 437,
+                "favorable_outcomes": 78,
+                "unfavorable_outcomes": 359,
+                "selection_rate": 0.17848970251716248
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:SEPARATED": {
+                "total_count": 8,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 6,
+                "selection_rate": 0.25
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 137,
+                "favorable_outcomes": 15,
+                "unfavorable_outcomes": 122,
+                "selection_rate": 0.10948905109489052
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:WIDOWED": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 104,
+                "favorable_outcomes": 15,
+                "unfavorable_outcomes": 89,
+                "selection_rate": 0.14423076923076922
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:divorced": {
+                "total_count": 29,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 25,
+                "selection_rate": 0.13793103448275862
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:married-af-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:married-civ-spouse": {
+                "total_count": 92,
+                "favorable_outcomes": 58,
+                "unfavorable_outcomes": 34,
+                "selection_rate": 0.6304347826086957
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:married-spouse-absent": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:never-married": {
+                "total_count": 15,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 12,
+                "selection_rate": 0.2
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:separated": {
+                "total_count": 5,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.2
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:DIVORCED": {
+                "total_count": 24,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 19,
+                "selection_rate": 0.20833333333333334
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 686,
+                "favorable_outcomes": 87,
+                "unfavorable_outcomes": 599,
+                "selection_rate": 0.12682215743440234
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 82,
+                "favorable_outcomes": 40,
+                "unfavorable_outcomes": 42,
+                "selection_rate": 0.4878048780487805
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:MARRIED-SPOUSE-ABSENT": {
+                "total_count": 1,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Married-AF-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 2834,
+                "favorable_outcomes": 1269,
+                "unfavorable_outcomes": 1565,
+                "selection_rate": 0.4477769936485533
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 51,
+                "favorable_outcomes": 6,
+                "unfavorable_outcomes": 45,
+                "selection_rate": 0.11764705882352941
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 9,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 7,
+                "selection_rate": 0.2222222222222222
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 343,
+                "favorable_outcomes": 46,
+                "unfavorable_outcomes": 297,
+                "selection_rate": 0.13411078717201166
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:SEPARATED": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Separated": {
+                "total_count": 89,
+                "favorable_outcomes": 9,
+                "unfavorable_outcomes": 80,
+                "selection_rate": 0.10112359550561797
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:WIDOWED": {
+                "total_count": 26,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 24,
+                "selection_rate": 0.07692307692307693
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 520,
+                "favorable_outcomes": 42,
+                "unfavorable_outcomes": 478,
+                "selection_rate": 0.08076923076923077
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:divorced": {
+                "total_count": 21,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 19,
+                "selection_rate": 0.09523809523809523
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:married-civ-spouse": {
+                "total_count": 110,
+                "favorable_outcomes": 48,
+                "unfavorable_outcomes": 62,
+                "selection_rate": 0.43636363636363634
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:never-married": {
+                "total_count": 9,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.1111111111111111
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:separated": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:widowed": {
+                "total_count": 21,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 16,
+                "selection_rate": 0.23809523809523808
+            },
+            "race:blk|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 25,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 25,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(-5.001, 25.0]|marital-status:Separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(-5.001, 25.0]|marital-status:never-married": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 6,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.16666666666666666
+            },
+            "race:blk|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 14,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 13,
+                "selection_rate": 0.07142857142857142
+            },
+            "race:blk|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(25.0, 33.0]|marital-status:married-civ-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 12,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 12,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 9,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.4444444444444444
+            },
+            "race:blk|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 13,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 13,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(33.0, 41.0]|marital-status:Widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(41.0, 51.0]|marital-status:DIVORCED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 9,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.1111111111111111
+            },
+            "race:blk|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 9,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.4444444444444444
+            },
+            "race:blk|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 5,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.2
+            },
+            "race:blk|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 10,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.1
+            },
+            "race:blk|age:(51.0, 999.0]|marital-status:MARRIED-SPOUSE-ABSENT": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 9,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.1111111111111111
+            },
+            "race:blk|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(51.0, 999.0]|marital-status:Separated": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:blk|age:(51.0, 999.0]|marital-status:married-civ-spouse": {
+                "total_count": 2,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.5
+            },
+            "race:blk|age:(51.0, 999.0]|marital-status:widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 32,
+                "favorable_outcomes": 6,
+                "unfavorable_outcomes": 26,
+                "selection_rate": 0.1875
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 9,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 205,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 205,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:Separated": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:Widowed": {
+                "total_count": 2,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.5
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:divorced": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:married-civ-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(-5.001, 25.0]|marital-status:never-married": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:DIVORCED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 24,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 23,
+                "selection_rate": 0.041666666666666664
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:Married-AF-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 121,
+                "favorable_outcomes": 43,
+                "unfavorable_outcomes": 78,
+                "selection_rate": 0.35537190082644626
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 90,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 89,
+                "selection_rate": 0.011111111111111112
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:SEPARATED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 9,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:Widowed": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:divorced": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:married-civ-spouse": {
+                "total_count": 3,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.3333333333333333
+            },
+            "race:wht|age:(25.0, 33.0]|marital-status:never-married": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 47,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 43,
+                "selection_rate": 0.0851063829787234
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 3,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.6666666666666666
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:MARRIED-SPOUSE-ABSENT": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 155,
+                "favorable_outcomes": 100,
+                "unfavorable_outcomes": 55,
+                "selection_rate": 0.6451612903225806
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:NEVER-MARRIED": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 49,
+                "favorable_outcomes": 6,
+                "unfavorable_outcomes": 43,
+                "selection_rate": 0.12244897959183673
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:SEPARATED": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 9,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.1111111111111111
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:Widowed": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:divorced": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(33.0, 41.0]|marital-status:married-civ-spouse": {
+                "total_count": 8,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.5
+            },
+            "race:wht|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 48,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 44,
+                "selection_rate": 0.08333333333333333
+            },
+            "race:wht|age:(41.0, 51.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 7,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.5714285714285714
+            },
+            "race:wht|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 163,
+                "favorable_outcomes": 88,
+                "unfavorable_outcomes": 75,
+                "selection_rate": 0.5398773006134969
+            },
+            "race:wht|age:(41.0, 51.0]|marital-status:Married-spouse-absent": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 29,
+                "favorable_outcomes": 6,
+                "unfavorable_outcomes": 23,
+                "selection_rate": 0.20689655172413793
+            },
+            "race:wht|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 8,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(41.0, 51.0]|marital-status:divorced": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(41.0, 51.0]|marital-status:married-civ-spouse": {
+                "total_count": 7,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.5714285714285714
+            },
+            "race:wht|age:(41.0, 51.0]|marital-status:never-married": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:DIVORCED": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 40,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 36,
+                "selection_rate": 0.1
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:MARRIED-CIV-SPOUSE": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 153,
+                "favorable_outcomes": 65,
+                "unfavorable_outcomes": 88,
+                "selection_rate": 0.42483660130718953
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 15,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 13,
+                "selection_rate": 0.13333333333333333
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:Separated": {
+                "total_count": 5,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.2
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 22,
+                "favorable_outcomes": 6,
+                "unfavorable_outcomes": 16,
+                "selection_rate": 0.2727272727272727
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:married-civ-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:never-married": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:wht|age:(51.0, 999.0]|marital-status:widowed": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            }
+        }
+    },
+    {
+        "timestamp": "2026-05-11T20:20:36.496456",
+        "transformation_name": "Fix Format",
+        "intersectional_demographics": {
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 7,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 6,
+                "selection_rate": 0.14285714285714285
+            },
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 43,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 42,
+                "selection_rate": 0.023255813953488372
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 12,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 11,
+                "selection_rate": 0.08333333333333333
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 35,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 30,
+                "selection_rate": 0.14285714285714285
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 25,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 24,
+                "selection_rate": 0.04
+            },
+            "race:Amer-Indian-Eskimo|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 15,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 12,
+                "selection_rate": 0.2
+            },
+            "race:Amer-Indian-Eskimo|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 18,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 14,
+                "selection_rate": 0.2222222222222222
+            },
+            "race:Amer-Indian-Eskimo|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 17,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 16,
+                "selection_rate": 0.058823529411764705
+            },
+            "race:Amer-Indian-Eskimo|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 18,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 17,
+                "selection_rate": 0.05555555555555555
+            },
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 33,
+                "favorable_outcomes": 9,
+                "unfavorable_outcomes": 24,
+                "selection_rate": 0.2727272727272727
+            },
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Married-spouse-absent": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 7,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 7,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 18,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 14,
+                "selection_rate": 0.2222222222222222
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Separated": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Amer-Indian-Eskimo|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 8,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 21,
+                "favorable_outcomes": 6,
+                "unfavorable_outcomes": 15,
+                "selection_rate": 0.2857142857142857
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 167,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 165,
+                "selection_rate": 0.011976047904191617
+            },
+            "race:Asian-Pac-Islander|age:(-5.001, 25.0]|marital-status:Separated": {
+                "total_count": 1,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 11,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 10,
+                "selection_rate": 0.09090909090909091
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 93,
+                "favorable_outcomes": 31,
+                "unfavorable_outcomes": 62,
+                "selection_rate": 0.3333333333333333
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:Married-spouse-absent": {
+                "total_count": 9,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.1111111111111111
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 115,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 110,
+                "selection_rate": 0.043478260869565216
+            },
+            "race:Asian-Pac-Islander|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 5,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.2
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 20,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 18,
+                "selection_rate": 0.1
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 130,
+                "favorable_outcomes": 64,
+                "unfavorable_outcomes": 66,
+                "selection_rate": 0.49230769230769234
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 7,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.2857142857142857
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 47,
+                "favorable_outcomes": 9,
+                "unfavorable_outcomes": 38,
+                "selection_rate": 0.19148936170212766
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 7,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 6,
+                "selection_rate": 0.14285714285714285
+            },
+            "race:Asian-Pac-Islander|age:(33.0, 41.0]|marital-status:Widowed": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 25,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 22,
+                "selection_rate": 0.12
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 129,
+                "favorable_outcomes": 69,
+                "unfavorable_outcomes": 60,
+                "selection_rate": 0.5348837209302325
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Married-spouse-absent": {
+                "total_count": 14,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 13,
+                "selection_rate": 0.07142857142857142
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 16,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 16,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 8,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 11,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 11,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 111,
+                "favorable_outcomes": 53,
+                "unfavorable_outcomes": 58,
+                "selection_rate": 0.4774774774774775
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 19,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 15,
+                "selection_rate": 0.21052631578947367
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Separated": {
+                "total_count": 1,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:Asian-Pac-Islander|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 13,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 10,
+                "selection_rate": 0.23076923076923078
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 13,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 11,
+                "selection_rate": 0.15384615384615385
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 46,
+                "favorable_outcomes": 8,
+                "unfavorable_outcomes": 38,
+                "selection_rate": 0.17391304347826086
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 9,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 503,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 499,
+                "selection_rate": 0.007952286282306162
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Separated": {
+                "total_count": 18,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 17,
+                "selection_rate": 0.05555555555555555
+            },
+            "race:Black|age:(-5.001, 25.0]|marital-status:Widowed": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 52,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 49,
+                "selection_rate": 0.057692307692307696
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 142,
+                "favorable_outcomes": 36,
+                "unfavorable_outcomes": 106,
+                "selection_rate": 0.2535211267605634
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Married-spouse-absent": {
+                "total_count": 9,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 404,
+                "favorable_outcomes": 7,
+                "unfavorable_outcomes": 397,
+                "selection_rate": 0.017326732673267328
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 43,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 43,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(25.0, 33.0]|marital-status:Widowed": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 137,
+                "favorable_outcomes": 10,
+                "unfavorable_outcomes": 127,
+                "selection_rate": 0.072992700729927
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 180,
+                "favorable_outcomes": 65,
+                "unfavorable_outcomes": 115,
+                "selection_rate": 0.3611111111111111
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 17,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 17,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 199,
+                "favorable_outcomes": 10,
+                "unfavorable_outcomes": 189,
+                "selection_rate": 0.05025125628140704
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 79,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 78,
+                "selection_rate": 0.012658227848101266
+            },
+            "race:Black|age:(33.0, 41.0]|marital-status:Widowed": {
+                "total_count": 16,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 16,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 160,
+                "favorable_outcomes": 17,
+                "unfavorable_outcomes": 143,
+                "selection_rate": 0.10625
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Married-af-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 0,
+                "selection_rate": 1.0
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 240,
+                "favorable_outcomes": 113,
+                "unfavorable_outcomes": 127,
+                "selection_rate": 0.4708333333333333
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Married-spouse-absent": {
+                "total_count": 16,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 14,
+                "selection_rate": 0.125
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 105,
+                "favorable_outcomes": 8,
+                "unfavorable_outcomes": 97,
+                "selection_rate": 0.0761904761904762
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 74,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 72,
+                "selection_rate": 0.02702702702702703
+            },
+            "race:Black|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 24,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 24,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 99,
+                "favorable_outcomes": 7,
+                "unfavorable_outcomes": 92,
+                "selection_rate": 0.0707070707070707
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 193,
+                "favorable_outcomes": 69,
+                "unfavorable_outcomes": 124,
+                "selection_rate": 0.35751295336787564
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 8,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 8,
+                "selection_rate": 0.0
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 59,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 57,
+                "selection_rate": 0.03389830508474576
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Separated": {
+                "total_count": 38,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 37,
+                "selection_rate": 0.02631578947368421
+            },
+            "race:Black|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 81,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 80,
+                "selection_rate": 0.012345679012345678
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 14,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 13,
+                "selection_rate": 0.07142857142857142
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 47,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 47,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(-5.001, 25.0]|marital-status:Separated": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 9,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 34,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 31,
+                "selection_rate": 0.08823529411764706
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:Married-spouse-absent": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 37,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 37,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 17,
+                "favorable_outcomes": 6,
+                "unfavorable_outcomes": 11,
+                "selection_rate": 0.35294117647058826
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 7,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.2857142857142857
+            },
+            "race:Other|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 3,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 6,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 6,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 23,
+                "favorable_outcomes": 8,
+                "unfavorable_outcomes": 15,
+                "selection_rate": 0.34782608695652173
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 5,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 5,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 4,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 3,
+                "selection_rate": 0.25
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 11,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 9,
+                "selection_rate": 0.18181818181818182
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 2,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:Other|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 4,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 4,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Divorced": {
+                "total_count": 133,
+                "favorable_outcomes": 5,
+                "unfavorable_outcomes": 128,
+                "selection_rate": 0.03759398496240601
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Married-af-spouse": {
+                "total_count": 4,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.5
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Married-civ-spouse": {
+                "total_count": 693,
+                "favorable_outcomes": 120,
+                "unfavorable_outcomes": 573,
+                "selection_rate": 0.17316017316017315
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Married-spouse-absent": {
+                "total_count": 33,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 31,
+                "selection_rate": 0.06060606060606061
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Never-married": {
+                "total_count": 4452,
+                "favorable_outcomes": 27,
+                "unfavorable_outcomes": 4425,
+                "selection_rate": 0.006064690026954178
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Separated": {
+                "total_count": 80,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 78,
+                "selection_rate": 0.025
+            },
+            "race:White|age:(-5.001, 25.0]|marital-status:Widowed": {
+                "total_count": 13,
+                "favorable_outcomes": 1,
+                "unfavorable_outcomes": 12,
+                "selection_rate": 0.07692307692307693
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Divorced": {
+                "total_count": 579,
+                "favorable_outcomes": 33,
+                "unfavorable_outcomes": 546,
+                "selection_rate": 0.05699481865284974
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Married-af-spouse": {
+                "total_count": 11,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 7,
+                "selection_rate": 0.36363636363636365
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Married-civ-spouse": {
+                "total_count": 2342,
+                "favorable_outcomes": 788,
+                "unfavorable_outcomes": 1554,
+                "selection_rate": 0.336464560204953
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Married-spouse-absent": {
+                "total_count": 57,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 55,
+                "selection_rate": 0.03508771929824561
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Never-married": {
+                "total_count": 2067,
+                "favorable_outcomes": 120,
+                "unfavorable_outcomes": 1947,
+                "selection_rate": 0.05805515239477504
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Separated": {
+                "total_count": 162,
+                "favorable_outcomes": 8,
+                "unfavorable_outcomes": 154,
+                "selection_rate": 0.04938271604938271
+            },
+            "race:White|age:(25.0, 33.0]|marital-status:Widowed": {
+                "total_count": 21,
+                "favorable_outcomes": 2,
+                "unfavorable_outcomes": 19,
+                "selection_rate": 0.09523809523809523
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Divorced": {
+                "total_count": 973,
+                "favorable_outcomes": 83,
+                "unfavorable_outcomes": 890,
+                "selection_rate": 0.08530318602261049
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Married-af-spouse": {
+                "total_count": 5,
+                "favorable_outcomes": 3,
+                "unfavorable_outcomes": 2,
+                "selection_rate": 0.6
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Married-civ-spouse": {
+                "total_count": 3138,
+                "favorable_outcomes": 1564,
+                "unfavorable_outcomes": 1574,
+                "selection_rate": 0.4984066284257489
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Married-spouse-absent": {
+                "total_count": 54,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 50,
+                "selection_rate": 0.07407407407407407
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Never-married": {
+                "total_count": 953,
+                "favorable_outcomes": 121,
+                "unfavorable_outcomes": 832,
+                "selection_rate": 0.12696747114375656
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Separated": {
+                "total_count": 191,
+                "favorable_outcomes": 18,
+                "unfavorable_outcomes": 173,
+                "selection_rate": 0.09424083769633508
+            },
+            "race:White|age:(33.0, 41.0]|marital-status:Widowed": {
+                "total_count": 47,
+                "favorable_outcomes": 4,
+                "unfavorable_outcomes": 43,
+                "selection_rate": 0.0851063829787234
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Divorced": {
+                "total_count": 1146,
+                "favorable_outcomes": 169,
+                "unfavorable_outcomes": 977,
+                "selection_rate": 0.1474694589877836
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Married-af-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Married-civ-spouse": {
+                "total_count": 3386,
+                "favorable_outcomes": 1907,
+                "unfavorable_outcomes": 1479,
+                "selection_rate": 0.5632014176018901
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Married-spouse-absent": {
+                "total_count": 80,
+                "favorable_outcomes": 12,
+                "unfavorable_outcomes": 68,
+                "selection_rate": 0.15
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Never-married": {
+                "total_count": 497,
+                "favorable_outcomes": 89,
+                "unfavorable_outcomes": 408,
+                "selection_rate": 0.1790744466800805
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Separated": {
+                "total_count": 158,
+                "favorable_outcomes": 18,
+                "unfavorable_outcomes": 140,
+                "selection_rate": 0.11392405063291139
+            },
+            "race:White|age:(41.0, 51.0]|marital-status:Widowed": {
+                "total_count": 112,
+                "favorable_outcomes": 15,
+                "unfavorable_outcomes": 97,
+                "selection_rate": 0.13392857142857142
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Divorced": {
+                "total_count": 773,
+                "favorable_outcomes": 98,
+                "unfavorable_outcomes": 675,
+                "selection_rate": 0.12677878395860284
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Married-af-spouse": {
+                "total_count": 1,
+                "favorable_outcomes": 0,
+                "unfavorable_outcomes": 1,
+                "selection_rate": 0.0
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Married-civ-spouse": {
+                "total_count": 3184,
+                "favorable_outcomes": 1423,
+                "unfavorable_outcomes": 1761,
+                "selection_rate": 0.4469221105527638
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Married-spouse-absent": {
+                "total_count": 54,
+                "favorable_outcomes": 7,
+                "unfavorable_outcomes": 47,
+                "selection_rate": 0.12962962962962962
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Never-married": {
+                "total_count": 377,
+                "favorable_outcomes": 51,
+                "unfavorable_outcomes": 326,
+                "selection_rate": 0.13527851458885942
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Separated": {
+                "total_count": 100,
+                "favorable_outcomes": 10,
+                "unfavorable_outcomes": 90,
+                "selection_rate": 0.1
+            },
+            "race:White|age:(51.0, 999.0]|marital-status:Widowed": {
+                "total_count": 591,
+                "favorable_outcomes": 55,
+                "unfavorable_outcomes": 536,
+                "selection_rate": 0.09306260575296109
             }
         }
     }

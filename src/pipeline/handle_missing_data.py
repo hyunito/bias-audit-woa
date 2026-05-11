@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
+from src.pipeline.outlier_remover import run_outlier_removal
 from src.pipeline.tracker_setup import tracker
 
-@tracker.track("Handle Missing Data")
 def handle_missing(df):
     """
     Handle missing values in the dataset.
@@ -10,10 +10,9 @@ def handle_missing(df):
     """
     df = df.copy()
     
-    # Replace all blanks or '?' with NA
     df = df.replace(r'^\s*$', np.nan, regex=True)
     df = df.replace('?', np.nan)
-    # Replaces 'Unknown' injected by make_dirty with NA as well
+    
     df = df.replace('Unknown', np.nan)
     return df
 
@@ -21,7 +20,6 @@ def missing_rows(df):
     """
     Removes rows missing 3 or more columns.
     """
-    # We require at least (total_cols - 5) valid values to keep a row
     thresh = len(df.columns) - 5
     df = df.dropna(thresh=thresh)
     return df
@@ -34,3 +32,13 @@ def remove_missing_target(df):
     if 'income' in df.columns:
         df = df.dropna(subset=['income'])
     return df
+
+def process_missing_data(df):
+    """Entry point for this pipeline stage."""
+    print("\nStep 2: Handling missing data...")
+    df = handle_missing(df)
+    df = missing_rows(df)
+    df = remove_missing_target(df)
+    print(f"Shape after step 2: {df.shape}")
+    
+    return run_outlier_removal(df)
