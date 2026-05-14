@@ -107,16 +107,43 @@ class ProvenanceMetadataTracker:
                     unfavorable = int(((target_series == 0) | (target_series == '0') | (target_series == 0.0) | (target_series == False)).sum())
                 
             valid_outcomes = favorable + unfavorable
-            selection_rate = favorable / total_count
+            selection_rate_favorable_outcomes = favorable / total_count
+            selection_rate_unfavorable_outcomes = unfavorable / total_count
             
             intersectional_demographics[group_key] = {
                 "total_count": total_count,
                 "favorable_outcomes": favorable,
                 "unfavorable_outcomes": unfavorable,
-                "selection_rate": selection_rate
+                "selection_rate_favorable_outcomes": selection_rate_favorable_outcomes,
+                "selection_rate_unfavorable_outcomes": selection_rate_unfavorable_outcomes
             }
             
         return intersectional_demographics
+
+    def _calculate_bias_metrics(self, snapshot):
+        """
+        Calculates the maximum Statistical Parity Difference and Disparate Impact
+        across all intersectional demographic groups based on favorable outcomes.
+        """
+        rates = [group_data.get('selection_rate_favorable_outcomes', 0.0) 
+                 for group_data in snapshot.values()]
+        
+        if not rates:
+            return {
+                "statistical_parity_difference": 0.0,
+                "disparate_impact": 1.0
+            }
+            
+        max_rate = max(rates)
+        min_rate = min(rates)
+        
+        spd = max_rate - min_rate
+        di = min_rate / max_rate if max_rate > 0 else 1.0
+        
+        return {
+            "statistical_parity_difference": round(spd, 4),
+            "disparate_impact": round(di, 4)
+        }
 
     def track(self, transformation_name=None):
         """
@@ -136,6 +163,8 @@ class ProvenanceMetadataTracker:
                             input_df = val
                             break
                             
+                row_count_before = len(input_df) if input_df is not None else None
+
                 target_col = self.target_variable.get('name') if isinstance(self.target_variable, dict) else self.target_variable
                 if input_df is not None and target_col in input_df.columns:
                     unique_targets = input_df[target_col].dropna().unique()
@@ -157,10 +186,16 @@ class ProvenanceMetadataTracker:
                 
                 if df_to_analyze is not None:
                     snapshot = self._generate_snapshot(df_to_analyze)
+                    row_count_after = len(df_to_analyze)
+                    
+                    bias_metrics = self._calculate_bias_metrics(snapshot)
                     
                     metadata_record = {
                         "timestamp": datetime.datetime.now().isoformat(),
                         "transformation_name": transformation_name or func.__name__,
+                        "row_count_before": row_count_before,
+                        "row_count_after": row_count_after,
+                        "bias_metrics": bias_metrics,
                         "intersectional_demographics": snapshot
                     }
                     

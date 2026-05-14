@@ -3,6 +3,7 @@ import sys
 import pandas as pd
 from src.pipeline.tracker_setup import tracker
 
+@tracker.track("Num Outlier")
 def num_outlier(df):
     """Remove age outliers using Interquartile Range (IQR) method."""
     df_cleaned = df.copy()
@@ -21,6 +22,7 @@ def num_outlier(df):
         df_cleaned = df_cleaned[(df_cleaned['age'] >= lower_bound) & (df_cleaned['age'] <= upper_bound)]
     return df_cleaned
 
+@tracker.track("Categorical Outlier")
 def cat_outlier(df, cat_threshold=0.01):
     """Remove categorical outliers based on frequency threshold."""
     df_cleaned = df.copy()

@@ -3,6 +3,7 @@ import numpy as np
 from src.pipeline.outlier_remover import run_outlier_removal
 from src.pipeline.tracker_setup import tracker
 
+@tracker.track("Handle Missing Values")
 def handle_missing(df):
     """
     Handle missing values in the dataset.
@@ -16,6 +17,7 @@ def handle_missing(df):
     df = df.replace('Unknown', np.nan)
     return df
 
+@tracker.track("Handle Missing Rows")
 def missing_rows(df):
     """
     Removes rows missing 3 or more columns.
@@ -24,6 +26,7 @@ def missing_rows(df):
     df = df.dropna(thresh=thresh)
     return df
 
+@tracker.track("Remove Missing Target Variable")
 def remove_missing_target(df):
     """
     Removes rows where the target variable ('income') is missing.
@@ -32,6 +35,7 @@ def remove_missing_target(df):
     if 'income' in df.columns:
         df = df.dropna(subset=['income'])
     return df
+
 
 def process_missing_data(df):
     """Entry point for this pipeline stage."""
