@@ -122,28 +122,26 @@ class ProvenanceMetadataTracker:
 
     def _calculate_bias_metrics(self, snapshot):
         """
-        Calculates the maximum Statistical Parity Difference and Disparate Impact
-        across all intersectional demographic groups based on favorable outcomes.
+        Calculates Statistical Parity Difference and Disparate Impact
+        for each intersectional demographic group compared to the highest performing group.
         """
         rates = [group_data.get('selection_rate_favorable_outcomes', 0.0) 
                  for group_data in snapshot.values()]
         
         if not rates:
-            return {
-                "statistical_parity_difference": 0.0,
-                "disparate_impact": 1.0
-            }
+            return
             
         max_rate = max(rates)
-        min_rate = min(rates)
         
-        spd = max_rate - min_rate
-        di = min_rate / max_rate if max_rate > 0 else 1.0
-        
-        return {
-            "statistical_parity_difference": round(spd, 4),
-            "disparate_impact": round(di, 4)
-        }
+        for group_data in snapshot.values():
+            rate = group_data.get('selection_rate_favorable_outcomes', 0.0)
+            spd = max_rate - rate
+            di = rate / max_rate if max_rate > 0 else 1.0
+            
+            group_data['bias_metrics'] = {
+                "statistical_parity_difference": round(spd, 4),
+                "disparate_impact": round(di, 4)
+            }
 
     def track(self, transformation_name=None):
         """
@@ -188,14 +186,13 @@ class ProvenanceMetadataTracker:
                     snapshot = self._generate_snapshot(df_to_analyze)
                     row_count_after = len(df_to_analyze)
                     
-                    bias_metrics = self._calculate_bias_metrics(snapshot)
+                    self._calculate_bias_metrics(snapshot)
                     
                     metadata_record = {
                         "timestamp": datetime.datetime.now().isoformat(),
                         "transformation_name": transformation_name or func.__name__,
                         "row_count_before": row_count_before,
                         "row_count_after": row_count_after,
-                        "bias_metrics": bias_metrics,
                         "intersectional_demographics": snapshot
                     }
                     

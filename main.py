@@ -11,7 +11,7 @@ def run_pipeline():
     print(f"Loading raw data from {raw_data_path}...")
     df = pd.read_csv(raw_data_path)
     print(f"Initial Shape: {df.shape}")
-    print("\nExecuting Pipeline Chain...")
+    
     df = process_format_and_duplicates(df)
 
     
