@@ -14,15 +14,7 @@ def run_pipeline():
     
     df = process_format_and_duplicates(df)
 
-    
-    print("\nSaving cleaned dataset...")
-    os.makedirs('data/cleaned', exist_ok=True)
-    output_path = 'data/cleaned/adult_data_cleaned.csv'
-    df.to_csv(output_path, index=False)
-    
     tracker.export_to_json(filepath="data/provenance/provenance_metadata.json")
-        
-    print(f"\nPipeline execution completed successfully! Cleaned dataset saved to {output_path}")
 
 if __name__ == "__main__":
     run_pipeline()

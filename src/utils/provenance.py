@@ -2,6 +2,7 @@ import pandas as pd
 import datetime
 import functools
 import json
+import inspect
 import os
 class ProvenanceMetadataTracker:
     """
@@ -77,8 +78,9 @@ class ProvenanceMetadataTracker:
         df_meta = self._bin_continuous(df_meta)
         
         groups = df_meta.groupby(attrs)
-        
         intersectional_demographics = {}
+        privileged_group = None
+        highest_rate = -1
         for name, group in groups:
             
             if isinstance(name, tuple):
@@ -102,7 +104,6 @@ class ProvenanceMetadataTracker:
                     favorable = int((target_series == pos_val).sum())
                     unfavorable = int((target_series == neg_val).sum())
                 else:
-                    
                     favorable = int(((target_series == 1) | (target_series == '1') | (target_series == 1.0) | (target_series == True)).sum())
                     unfavorable = int(((target_series == 0) | (target_series == '0') | (target_series == 0.0) | (target_series == False)).sum())
                 
@@ -117,31 +118,10 @@ class ProvenanceMetadataTracker:
                 "selection_rate_favorable_outcomes": selection_rate_favorable_outcomes,
                 "selection_rate_unfavorable_outcomes": selection_rate_unfavorable_outcomes
             }
-            
-        return intersectional_demographics
-
-    def _calculate_bias_metrics(self, snapshot):
-        """
-        Calculates Statistical Parity Difference and Disparate Impact
-        for each intersectional demographic group compared to the highest performing group.
-        """
-        rates = [group_data.get('selection_rate_favorable_outcomes', 0.0) 
-                 for group_data in snapshot.values()]
-        
-        if not rates:
-            return
-            
-        max_rate = max(rates)
-        
-        for group_data in snapshot.values():
-            rate = group_data.get('selection_rate_favorable_outcomes', 0.0)
-            spd = max_rate - rate
-            di = rate / max_rate if max_rate > 0 else 1.0
-            
-            group_data['bias_metrics'] = {
-                "statistical_parity_difference": round(spd, 4),
-                "disparate_impact": round(di, 4)
-            }
+            if total_count >= 30 and selection_rate_favorable_outcomes > highest_rate:
+                highest_rate = selection_rate_favorable_outcomes
+                privileged_group = group_key
+        return intersectional_demographics, privileged_group, highest_rate
 
     def track(self, transformation_name=None):
         """
@@ -174,7 +154,8 @@ class ProvenanceMetadataTracker:
                         raise ValueError(error_msg)
 
                 result_df = func(*args, **kwargs)
-                
+                file_path = inspect.getfile(func)
+                script_name = os.path.basename(file_path)
                 df_to_analyze = None
                 if isinstance(result_df, pd.DataFrame):
                     df_to_analyze = result_df
@@ -183,14 +164,15 @@ class ProvenanceMetadataTracker:
                     df_to_analyze = input_df
                 
                 if df_to_analyze is not None:
-                    snapshot = self._generate_snapshot(df_to_analyze)
+                    snapshot, privileged_group, highest_rate = self._generate_snapshot(df_to_analyze)
                     row_count_after = len(df_to_analyze)
                     
-                    self._calculate_bias_metrics(snapshot)
-                    
                     metadata_record = {
+                        "script_name": script_name,
                         "timestamp": datetime.datetime.now().isoformat(),
                         "transformation_name": transformation_name or func.__name__,
+                        "privileged_group": privileged_group,
+                        "highest_selection_rate": highest_rate if privileged_group is not None else None,
                         "row_count_before": row_count_before,
                         "row_count_after": row_count_after,
                         "intersectional_demographics": snapshot

@@ -48,6 +48,7 @@ def fix_format(df):
         df['race'] = df['race'].replace({'wht': 'White', 'blk': 'Black'})
         
     if 'sex' in df.columns:
+        df['sex'] = df['sex'].str.capitalize()
         df['sex'] = df['sex'].replace({'m': 'Male', 'M': 'Male', 'f': 'Female', 'F': 'Female', 'fem': 'Female'})
         
     if 'native-country' in df.columns:
