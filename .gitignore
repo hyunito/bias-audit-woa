@@ -1,3 +1,17 @@
 .env
 InventoryManagement.md
 provenance.json
+ACSIncome_2018_US.csv
+\[Group 13\] - THESIS PLAN (2).pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# Data
+data/raw/
+data/cleaned/
+*.csv
