@@ -3,6 +3,8 @@ import datetime
 import functools
 import json
 import inspect
+import psycopg2
+from psycopg2.extras import Json
 import os
 class ProvenanceMetadataTracker:
     """
@@ -169,8 +171,8 @@ class ProvenanceMetadataTracker:
                     
                     metadata_record = {
                         "script_name": script_name,
-                        "timestamp": datetime.datetime.now().isoformat(),
                         "transformation_name": transformation_name or func.__name__,
+                        "timestamp": datetime.datetime.now().isoformat(),
                         "privileged_group": privileged_group,
                         "highest_selection_rate": highest_rate if privileged_group is not None else None,
                         "row_count_before": row_count_before,
@@ -190,6 +192,29 @@ class ProvenanceMetadataTracker:
         """
         self.metadata_records.append(record)
         print(f"Generated Provenance Metadata for: {record['transformation_name']}")
+
+    def export_to_postgresql(self, db_name, db_user, db_password, db_host="localhost", db_port="5432"):
+        """
+        Exports the tracked metadata records to a PostgreSQL JSONB table
+        """
+        try:
+            conn = psycopg2.connect(
+                dbname=db_name,
+                user=db_user,
+                password=db_password,
+                host=db_host,
+                port=db_port
+            )
+            cursor = conn.cursor()
+            for record in self.metadata_records:
+                cursor.execute(
+                    "INSERT INTO provenance_logs (log_data) VALUES (%s)", [Json(record)]) 
+            conn.commit()
+            cursor.close()
+            conn.close()
+            print(f"Successfully exported {len(self.metadata_records)} provenance records to PostgreSQL JSONB")
+        except Exception as e:
+            print(f"Error exporting to PostgreSQL: {e}")
 
     def export_to_json(self, filepath="provenance_metadata.json"):
         """
