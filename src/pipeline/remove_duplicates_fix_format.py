@@ -23,7 +23,6 @@ def fix_format(df):
         if col in df.columns:
             if df[col].dtype == 'object':
                 df[col] = df[col].apply(lambda x: str(x).replace(',', '') if pd.notnull(x) else x)
-            # Cast to numeric, coerce errors to NaN, then cast to nullable Integer
             df[col] = pd.to_numeric(df[col], errors='coerce').astype('Int64')
 
     cat_cols = ['workclass', 'education', 'marital-status', 'occupation', 'relationship', 'race', 'sex', 'native-country', 'income']

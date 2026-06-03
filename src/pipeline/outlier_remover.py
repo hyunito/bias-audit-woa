@@ -1,6 +1,3 @@
-import os
-import sys
-import pandas as pd
 from src.pipeline.tracker_setup import tracker
 
 @tracker.track("Num Outlier")
@@ -50,7 +47,6 @@ def run_outlier_removal(df):
     cleaned_df = cat_outlier(df, cat_threshold=0.01)
     print(f"Shape after step 3: {df.shape}")
 
-    os.makedirs('data/cleaned', exist_ok=True)
-    cleaned_df.to_csv('data/cleaned/adult_data_final.csv', index=False)
+    cleaned_df.to_csv('data/adult_data_final.csv', index=False)
 
     return cleaned_df

@@ -15,7 +15,7 @@ def run_pipeline():
     
     df = process_format_and_duplicates(df)
 
-    tracker.export_to_json(filepath="data/provenance/provenance_metadata.json")
+    tracker.export_to_json(filepath="data/provenance_metadata.json")
     tracker.export_to_postgresql(
         db_name=os.getenv("DB_NAME"),
         db_user=os.getenv("DB_USER"),
