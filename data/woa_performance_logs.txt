@@ -1,0 +1,15 @@
+Run 1 Status:
+Algorithms Latency: 0.149644 seconds
+Peak Memory Usage: 38.13 MB
+Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+
+Run 2 Status:
+Algorithms Latency: 0.059859 seconds
+Peak Memory Usage: 38.20 MB
+Bias: {'max_fitness_score': 1.4883955600403633, 'script_name': 'handle_missing_data.py', 'transformation_name': 'Remove Missing Target Variable', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+
+Run 3 Status:
+Algorithms Latency: 0.057149 seconds
+Peak Memory Usage: 38.24 MB
+Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+
