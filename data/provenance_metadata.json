@@ -2,7 +2,7 @@
     {
         "script_name": "remove_duplicates_fix_format.py",
         "transformation_name": "Remove Duplicates",
-        "timestamp": "2026-06-03T21:37:36.940226",
+        "timestamp": "2026-06-06T20:27:52.108464",
         "privileged_group": "age:(41.0, 51.0]|race:White|sex:male",
         "highest_selection_rate": 0.5128205128205128,
         "row_count_before": 34189,
@@ -1497,7 +1497,7 @@
     {
         "script_name": "remove_duplicates_fix_format.py",
         "transformation_name": "Fix Format",
-        "timestamp": "2026-06-03T21:37:37.200620",
+        "timestamp": "2026-06-06T20:27:52.375681",
         "privileged_group": "age:(41.0, 51.0]|race:White|sex:Male",
         "highest_selection_rate": 0.4883955600403633,
         "row_count_before": 32559,
@@ -2019,7 +2019,7 @@
     {
         "script_name": "handle_missing_data.py",
         "transformation_name": "Handle Missing Values",
-        "timestamp": "2026-06-03T21:37:37.460781",
+        "timestamp": "2026-06-06T20:27:52.663666",
         "privileged_group": "age:(41.0, 51.0]|race:White|sex:Male",
         "highest_selection_rate": 0.4883955600403633,
         "row_count_before": 32559,
@@ -2541,7 +2541,7 @@
     {
         "script_name": "handle_missing_data.py",
         "transformation_name": "Handle Missing Rows",
-        "timestamp": "2026-06-03T21:37:37.575605",
+        "timestamp": "2026-06-06T20:27:52.793080",
         "privileged_group": "age:(41.0, 51.0]|race:White|sex:Male",
         "highest_selection_rate": 0.4883955600403633,
         "row_count_before": 32559,
@@ -3063,7 +3063,7 @@
     {
         "script_name": "handle_missing_data.py",
         "transformation_name": "Remove Missing Target Variable",
-        "timestamp": "2026-06-03T21:37:37.686470",
+        "timestamp": "2026-06-06T20:27:52.911349",
         "privileged_group": "age:(41.0, 51.0]|race:White|sex:Male",
         "highest_selection_rate": 0.4883955600403633,
         "row_count_before": 32559,
@@ -3585,7 +3585,7 @@
     {
         "script_name": "outlier_remover.py",
         "transformation_name": "Num Outlier",
-        "timestamp": "2026-06-03T21:37:37.795690",
+        "timestamp": "2026-06-06T20:27:53.037175",
         "privileged_group": "age:(41.0, 50.0]|race:Asian-Pac-Islander|sex:Male",
         "highest_selection_rate": 0.5,
         "row_count_before": 32559,
@@ -4107,7 +4107,7 @@
     {
         "script_name": "outlier_remover.py",
         "transformation_name": "Categorical Outlier",
-        "timestamp": "2026-06-03T21:37:37.941006",
+        "timestamp": "2026-06-06T20:27:53.175759",
         "privileged_group": "age:(41.0, 50.0]|race:Asian-Pac-Islander|sex:Male",
         "highest_selection_rate": 0.5,
         "row_count_before": 30220,

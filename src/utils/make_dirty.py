@@ -94,7 +94,8 @@ def make_dirty():
         df.loc[np.random.choice(usa_idx, int(len(usa_idx)*0.05), replace=False), 'native-country'] = 'US'
         df.loc[np.random.choice(usa_idx, int(len(usa_idx)*0.05), replace=False), 'native-country'] = 'united-states'
     
-    
+
+
     duplicates = df.sample(n=int(n*0.05), replace=True)
     df = pd.concat([df, duplicates], ignore_index=True)
     

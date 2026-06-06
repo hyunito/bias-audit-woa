@@ -12,6 +12,5 @@ venv/
 .venv/
 
 # Data
-data/raw/
-data/cleaned/
+data/
 *.csv
