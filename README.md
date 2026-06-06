@@ -39,7 +39,7 @@ For security, database credentials are not hardcoded in the Python scripts. Ever
 Open your terminal in the project folder and install the required Python libraries. This includes `psycopg2-binary` for database connection, `python-dotenv` for reading the environment variables, and `psutil` which will be used for evaluating memory scalability.
 
 ```bash
-pip install pandas psycopg2-binary python-dotenv psutil
+pip install pandas psycopg2-binary python-dotenv psutil numpy
 ```
 
 ## Running the Pipeline
@@ -54,6 +54,19 @@ This script will:
 2. Run data through the preprocessing pipelines (e.g., removing duplicates, fixing formats, handling missing values, and outliers).
 3. Generate active metadata provenance snapshots to identify privileged demographic groups dynamically.
 4. Export the resulting logs to `data/provenance/provenance_metadata.json` AND push them securely to your PostgreSQL database.
+
+## Running the WOA Bias Auditor
+To run the Whale Optimization Algorithm (WOA) to scan your pipeline logs for bias hotspots:
+
+```bash
+python src/models/woa.py
+```
+
+This script executes the standalone WOA search agent:
+1. First, on a simulated/mock metadata log set to verify the optimization mechanics.
+2. Second, on the actual pipeline logs fetched from your local PostgreSQL database (falling back to `data/provenance_metadata.json` if the database is unreachable).
+
+The auditor will output the unprivileged demographic group that experienced the highest relative bias throughout the pipeline transformations.
 
 ## Viewing and Managing Logs
 To verify the logs were saved successfully:

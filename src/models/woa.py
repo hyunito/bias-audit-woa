@@ -1,62 +1,131 @@
 import numpy as np
 import math
 import random
-from fitness import calculate_bias_fitness
+from fitness import calculate_bias_fitness, calculate_3d_fitness, load_provenance_data
 
 class MetadataWOAAuditor:
-    def __init__(self, metadata_logs, privileged_group_key, num_whales=10, max_iter=50):
+    def __init__(self, metadata_logs=None, num_whales=10, max_iter=50):
         """
-        Initializes the WOA Auditor.
-        :param metadata_logs: A list of dictionaries representing the JSONB logs from the pipeline.
-        :param privileged_group_key: The demographic group used as the baseline for DI and SPD.
+        Initializes the WOA Auditor with a 3D search space.
+        :param metadata_logs: Optional list of dictionaries representing the JSONB logs.
+                              If None, will fetch from PostgreSQL database.
         :param num_whales: Population size of search agents.
         :param max_iter: Maximum number of search iterations.
         """
-        self.metadata_logs = metadata_logs
-        self.privileged_group = privileged_group_key
         self.num_whales = num_whales
         self.max_iter = max_iter
         
-        self.dim = 1
-        self.lb = 0
-        self.ub = len(metadata_logs) - 1
-        
+        # Load search space structure
+        if metadata_logs is not None:
+            # Parse mock logs into the fitness module structure
+            import fitness
+            fitness._scripts = []
+            fitness._transformations = {}
+            fitness._demographics = {}
+            fitness._raw_records = {}
+            
+            for log in metadata_logs:
+                script = log.get("script_name", "mock_script.py")
+                trans = log.get("transformation_name", "mock_trans")
+                
+                if script not in fitness._scripts:
+                    fitness._scripts.append(script)
+                    fitness._transformations[script] = []
+                if trans not in fitness._transformations[script]:
+                    fitness._transformations[script].append(trans)
+                
+                fitness._raw_records[(script, trans)] = log
+                demos = log.get("intersectional_demographics", {})
+                fitness._demographics[(script, trans)] = sorted(list(demos.keys()))
+                
+            self.scripts, self.transformations, self.demographics = fitness._scripts, fitness._transformations, fitness._demographics
+            fitness._logs_cache = True # Prevent reloading database when mock is used
+        else:
+            from fitness import get_space_dimensions
+            self.scripts, self.transformations, self.demographics = get_space_dimensions()
+            
+        self.dim = 3
         self.best_position = np.zeros(self.dim)
-        self.best_fitness = float('-inf') 
+        self.best_fitness = float('-inf')
 
-    def calculate_fitness(self, log_index, target_group_key):
+    def clip_position(self, pos):
         """
-        Wraps the external calculate_bias_fitness function.
+        Clips a 3D position [s, t, d] to the valid uneven bounds of the search space.
         """
-        idx = int(np.round(np.clip(log_index, self.lb, self.ub)))
-        snapshot = self.metadata_logs[idx]["intersectional_demographics"]
+        if not self.scripts:
+            return np.zeros(self.dim)
+            
+        s = int(round(np.clip(pos[0], 0, len(self.scripts) - 1)))
+        script_name = self.scripts[s]
         
-        return calculate_bias_fitness(
-            snapshot=snapshot,
-            privileged_group_key=self.privileged_group,
-            target_group_key=target_group_key
-        )
+        t_max = len(self.transformations.get(script_name, [])) - 1
+        t_max = max(0, t_max)
+        t = int(round(np.clip(pos[1], 0, t_max)))
+        
+        trans_list = self.transformations.get(script_name, [])
+        trans_name = trans_list[t] if trans_list else "None"
+        
+        d_max = len(self.demographics.get((script_name, trans_name), [])) - 1
+        d_max = max(0, d_max)
+        d = int(round(np.clip(pos[2], 0, d_max)))
+        
+        return np.array([float(s), float(t), float(d)])
 
-    def run_audit(self, target_group_key):
+    def calculate_fitness(self, pos):
         """
-        Executes the main WOA Scouting loop.
+        Calls calculate_3d_fitness using s_idx, t_idx, d_idx coordinates.
         """
+        fitness, _, _, _ = calculate_3d_fitness(pos[0], pos[1], pos[2])
+        return fitness
 
-        whales_pos = np.random.uniform(self.lb, self.ub, (self.num_whales, self.dim))
+    def run_audit(self):
+        """
+        Executes the main WOA Scouting loop over the uneven 3D search space.
+        """
+        if not self.scripts:
+            print("No search space found. Verify database or fallback JSON path.")
+            return {
+                "max_fitness_score": 0.0,
+                "script_name": "None",
+                "transformation_name": "None",
+                "demographic_group": "None"
+            }
+            
+        # Initialize whales inside valid uneven boundaries
+        whales_pos = []
+        for _ in range(self.num_whales):
+            s_val = random.randint(0, len(self.scripts) - 1)
+            script_name = self.scripts[s_val]
+            
+            t_max = len(self.transformations.get(script_name, [])) - 1
+            t_max = max(0, t_max)
+            t_val = random.randint(0, t_max)
+            trans_list = self.transformations.get(script_name, [])
+            trans_name = trans_list[t_val] if trans_list else "None"
+            
+            d_max = len(self.demographics.get((script_name, trans_name), [])) - 1
+            d_max = max(0, d_max)
+            d_val = random.randint(0, d_max)
+            
+            whales_pos.append([float(s_val), float(t_val), float(d_val)])
+            
+        whales_pos = np.array(whales_pos)
+        
+        self.best_fitness = float('-inf')
+        self.best_position = whales_pos[0].copy()
         
         for t in range(self.max_iter):
             # Evaluate fitness for all whales
             for i in range(self.num_whales):
+                whales_pos[i] = self.clip_position(whales_pos[i])
+                fitness = self.calculate_fitness(whales_pos[i])
                 
-                whales_pos[i] = np.clip(whales_pos[i], self.lb, self.ub)
-                
-                fitness = self.calculate_fitness(whales_pos[i][0], target_group_key)
-                
+                # We want to maximize the bias fitness score (higher score = more biased stage/demographic)
                 if fitness > self.best_fitness:
                     self.best_fitness = fitness
                     self.best_position = whales_pos[i].copy()
             
-            a = 2.0 - (t * (2.0 / self.max_iter))
+            a = 2.0 - (t * (2.0 / self.max_iter)) # Linearly decreases from 2 to 0
             
             for i in range(self.num_whales):
                 r1 = random.random()
@@ -70,54 +139,44 @@ class MetadataWOAAuditor:
                 
                 if p < 0.5:
                     if abs(A) < 1:
-                    
+                        # Encircling prey
                         D = abs(C * self.best_position - whales_pos[i])
-                        whales_pos[i] = self.best_position - A * D
+                        new_pos = self.best_position - A * D
                     else:
-                    
-                        random_whale_idx = math.floor(self.num_whales * random.random())
+                        # Search for prey (random search agent selection)
+                        random_whale_idx = random.randint(0, self.num_whales - 1)
                         random_whale = whales_pos[random_whale_idx]
                         D = abs(C * random_whale - whales_pos[i])
-                        whales_pos[i] = random_whale - A * D
+                        new_pos = random_whale - A * D
                 else:
-              
+                    # Spiral bubble-net attack
                     D_prime = abs(self.best_position - whales_pos[i])
                     b = 1 
-                    whales_pos[i] = D_prime * math.exp(b * l) * math.cos(2 * math.pi * l) + self.best_position
+                    new_pos = D_prime * math.exp(b * l) * math.cos(2 * math.pi * l) + self.best_position
+                
+                whales_pos[i] = self.clip_position(new_pos)
 
-        best_log_index = int(np.round(self.best_position[0]))
+        # Get final names and values from the best position found
+        best_fitness, best_script, best_trans, best_demo = calculate_3d_fitness(
+            self.best_position[0], self.best_position[1], self.best_position[2]
+        )
+        
         return {
-            "highest_bias_stage_index": best_log_index,
-            "max_fitness_score": self.best_fitness,
-            "transformation_name": self.metadata_logs[best_log_index]["transformation_name"]
+            "max_fitness_score": best_fitness,
+            "script_name": best_script,
+            "transformation_name": best_trans,
+            "demographic_group": best_demo
         }
-
-
-mock_jsonb_logs = [
-    {
-        "transformation_name": "RAW_DATA",
-        "intersectional_demographics": {
-            "race:White|sex:Male|age:40-60": {"total_count": 1000, "total_approve": 500},
-            "race:Black|sex:Female|age:20-40": {"total_count": 300, "total_approve": 120}
-        }
-    },
-    {
-        "transformation_name": "CLEAN_NULLS_AGE",
-        "intersectional_demographics": {
-            "race:White|sex:Male|age:40-60": {"total_count": 1000, "total_approve": 500},
-            "race:Black|sex:Female|age:20-40": {"total_count": 300, "total_approve": 40} # Bias introduced here!
-        }
-    }
-]
-
-# Initialize Auditor
-auditor = MetadataWOAAuditor(
-    metadata_logs=mock_jsonb_logs,
-    privileged_group_key="race:White|sex:Male|age:40-60",
-    num_whales=5,
-    max_iter=20
-)
-
-# Run the hunt
-result = auditor.run_audit(target_group_key="race:Black|sex:Female|age:20-40")
-print(f"Audit Complete! Bias Hotspot Found:\n{result}")
+if __name__ == "__main__":
+    # 1. Run with real logs (DB or fallback JSON)
+    print("=== Running Standalone WOA on Real Logs (DB/JSON) ===")
+    import fitness
+    fitness._logs_cache = None # Force cache reset to load real data
+    
+    auditor_real = MetadataWOAAuditor(
+        metadata_logs=None,
+        num_whales=10,
+        max_iter=30
+    )
+    result_real = auditor_real.run_audit()
+    print(f"Audit Complete! Standalone WOA Bias Hotspot Found:\n{result_real}")
