@@ -1,11 +1,23 @@
 import json
 import os
+import time
+import psutil
+import re
+
+def get_peak_memory():
+    """
+    Returns the peak working set memory usage of the process on Windows in bytes.
+    """
+    process = psutil.Process(os.getpid())
+    mem_info = process.memory_info()
+    if hasattr(mem_info, 'peak_wset'):
+        return mem_info.peak_wset
+    return mem_info.rss
 
 def find_ground_truth_max_fitness():
-    log_dir = os.path.join(os.path.dirname(__file__), "..", "..", "data")
-    os.makedirs(log_dir, exist_ok=True)
-    log_path = os.path.join(log_dir, "ground_truth.txt")  
-    file_path = os.path.join(os.path.dirname(__file__), "..", "..", "data", "provenance_metadata.json")
+    file_path = "data/provenance_metadata.json"
+    log_path = "data/ground_truth.txt"
+    
     if not os.path.exists(file_path):
         print(f"Error: {file_path} not found.")
         return
@@ -13,9 +25,13 @@ def find_ground_truth_max_fitness():
     with open(file_path, "r", encoding="utf-8") as f:
         stages = json.load(f)
         
-    print(f"=== Ground Truth Bias Hotspots (Linear Search) ===\n")
+    results = []
     
-    for i, stage in enumerate(stages):
+    # Overwrite the ground_truth.txt file with a clean header
+    with open(log_path, "w", encoding="utf-8") as f:
+        f.write("=== Ground Truth Bias Hotspots (Linear Search) ===\n\n")
+    
+    for stage in stages:
         script_name = stage.get("script_name", "Unknown")
         trans_name = stage.get("transformation_name", "Unknown")
         demos = stage.get("intersectional_demographics", {})
@@ -61,7 +77,7 @@ def find_ground_truth_max_fitness():
             if fitness_score > max_score:
                 max_score = fitness_score
                 best_demo = demo_key
-              
+                
         if max_score != float("-inf"):
             result = {
                 "max_fitness_score": max_score,
@@ -69,14 +85,68 @@ def find_ground_truth_max_fitness():
                 "transformation_name": trans_name,
                 "demographic_group": best_demo
             }
+            results.append(result)
             with open(log_path, "a", encoding="utf-8") as f:
                 f.write(f"{result}\n")
         else:
-            entry =f"{{'max_fitness_score': 0.0, 'script_name': '{script_name}', 'transformation_name': '{trans_name}', 'demographic_group': 'No groups >= 30 samples'}}"
-            
+            entry = {
+                "max_fitness_score": 0.0,
+                "script_name": script_name,
+                "transformation_name": trans_name,
+                "demographic_group": "No groups >= 30 samples"
+            }
+            results.append(entry)
             with open(log_path, "a", encoding="utf-8") as f:
-                f.write(entry)
+                f.write(f"{entry}\n")
+                
+    return results
+
+def log_performance(results, latency, peak_memory):
+    log_path = "data/linear_search_performance_logs.txt"
+    
+    # Determine the next run number by scanning the log file
+    run_num = 1
+    if os.path.exists(log_path):
+        try:
+            with open(log_path, "r", encoding="utf-8") as f:
+                content = f.read()
+                runs = re.findall(r"Run (\d+) Status:", content)
+                if runs:
+                    run_num = max(int(r) for r in runs) + 1
+        except Exception:
+            pass
             
+    peak_mem_mb = peak_memory / (1024 * 1024)
+    
+    log_entry = (
+        f"Run {run_num} Status:\n"
+        f"Algorithms Latency: {latency:.6f} seconds\n"
+        f"Peak Memory Usage: {peak_mem_mb:.2f} MB\n"
+        f"Bias:\n"
+    )
+    for res in results:
+        log_entry += f"  {res}\n"
+    log_entry += "\n"
+    
+    with open(log_path, "a", encoding="utf-8") as f:
+        f.write(log_entry)
+        
+    print(f"Metrics successfully logged to: {os.path.abspath(log_path)}")
 
 if __name__ == "__main__":
-    find_ground_truth_max_fitness()
+    print("=== Running Standalone Linear Search on Fallback JSON ===")
+    
+    t_start = time.perf_counter()
+    
+    results = find_ground_truth_max_fitness()
+    
+    t_end = time.perf_counter()
+    latency = t_end - t_start
+    peak_mem = get_peak_memory()
+    
+    print(f"\nLinear Search Complete! Found {len(results)} hotspots.")
+    print(f"Algorithms Latency: {latency:.6f} seconds")
+    print(f"Peak Memory Usage: {peak_mem / (1024 * 1024):.2f} MB")
+    
+    # Log run output to performance logs
+    log_performance(results, latency, peak_mem)

@@ -11,7 +11,7 @@ from src.utils.benchmark import get_peak_memory, log_audit_run
 
 
 class MetadataWOAAuditor:
-    def __init__(self, metadata_logs=None, num_whales=10, max_iter=200):
+    def __init__(self, metadata_logs=None, num_whales=15, max_iter=100):
         """
         Initializes the WOA Auditor with a 3D search space.
         :param metadata_logs: Optional list of dictionaries representing the JSONB logs.
@@ -174,10 +174,7 @@ class MetadataWOAAuditor:
         }
 
 if __name__ == "__main__":
-    print("=== Running Standalone WOA on Real Logs (DB/JSON) ===")
-    fitness._logs_cache = None # Force cache reset to load real data
-    
-    # Start latency and memory tracking
+    fitness._logs_cache = None 
     t_start = time.perf_counter()
     
     auditor_real = MetadataWOAAuditor(
@@ -188,10 +185,6 @@ if __name__ == "__main__":
     t_end = time.perf_counter()
     latency = t_end - t_start
     peak_mem = get_peak_memory()
-    
-    print(f"Audit Complete! Standalone WOA Bias Hotspot Found:\n{result_real}")
-    print(f"Algorithms Latency: {latency:.6f} seconds")
-    print(f"Peak Memory Usage: {peak_mem / (1024 * 1024):.2f} MB")
     
     # Log run output to performance logs using the external function
     log_audit_run(result_real, latency, peak_mem)
