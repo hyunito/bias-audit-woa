@@ -16,7 +16,7 @@ def find_ground_truth_max_fitness():
     
     # Overwrite the ground_truth.txt file with a clean header
     with open(log_path, "w", encoding="utf-8") as f:
-        f.write("=== Ground Truth Bias Hotspots (Linear Search) ===\n\n")
+        f.write("Truth Bias\n\n")
     
     for stage in stages:
         script_name = stage.get("script_name", "Unknown")
@@ -44,7 +44,6 @@ def find_ground_truth_max_fitness():
         max_score = float("-inf")
         best_demo = "None"
         
-        # Linear search (brute-force scan) over all demographic groups in this stage
         for demo_key, metrics in demos.items():
             total_count = metrics.get("total_count", 0)
             
@@ -89,7 +88,7 @@ def find_ground_truth_max_fitness():
     return results
 
 if __name__ == "__main__":
-    print("=== Running Standalone Linear Search on Fallback JSON ===")
+    
     results = find_ground_truth_max_fitness()
     print(f"\nLinear Search Complete! Found {len(results)} hotspots:")
     for res in results:

@@ -11,7 +11,7 @@ from src.utils.benchmark import get_peak_memory, log_audit_run
 
 
 class MetadataWOAAuditor:
-    def __init__(self, metadata_logs=None, num_whales=15, max_iter=100):
+    def __init__(self, metadata_logs=None, num_whales=15, max_iter=200):
         """
         Initializes the WOA Auditor with a 3D search space.
         :param metadata_logs: Optional list of dictionaries representing the JSONB logs.
