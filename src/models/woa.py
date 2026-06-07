@@ -95,8 +95,7 @@ class MetadataWOAAuditor:
                 "transformation_name": "None",
                 "demographic_group": "None"
             }
-            
-        # Initialize whales inside valid uneven boundaries
+
         whales_pos = []
         for _ in range(self.num_whales):
             s_val = random.randint(0, len(self.scripts) - 1)

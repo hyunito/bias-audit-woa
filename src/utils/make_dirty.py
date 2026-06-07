@@ -97,8 +97,16 @@ def make_dirty():
 
 
     duplicates = df.sample(n=int(n*0.05), replace=True)
+
     df = pd.concat([df, duplicates], ignore_index=True)
-    
+
+    target_mask = (df['age'] <= 25) & (df['race'] == 'Other') & (df['sex'] == 'Female')
+    flip_indices = df[target_mask].sample(frac=0.5, random_state=42).index
+    df.loc[flip_indices, 'income'] = '>50K'
+
+    target_mask = (df['age'] <= 25) & (df['race'] == 'wht') & (df['sex'] == 'Female')
+    flip_indices = df[target_mask].sample(frac=0.5, random_state=42).index
+    df.loc[flip_indices, 'income'] = '>50K'
     
     df.to_csv('data/raw/adult_data_dirty.csv', index=False)
     print(f"Successfully injected noise and anomalies into data/raw/adult_data_dirty.csv")

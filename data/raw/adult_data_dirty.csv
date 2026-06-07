@@ -49,7 +49,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 44.0,Private,128354,Masters,14.0,Divorced,Exec-managerial,Unmarried,White,Female,0,0,40.0,United-States,<=50K
 41.0,State-gov,101603,assoc-voc,11.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,united-states,<=50K
 29.0,Private,271466,Assoc-voc,11.0,Never-married,Prof-specialty,Not-in-family,White,Male,0,0,43.0,United-States,<=50K
-25.0,Private,32275,Some-college,10.0,Married-civ-spouse,Exec-managerial,Wife,Other,Female,0,0,40.0,United-States,<=50K
+25.0,Private,32275,Some-college,10.0,Married-civ-spouse,Exec-managerial,Wife,Other,Female,0,0,40.0,United-States,>50K
 18.0,Private,226956,HS-GRAD,9.0,Never-married,Other-service,Own-child,White,Female,0,0,30.0,?,<=50K
 47.0,Private,51835,Prof-school,15.0,Married-civ-spouse,Prof-specialty,Wife,White,Female,0,1902,60.0,Honduras,>50K
 50.0,Federal-gov,251585,Bachelors,13.0,Divorced,Exec-managerial,Not-in-family,White,Male,0,0,55.0,United-States,>50K
@@ -864,7 +864,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 48.0,Private,285335,11th,,MARRIED-CIV-SPOUSE,Exec-managerial,husband,White,Male,0,0,,US,<=50K
 28.0,,142712,Some-college,10.0,Married-civ-spouse,Exec-managerial,husband,White,Male,0,0,70.0,United-States,<=50K
 33.0,Private,80945,HS-grad,9.0,Married-civ-spouse,Machine-op-inspct,Husband,White,Male,0,0,40.0,United-States,<=50K
-24.0,Private,309055,Some-college,10.0,never-married,Sales,Not-in-family,wht,Female,0,0,15.0,US,<=50K
+24.0,Private,309055,Some-college,10.0,never-married,Sales,Not-in-family,wht,Female,0,0,15.0,US,>50K
 21.0,Private,62339,10th,6.0,Never-married,Handlers-cleaners,Not-in-family,White,m,0,0,40.0,United-States,<=50K
 17.0,Private,368700,11th,7.0,Never-married,Sales,Own-child,White,Male,0,0,28.0,US,<=50K
 39.0,Private,176186,Some-college,10.0,married-civ-spouse,Farming-fishing,Husband,White,Male,0,0,50.0,United-States,>50K
@@ -2655,7 +2655,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 19.0,Private,115248,Some-college,10.0,Never-married,Adm-clerical,Not-in-family,Asian-Pac-Islander,Male,0,0,40.0,Vietnam,<=50K
 37.0,Private,185061,Some-college,10.0,Married-civ-spouse,Exec-managerial,husband,Asian-Pac-Islander,M,0,0,55.0,United-States,<=50K
 27.0,Private,147638,Bachelors,13.0,Never-married,Adm-clerical,Other-relative,Asian-Pac-Islander,fem,0,0,40.0,Hong,<=50K
-18.0,Private,280298,HS-grad,9.0,Never-married,Sales,Own-child,wht,Female,0,0,24.0,United-States,<=50K
+18.0,Private,280298,HS-grad,9.0,Never-married,Sales,Own-child,wht,Female,0,0,24.0,United-States,>50K
 31.0,Private,163516,Some-college,10.0,Widowed,Adm-clerical,Unmarried,White,fem,0,0,40.0,United-States,<=50K
 49.0,Private,277434,HS-grad,9.0,Married-civ-spouse,Transport-moving,Husband,White,Male,0,0,50.0,United-States,<=50K
 26.0,,206983,PROF-SCHOOL,15.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,60.0,Columbia,<=50K
@@ -2703,7 +2703,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 34.0,Private,92682,HS-grad,9.0,Never-married,Adm-clerical,Not-in-family,White,Female,4865,0,40.0,United-States,<=50K
 56.0,Federal-gov,101338,Bachelors,13.0,Married-civ-spouse,Sales,husband,White,Male,0,0,40.0,United-States,<=50K
 18.0,Private,132652,11th,,Never-married,Other-service,Own-child,White,Male,0,0,20.0,United-States,<=50K
-21.0,Private,34616,Some-college,10.0,Never-married,Other-service,Own-child,wht,Female,0,0,25.0,united-states,<=50K
+21.0,Private,34616,Some-college,10.0,Never-married,Other-service,Own-child,wht,Female,0,0,25.0,united-states,>50K
 40.0,privat,218903,hs-grad,9.0,Divorced,Tech-support,Unmarried,White,F,0,-100,40.0,US,<=50K
 27.0,Local-gov,204098,HS-grad,9.0,Married-civ-spouse,Handlers-cleaners,Other-relative,White,Male,0,0,50.0,United-States,<=50K
 52.0,Self-emp-not-inc,64045,Prof-school,15.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,99999,0,45.0,United-States,>50K
@@ -3098,7 +3098,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 22.0,?,175586,HS-grad,,Never-married,?,Unmarried,Black,Female,0,0,35.0,United-States,<=50K
 24.0,Local-gov,322658,Bachelors,13.0,Never-married,Prof-specialty,Not-in-family,White,Female,0,0,40.0,United-States,<=50K
 45.0,State-gov,263982,SOME-COLLEGE,10.0,Divorced,Prof-specialty,Unmarried,wht,Female,0,0,40.0,United-States,<=50K
-18.0,,266287,12th,8.0,Never-married,Sales,Own-child,wht,Female,0,0,35.0,United-States,<=50K
+18.0,,266287,12th,8.0,Never-married,Sales,Own-child,wht,Female,0,0,35.0,United-States,>50K
 39.0,Private,278187,HS-grad,9.0,Married-civ-spouse,Machine-op-inspct,Husband,White,Male,0,0,40.0,United-States,<=50K
 65.0,,81413,HS-grad,9.0,Married-civ-spouse,Farming-fishing,husband,White,Male,0,2352,65.0,united-states,<=50K
 22.0,Private,221745,some-college,10.0,Divorced,Machine-op-inspct,Own-child,White,Female,0,0,40.0,United-States,<=50K
@@ -4415,7 +4415,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 -5.0,?,193416,Some-college,10.0,Never-married,?,Own-child,White,Female,0,0,40.0,United-States,<=50K
 51.0,Private,194908,HS-grad,9.0,Never-married,Adm-clerical,Not-in-family,White,Female,0,0,40.0,United-States,<=50K
 38.0,Self-emp-not-inc,357962,9th,5.0,Divorced,,Not-in-family,White,m,0,0,40.0,United-States,<=50K
-21.0,Private,214716,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,10.0,United-States,<=50K
+21.0,Private,214716,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,10.0,United-States,>50K
 40.0,Self-emp-inc,207578,HS-GRAD,9.0,Married-civ-spouse,Adm-clerical,Husband,White,Male,0,0,50.0,United-States,>50K
 54.0,Private,146409,Some-college,10.0,Widowed,Exec-managerial,unmarried,White,Female,0,0,40.0,United-States,<=50K
 35.0,Private,341643,Bachelors,13.0,Never-married,Other-service,other-relative,White,Male,0,0,50.0,United-States,<=50K
@@ -4891,7 +4891,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 28.0,Private,196564,HS-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,45.0,United-States,<=50K
 ,Self-emp-not-inc,149220,Some-college,10.0,MARRIED-CIV-SPOUSE,Farming-fishing,Husband,White,Male,0,0,75.0,United-States,<=50K
 21.0,Private,169699,Some-college,10.0,Never-married,Other-service,Not-in-family,White,Female,0,0,35.0,United-States,<=50K
-23.0,Private,218215,Assoc-acdm,12.0,Never-married,Other-service,Own-child,wht,Female,9999999,0,35.0,United-States,<=50K
+23.0,Private,218215,Assoc-acdm,12.0,Never-married,Other-service,Own-child,wht,Female,9999999,0,35.0,United-States,>50K
 30.0,Private,156718,HS-grad,9.0,Never-married,Tech-support,Not-in-family,White,Female,0,0,40.0,USA,<=50K
 46.0,privat,55720,Masters,14.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,0,0,45.0,United-States,>50K
 38.0,Self-emp-inc,257250,HS-grad,9.0,Never-married,Farming-fishing,Not-in-family,White,Male,0,0,50.0,United-States,<=50K
@@ -6495,7 +6495,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 50.0,Self-emp-not-inc,324506,HS-grad,9.0,Widowed,Exec-managerial,unmarried,Asian-Pac-Islander,Female,0,0,48.0,South,<=50K
 36.0,Private,162256,hs-grad,9.0,Divorced,Exec-managerial,Unmarried,wht,Female,0,0,40.0,United-States,<=50K
 31.0,Local-gov,356689,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,40.0,United-States,<=50K
-20.0,Private,260199,HS-grad,9.0,Never-married,,Own-child,wht,Female,0,0,10.0,United-States,<=50K
+20.0,Private,260199,HS-grad,9.0,Never-married,,Own-child,wht,Female,0,0,10.0,United-States,>50K
 36.0,Private,103605,HS-grad,9.0,Married-civ-spouse,Handlers-cleaners,Husband,White,Male,0,0,40.0,United-States,<=50K
 38.0,Private,316211,HS-grad,9.0,Divorced,Craft-repair,own-child,White,Male,0,0,40.0,United-States,<=50K
 37.0,Private,308691,Bachelors,13.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,45.0,United-States,>50K
@@ -6859,7 +6859,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 45.0,Private,117310,Bachelors,13.0,Divorced,Sales,Not-in-family,White,Female,0,0,,United-States,<=50K
 41.0,Self-emp-inc,82049,HS-grad,9.0,married-civ-spouse,Craft-repair,husband,White,Male,0,0,40.0,United-States,<=50K
 41.0,Self-emp-not-inc,126094,HS-grad,9.0,Married-civ-spouse,Exec-managerial,Husband,wht,Male,0,0,38.0,United-States,<=50K
-18.0,?,202516,HS-grad,9.0,Never-married,?,Own-child,wht,Female,0,0,35.0,United-States,<=50K
+18.0,?,202516,HS-grad,9.0,Never-married,?,Own-child,wht,Female,0,0,35.0,United-States,>50K
 48.0,Local-gov,246392,Assoc-acdm,12.0,Separated,Adm-clerical,Not-in-family,Black,Female,0,0,40.0,United-States,<=50K
 51.0,?,69328,Assoc-voc,11.0,MARRIED-CIV-SPOUSE,,Husband,White,Male,0,0,50.0,United-States,>50K
 ,Private,292803,Some-college,10.0,Never-married,Other-service,Own-child,White,Female,0,0,24.0,United-States,<=50K
@@ -7079,7 +7079,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 24.0,Private,222993,HS-GRAD,9.0,Never-married,Machine-op-inspct,Own-child,White,M,0,0,40.0,united-states,<=50K
 42.0,Federal-gov,25240,ASSOC-VOC,11.0,Divorced,Prof-specialty,Unmarried,Amer-Indian-Eskimo,fem,-5000,0,,United-States,<=50K
 31.0,Self-emp-not-inc,204052,HS-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,United-States,>50K
-18.0,,74054,11th,7.0,Never-married,Sales,own-child,Other,Female,0,0,20.0,?,<=50K
+18.0,,74054,11th,7.0,Never-married,Sales,own-child,Other,Female,0,0,20.0,?,>50K
 46.0,Private,169042,10th,6.0,Never-married,Other-service,Not-in-family,White,Female,0,0,25.0,Ecuador,<=50K
 31.0,privat,104509,Bachelors,13.0,Never-married,Sales,Not-in-family,White,Female,0,0,65.0,United-States,>50K
 38.0,Local-gov,185394,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Wife,White,Female,7688,0,40.0,US,>50K
@@ -7880,7 +7880,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 37.0,Local-gov,51158,some-college,10.0,Married-civ-spouse,Tech-support,Wife,White,Female,7298,0,36.0,United-States,>50K
 51.0,Private,186303,Bachelors,13.0,Married-civ-spouse,Sales,Husband,White,Male,0,0,40.0,United-States,>50K
 52.0,Private,127749,HS-grad,9.0,Married-civ-spouse,Transport-moving,Husband,White,Male,0,0,50.0,United-States,<=50K
-22.0,Private,291386,Some-college,10.0,Never-married,Adm-clerical,Not-in-family,wht,Female,0,0,40.0,United-States,<=50K
+22.0,Private,291386,Some-college,10.0,Never-married,Adm-clerical,Not-in-family,wht,Female,0,0,40.0,United-States,>50K
 28.0,Private,138054,Assoc-acdm,12.0,Never-married,Other-service,Not-in-family,Other,Male,0,0,40.0,United-States,<=50K
 47.0,Self-emp-not-inc,174533,Some-college,10.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,200.0,United-States,<=50K
 43.0,Private,200835,HS-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,USA,<=50K
@@ -7968,7 +7968,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 46.0,Private,459189,Some-college,10.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,1902,50.0,United-States,>50K
 28.0,Self-emp-not-inc,214689,11th,7.0,Never-married,Craft-repair,Not-in-family,White,Male,0,0,40.0,US,<=50K
 58.0,Private,289364,SOME-COLLEGE,10.0,Married-civ-spouse,Exec-managerial,husband,White,Male,7688,0,45.0,United-States,>50K
-21.0,Private,174907,HS-grad,,Never-married,Adm-clerical,Own-child,wht,Female,9999999,0,40.0,united-states,<=50K
+21.0,Private,174907,HS-grad,,Never-married,Adm-clerical,Own-child,wht,Female,9999999,0,40.0,united-states,>50K
 50.0,Self-emp-not-inc,348099,10th,6.0,Divorced,Sales,Not-in-family,White,Female,0,0,50.0,United-States,<=50K
 30.0,?,104965,9th,5.0,Never-married,Unknown,Not-in-family,White,Female,0,0,30.0,United-States,<=50K
 31.0,Private,31600,bachelors,13.0,Never-married,Prof-specialty,Not-in-family,White,Female,0,-100,40.0,United-States,<=50K
@@ -8015,7 +8015,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 45.0,Private,205424,SOME-COLLEGE,10.0,Married-civ-spouse,Sales,Husband,White,Male,0,0,65.0,United-States,>50K
 40.0,Private,173858,7th-8th,4.0,Married-civ-spouse,Other-service,husband,Asian-Pac-Islander,Male,0,0,,Cambodia,<=50K
 34.0,Private,202450,HS-grad,9.0,Married-civ-spouse,,Husband,White,Male,0,0,55.0,US,>50K
-20.0,,154779,some-college,10.0,Never-married,Sales,Other-relative,Other,Female,0,0,40.0,United-States,<=50K
+20.0,,154779,some-college,10.0,Never-married,Sales,Other-relative,Other,Female,0,0,40.0,United-States,>50K
 33.0,Private,180551,Some-college,10.0,Separated,Adm-clerical,Unmarried,White,Female,0,0,40.0,United-States,<=50K
 30.0,Private,177522,HS-grad,9.0,Married-civ-spouse,Adm-clerical,Own-child,White,Female,0,0,20.0,united-states,<=50K
 23.0,Private,277328,Some-college,10.0,Never-married,Handlers-cleaners,Own-child,White,Male,0,0,32.0,Cuba,<=50K
@@ -8220,7 +8220,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 65.0,Private,149811,HS-grad,9.0,Divorced,Adm-clerical,unmarried,White,Female,0,2206,59.0,Canada,<=50K
 39.0,Private,444219,HS-grad,9.0,Married-civ-spouse,Craft-repair,Wife,blk,Female,0,0,45.0,United-States,<=50K
 48.0,Private,125120,Some-college,10.0,Married-civ-spouse,Adm-clerical,Wife,White,Female,0,0,37.0,United-States,<=50K
-20.0,Private,190429,Some-college,10.0,Never-married,Other-service,Not-in-family,wht,Female,0,0,40.0,United-States,<=50K
+20.0,Private,190429,Some-college,10.0,Never-married,Other-service,Not-in-family,wht,Female,0,0,40.0,United-States,>50K
 28.0,?,190303,Assoc-acdm,12.0,never-married,?,Other-relative,White,Male,0,0,40.0,United-States,<=50K
 48.0,Private,248164,Bachelors,13.0,Married-civ-spouse,Sales,Husband,White,Male,4386,0,50.0,United-States,>50K
 29.0,Federal-gov,208534,Prof-school,15.0,Married-civ-spouse,Prof-specialty,husband,White,m,0,0,80.0,United-States,<=50K
@@ -8706,7 +8706,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 70.0,Private,102610,Some-college,10.0,Divorced,Other-service,Not-in-family,White,Male,0,0,80.0,United-States,<=50K
 32.0,Local-gov,296466,masters,14.0,Never-married,Prof-specialty,Not-in-family,White,M,0,0,60.0,United-States,<=50K
 33.0,Private,323069,Assoc-voc,11.0,Divorced,Other-service,Unmarried,White,Female,0,0,40.0,United-States,<=50K
-24.0,Private,184756,Bachelors,13.0,Never-married,Exec-managerial,Not-in-family,wht,Female,0,0,40.0,United-States,<=50K
+24.0,Private,184756,Bachelors,13.0,Never-married,Exec-managerial,Not-in-family,wht,Female,0,0,40.0,United-States,>50K
 30.0,Local-gov,233993,Bachelors,13.0,Never-married,,Own-child,White,Female,0,0,15.0,United-States,<=50K
 22.0,Private,130724,Some-college,10.0,Never-married,Sales,Own-child,Black,m,0,0,25.0,United-States,<=50K
 52.0,Self-emp-inc,181855,Prof-school,15.0,Married-civ-spouse,Prof-specialty,Husband,Other,Male,99999,0,65.0,United-States,>50K
@@ -9327,7 +9327,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 46.0,Self-emp-not-inc,320421,BACHELORS,13.0,Married-spouse-absent,Prof-specialty,Not-in-family,wht,Male,0,0,25.0,United-States,<=50K
 31.0,Local-gov,295589,Some-college,10.0,Never-married,,Own-child,Black,Male,0,0,40.0,united-states,<=50K
 22.0,Private,370548,ASSOC-VOC,11.0,Never-married,Craft-repair,Not-in-family,White,Male,0,0,30.0,United-States,<=50K
-20.0,Private,120572,Some-college,10.0,Never-married,Other-service,Not-in-family,wht,Female,0,0,12.0,United-States,<=50K
+20.0,Private,120572,Some-college,10.0,Never-married,Other-service,Not-in-family,wht,Female,0,0,12.0,United-States,>50K
 52.0,Private,110977,Doctorate,16.0,Never-married,Exec-managerial,Not-in-family,White,Male,-5000,0,40.0,United-States,>50K
 26.0,Private,55860,Some-college,,Never-married,Adm-clerical,Not-in-family,Black,Female,0,0,40.0,United-States,<=50K
 34.0,Private,158800,Bachelors,13.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,0,0,50.0,US,>50K
@@ -10036,7 +10036,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 49.0,Private,59380,Some-college,10.0,Married-spouse-absent,Adm-clerical,Not-in-family,White,Female,0,0,40.0,United-States,<=50K
 61.0,?,135285,HS-grad,9.0,Married-civ-spouse,Unknown,Husband,wht,Male,0,2603,32.0,United-States,<=50K
 39.0,,126675,Some-college,10.0,married-civ-spouse,Prof-specialty,Husband,White,M,0,0,25.0,USA,<=50K
-22.0,Private,217363,HS-grad,9.0,Separated,Adm-clerical,Unmarried,wht,Female,0,0,,United-States,<=50K
+22.0,Private,217363,HS-grad,9.0,Separated,Adm-clerical,Unmarried,wht,Female,0,0,,United-States,>50K
 42.0,Private,91836,10th,6.0,Married-civ-spouse,Craft-repair,husband,White,male,0,0,40.0,USA,<=50K
 22.0,,184813,Some-college,10.0,Never-married,Adm-clerical,Own-child,White,Male,0,0,40.0,United-States,<=50K
 18.0,Private,178142,HS-grad,9.0,Never-married,Craft-repair,own-child,White,Male,0,0,40.0,United-States,<=50K
@@ -10071,7 +10071,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 45.0,Private,210875,HS-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,United-States,<=50K
 28.0,Private,137898,HS-grad,9.0,Married-civ-spouse,Machine-op-inspct,Wife,White,Female,0,0,40.0,US,<=50K
 28.0,Local-gov,216965,some-college,,Married-civ-spouse,Protective-serv,Husband,White,Male,0,0,40.0,United-States,<=50K
--5.0,Private,201554,Some-college,10.0,never-married,Machine-op-inspct,Not-in-family,wht,Female,0,0,15.0,United-States,<=50K
+-5.0,Private,201554,Some-college,10.0,never-married,Machine-op-inspct,Not-in-family,wht,Female,0,0,15.0,United-States,>50K
 62.0,Private,57970,7th-8th,4.0,Divorced,Handlers-cleaners,not-in-family,White,Male,0,0,40.0,United-States,<=50K
 35.0,Private,208378,12th,8.0,Separated,Machine-op-inspct,Unmarried,White,Female,0,0,40.0,United-States,<=50K
 39.0,privat,61343,10th,6.0,Married-civ-spouse,Machine-op-inspct,Husband,White,Male,0,0,,United-States,<=50K
@@ -10238,7 +10238,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 33.0,State-gov,167474,10th,6.0,married-civ-spouse,Handlers-cleaners,Husband,White,Male,0,0,40.0,United-States,<=50K
 37.0,Private,110713,HS-grad,9.0,Married-civ-spouse,Sales,husband,wht,Male,0,0,50.0,United-States,>50K
 20.0,Private,201204,HS-grad,9.0,Never-married,Handlers-cleaners,Own-child,White,Male,0,0,40.0,United-States,<=50K
-24.0,Private,197666,Bachelors,13.0,Never-married,Exec-managerial,Not-in-family,wht,Female,0,0,200.0,United-States,<=50K
+24.0,Private,197666,Bachelors,13.0,Never-married,Exec-managerial,Not-in-family,wht,Female,0,0,200.0,United-States,>50K
 29.0,,162002,HS-grad,9.0,Never-married,Other-service,Own-child,White,Female,0,0,35.0,United-States,<=50K
 999.0,Private,263561,Bachelors,13.0,Married-civ-spouse,Exec-managerial,husband,White,Male,0,-100,45.0,USA,>50K
 41.0,Private,224799,SOME-COLLEGE,10.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,United-States,<=50K
@@ -10524,7 +10524,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 56.0,Self-emp-not-inc,196307,Bachelors,13.0,Never-married,Prof-specialty,Not-in-family,White,Male,0,0,20.0,United-States,<=50K
 37.0,Private,177181,HS-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,United-States,<=50K
 26.0,Private,324854,Bachelors,13.0,Never-married,Prof-specialty,Not-in-family,White,Female,0,0,40.0,United-States,>50K
-23.0,Private,188505,BACHELORS,13.0,Never-married,Other-service,Own-child,wht,Female,0,0,25.0,United-States,<=50K
+23.0,Private,188505,BACHELORS,13.0,Never-married,Other-service,Own-child,wht,Female,0,0,25.0,United-States,>50K
 23.0,State-gov,502316,bachelors,13.0,Never-married,Prof-specialty,Not-in-family,White,fem,0,0,40.0,United-States,<=50K
 41.0,State-gov,26892,Bachelors,13.0,Never-married,Adm-clerical,Not-in-family,White,m,0,0,-10.0,United-States,<=50K
 55.0,Private,102058,Bachelors,13.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,0,0,50.0,United-States,>50K
@@ -11604,7 +11604,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 36.0,Private,288103,11th,,Separated,Machine-op-inspct,Not-in-family,Black,Male,0,0,40.0,United-States,<=50K
 35.0,Private,108907,HS-grad,9.0,Separated,Machine-op-inspct,Unmarried,wht,Male,0,0,40.0,United-States,<=50K
 46.0,Private,358533,Some-college,10.0,Married-civ-spouse,Protective-serv,Husband,Black,Male,0,0,40.0,United-States,>50K
-24.0,Private,126613,Bachelors,13.0,Never-married,,Own-child,wht,Female,0,0,8.0,United-States,<=50K
+24.0,Private,126613,Bachelors,13.0,Never-married,,Own-child,wht,Female,0,0,8.0,United-States,>50K
 30.0,privat,164190,assoc-voc,11.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,5178,0,52.0,United-States,>50K
 ,Private,199816,HS-grad,9.0,Divorced,Machine-op-inspct,own-child,White,Male,0,0,40.0,US,<=50K
 50.0,Private,98228,hs-grad,9.0,Divorced,Sales,Unmarried,White,Female,0,0,45.0,United-States,<=50K
@@ -12159,7 +12159,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 33.0,Private,106670,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Wife,White,Female,0,0,200.0,United-States,>50K
 41.0,,123403,HS-grad,9.0,Married-civ-spouse,Adm-clerical,Husband,White,Male,0,0,40.0,United-States,<=50K
 61.0,Self-emp-inc,119986,Bachelors,13.0,Married-civ-spouse,Sales,Husband,White,male,0,0,50.0,United-States,<=50K
-25.0,Private,66622,Some-college,10.0,Never-married,Other-service,Own-child,wht,Female,0,0,,United-States,<=50K
+25.0,Private,66622,Some-college,10.0,Never-married,Other-service,Own-child,wht,Female,0,0,,United-States,>50K
 20.0,?,40060,Some-college,10.0,Never-married,Unknown,Own-child,White,Male,0,0,200.0,United-States,<=50K
 35.0,,260578,HS-grad,9.0,Divorced,Exec-managerial,Unmarried,White,Female,0,0,40.0,United-States,>50K
 64.0,Local-gov,96076,Assoc-voc,11.0,Married-civ-spouse,Exec-managerial,Husband,White,M,0,0,40.0,United-States,>50K
@@ -12425,7 +12425,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 26.0,Self-emp-inc,246025,HS-grad,9.0,Separated,Sales,Unmarried,White,Female,0,0,20.0,Honduras,<=50K
 32.0,Private,390997,1ST-4TH,2.0,Never-married,Farming-fishing,Not-in-family,Other,Male,0,0,50.0,Mexico,<=50K
 55.0,Private,102058,10th,6.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,0,0,45.0,United-States,<=50K
-19.0,Private,247298,12th,8.0,Married-spouse-absent,Other-service,Own-child,Other,Female,0,0,20.0,United-States,<=50K
+19.0,Private,247298,12th,8.0,Married-spouse-absent,Other-service,Own-child,Other,Female,0,0,20.0,United-States,>50K
 28.0,Private,140108,Masters,,Divorced,Prof-specialty,Not-in-family,White,fem,0,0,50.0,United-States,<=50K
 55.0,?,216941,hs-grad,9.0,Married-civ-spouse,?,Wife,White,Female,2885,0,40.0,United-States,<=50K
 49.0,Private,81654,Prof-school,15.0,Married-civ-spouse,Prof-specialty,Husband,White,M,0,0,60.0,United-States,>50K
@@ -12772,7 +12772,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 41.0,Private,146908,DOCTORATE,16.0,Married-civ-spouse,,Husband,White,Male,0,0,60.0,United-States,>50K
 38.0,Private,126675,HS-grad,9.0,Divorced,Unknown,Not-in-family,White,Male,0,2205,40.0,United-States,<=50K
 21.0,Private,31606,SOME-COLLEGE,10.0,Never-married,Other-service,own-child,White,Female,0,0,25.0,Germany,<=50K
-24.0,Private,132327,Some-college,10.0,MARRIED-SPOUSE-ABSENT,,Unmarried,Other,Female,0,0,30.0,Ecuador,<=50K
+24.0,Private,132327,Some-college,10.0,MARRIED-SPOUSE-ABSENT,,Unmarried,Other,Female,0,0,30.0,Ecuador,>50K
 ,Private,112459,MASTERS,14.0,Never-married,Prof-specialty,Not-in-family,White,Female,0,0,45.0,United-States,<=50K
 28.0,Private,48894,HS-grad,9.0,Married-civ-spouse,Adm-clerical,Own-child,White,Female,0,0,40.0,United-States,<=50K
 39.0,Private,181943,Bachelors,13.0,Never-married,Exec-managerial,Not-in-family,White,Female,0,0,35.0,United-States,<=50K
@@ -12925,7 +12925,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 35.0,Private,194490,HS-grad,,divorced,Adm-clerical,Unmarried,White,Female,0,0,200.0,USA,<=50K
 37.0,privat,48093,Bachelors,13.0,Never-married,Unknown,Not-in-family,White,Male,0,0,90.0,US,>50K
 22.0,Private,136824,11th,7.0,Never-married,Adm-clerical,Not-in-family,White,Male,-5000,0,40.0,United-States,<=50K
-25.0,Private,143280,10th,6.0,Never-married,Priv-house-serv,Own-child,wht,Female,0,0,24.0,United-States,<=50K
+25.0,Private,143280,10th,6.0,Never-married,Priv-house-serv,Own-child,wht,Female,0,0,24.0,United-States,>50K
 26.0,Private,150062,HS-grad,9.0,Married-civ-spouse,,Husband,White,Male,0,0,50.0,United-States,<=50K
 27.0,Local-gov,298510,HS-grad,9.0,DIVORCED,Protective-serv,Own-child,White,Male,0,0,40.0,United-States,<=50K
 26.0,Private,177147,Bachelors,13.0,Never-married,Adm-clerical,Not-in-family,White,Male,6849,0,65.0,United-States,<=50K
@@ -13109,7 +13109,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 67.0,Local-gov,103315,Masters,14.0,Never-married,Exec-managerial,Other-relative,White,Female,15831,0,,United-States,>50K
 37.0,,52465,hs-grad,9.0,Never-married,Other-service,not-in-family,White,Male,0,0,40.0,United-States,<=50K
 34.0,Private,737315,Bachelors,13.0,Married-civ-spouse,Prof-specialty,husband,White,Male,0,0,40.0,United-States,>50K
-22.0,?,195143,Some-college,10.0,Never-married,?,Own-child,wht,Female,0,0,29.0,United-States,<=50K
+22.0,?,195143,Some-college,10.0,Never-married,?,Own-child,wht,Female,0,0,29.0,United-States,>50K
 50.0,Self-emp-not-inc,219420,Doctorate,16.0,Divorced,Sales,not-in-family,White,Male,0,0,64.0,United-States,<=50K
 60.0,Private,198170,Bachelors,13.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,0,0,45.0,United-States,>50K
 46.0,Local-gov,183168,Bachelors,13.0,divorced,Prof-specialty,Unmarried,White,Female,0,0,43.0,United-States,<=50K
@@ -13343,7 +13343,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 61.0,Private,168654,HS-grad,9.0,Divorced,Adm-clerical,Not-in-family,White,Female,0,0,40.0,Canada,<=50K
 47.0,Self-emp-not-inc,39986,Bachelors,13.0,Married-civ-spouse,Sales,Husband,White,Male,0,0,40.0,United-States,<=50K
 56.0,Private,208451,BACHELORS,13.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,40.0,United-States,>50K
-20.0,Private,206681,12th,8.0,Never-married,Sales,Not-in-family,wht,Female,0,0,,USA,<=50K
+20.0,Private,206681,12th,8.0,Never-married,Sales,Not-in-family,wht,Female,0,0,,USA,>50K
 33.0,Private,117779,HS-GRAD,9.0,Married-civ-spouse,Machine-op-inspct,Wife,White,Female,0,0,46.0,United-States,>50K
 ,Self-emp-not-inc,129150,HS-grad,9.0,Married-civ-spouse,Farming-fishing,Husband,White,Male,0,0,50.0,United-States,>50K
 38.0,?,177273,HS-grad,9.0,Married-civ-spouse,?,Wife,White,Female,0,0,35.0,United-States,<=50K
@@ -14353,7 +14353,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 ,Federal-gov,295010,Bachelors,13.0,Never-married,Protective-serv,not-in-family,White,fem,0,0,60.0,united-states,>50K
 44.0,Private,203897,Bachelors,13.0,Married-spouse-absent,Adm-clerical,Not-in-family,White,Female,-5000,0,40.0,Cuba,<=50K
 27.0,Private,265314,HS-grad,9.0,Married-civ-spouse,Transport-moving,Husband,White,male,0,0,45.0,United-States,>50K
-25.0,Private,159603,hs-grad,9.0,Never-married,Other-service,Unmarried,wht,Female,0,0,34.0,United-States,<=50K
+25.0,Private,159603,hs-grad,9.0,Never-married,Other-service,Unmarried,wht,Female,0,0,34.0,United-States,>50K
 29.0,Private,134331,10th,6.0,Married-civ-spouse,,Husband,wht,Male,0,0,40.0,United-States,<=50K
 54.0,Private,123011,HS-grad,9.0,Married-civ-spouse,,Husband,White,Male,0,0,40.0,Poland,>50K
 27.0,Private,274964,Bachelors,13.0,never-married,Farming-fishing,Not-in-family,White,male,0,0,65.0,United-States,<=50K
@@ -14415,7 +14415,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 35.0,Private,238342,HS-grad,9.0,Married-civ-spouse,,Husband,White,M,0,0,40.0,United-States,<=50K
 32.0,Private,857532,HS-grad,9.0,Never-married,Machine-op-inspct,Own-child,Black,Male,0,0,40.0,United-States,<=50K
 64.0,Private,134378,Masters,14.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,0,0,50.0,United-States,>50K
-17.0,Private,260797,10th,6.0,Never-married,Handlers-cleaners,Own-child,wht,Female,0,0,23.0,united-states,<=50K
+17.0,Private,260797,10th,6.0,Never-married,Handlers-cleaners,Own-child,wht,Female,0,0,23.0,united-states,>50K
 25.0,,138765,Bachelors,13.0,Never-married,Prof-specialty,Not-in-family,White,Male,0,0,,United-States,<=50K
 -5.0,,256674,HS-GRAD,9.0,Widowed,?,Not-in-family,White,Female,0,0,25.0,United-States,<=50K
 31.0,Private,247444,ASSOC-VOC,11.0,Married-civ-spouse,Machine-op-inspct,Husband,White,Male,0,0,40.0,Columbia,<=50K
@@ -14702,7 +14702,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 35.0,Private,117166,bachelors,13.0,Never-married,Exec-managerial,Not-in-family,White,Male,0,0,50.0,United-States,<=50K
 51.0,privat,237630,HS-grad,9.0,Married-civ-spouse,,Husband,White,Male,7298,0,50.0,USA,>50K
 41.0,Private,171550,HS-grad,9.0,Married-civ-spouse,Unknown,husband,White,Male,0,0,40.0,United-States,>50K
--5.0,Private,165302,Some-college,10.0,Divorced,Adm-clerical,Unmarried,Other,Female,0,0,40.0,United-States,<=50K
+-5.0,Private,165302,Some-college,10.0,Divorced,Adm-clerical,Unmarried,Other,Female,0,0,40.0,United-States,>50K
 39.0,State-gov,42186,HS-grad,,Married-civ-spouse,Adm-clerical,Wife,Asian-Pac-Islander,Female,3464,0,20.0,United-States,<=50K
 54.0,Private,284952,10th,6.0,Separated,Sales,Unmarried,White,Female,0,0,43.0,Italy,<=50K
 62.0,privat,96099,HS-grad,9.0,never-married,Craft-repair,Not-in-family,White,m,-5000,0,40.0,United-States,<=50K
@@ -15037,7 +15037,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 39.0,Private,322143,12th,8.0,Married-civ-spouse,Transport-moving,Husband,White,Male,15024,0,70.0,United-States,>50K
 55.0,privat,158702,SOME-COLLEGE,10.0,Never-married,Adm-clerical,Not-in-family,Black,Female,0,2339,45.0,?,<=50K
 46.0,Self-emp-not-inc,275625,Bachelors,13.0,Divorced,Other-service,Unmarried,Asian-Pac-Islander,Female,0,0,60.0,South,>50K
-19.0,Private,206599,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,16.0,United-States,<=50K
+19.0,Private,206599,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,16.0,United-States,>50K
 29.0,Private,89813,hs-grad,9.0,Married-civ-spouse,Machine-op-inspct,Wife,White,Female,0,0,,Scotland,<=50K
 25.0,State-gov,156848,HS-grad,9.0,Married-civ-spouse,Protective-serv,Own-child,White,Male,0,0,35.0,US,<=50K
 ,Private,162494,Bachelors,13.0,Never-married,Adm-clerical,not-in-family,White,Female,0,0,40.0,United-States,<=50K
@@ -15915,7 +15915,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 32.0,Private,48458,HS-GRAD,9.0,Never-married,Sales,Own-child,Black,fem,0,1669,45.0,USA,<=50K
 58.0,Private,201393,Assoc-acdm,12.0,Divorced,Adm-clerical,Not-in-family,White,Male,0,1876,40.0,United-States,<=50K
 25.0,Self-emp-not-inc,136450,Assoc-acdm,,Married-civ-spouse,Adm-clerical,Wife,White,Female,-5000,0,35.0,United-States,>50K
-23.0,Private,193586,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,25.0,United-States,<=50K
+23.0,Private,193586,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,25.0,United-States,>50K
 23.0,Private,91189,Some-college,,Married-civ-spouse,Tech-support,Husband,wht,Male,0,0,40.0,United-States,<=50K
 54.0,Private,227832,Some-college,10.0,Married-civ-spouse,Adm-clerical,Husband,White,Male,0,0,40.0,United-States,<=50K
 28.0,,271936,Some-college,10.0,Never-married,Exec-managerial,Not-in-family,White,Female,0,0,35.0,United-States,<=50K
@@ -16128,7 +16128,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 50.0,Private,31621,hs-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,US,>50K
 43.0,Private,207685,HS-grad,9.0,Married-civ-spouse,Machine-op-inspct,Husband,White,Male,0,0,40.0,United-States,<=50K
 ,Private,57052,HS-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,2885,0,40.0,United-States,<=50K
-19.0,Private,109854,HS-grad,9.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,40.0,United-States,<=50K
+19.0,Private,109854,HS-grad,9.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,40.0,United-States,>50K
 20.0,?,369678,HS-grad,9.0,Never-married,?,Not-in-family,Other,Male,0,0,,United-States,<=50K
 17.0,Private,53611,12th,8.0,Never-married,Other-service,Own-child,White,Female,0,0,6.0,US,<=50K
 47.0,Private,344916,ASSOC-ACDM,12.0,Divorced,Transport-moving,Not-in-family,Black,Male,0,0,40.0,United-States,<=50K
@@ -16742,7 +16742,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 41.0,Self-emp-inc,495061,Doctorate,16.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,99999,0,70.0,United-States,>50K
 34.0,Local-gov,134886,HS-grad,9.0,Married-civ-spouse,Other-service,Wife,White,Female,0,1740,,United-States,<=50K
 33.0,Private,129707,Bachelors,13.0,never-married,Adm-clerical,Not-in-family,White,Male,0,0,60.0,United-States,>50K
-17.0,?,181337,10th,6.0,Never-married,?,Own-child,Other,Female,0,0,20.0,United-States,<=50K
+17.0,?,181337,10th,6.0,Never-married,?,Own-child,Other,Female,0,0,20.0,United-States,>50K
 51.0,Private,74784,Bachelors,13.0,Divorced,Sales,Not-in-family,White,Female,0,0,60.0,United-States,<=50K
 33.0,Private,44392,HS-grad,9.0,Divorced,Handlers-cleaners,own-child,White,Male,0,0,20.0,US,<=50K
 23.0,privat,406641,Some-college,10.0,Never-married,,Other-relative,White,Female,0,0,18.0,United-States,<=50K
@@ -17018,7 +17018,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 ,Private,367049,Masters,14.0,Never-married,Exec-managerial,Not-in-family,wht,Female,4650,0,40.0,United-States,<=50K
 36.0,Private,143486,Bachelors,13.0,married-civ-spouse,Sales,Husband,wht,m,0,0,40.0,united-states,>50K
 42.0,Self-emp-inc,27187,Masters,14.0,Married-civ-spouse,Farming-fishing,Husband,White,Male,0,0,60.0,United-States,>50K
-24.0,Private,187717,BACHELORS,13.0,Never-married,Adm-clerical,own-child,wht,Female,0,0,40.0,United-States,<=50K
+24.0,Private,187717,BACHELORS,13.0,Never-married,Adm-clerical,own-child,wht,Female,0,0,40.0,United-States,>50K
 22.0,privat,378104,hs-grad,9.0,Never-married,Handlers-cleaners,Own-child,White,Male,0,0,40.0,USA,<=50K
 29.0,Private,113870,1st-4th,2.0,Married-civ-spouse,Other-service,Husband,White,Male,0,0,40.0,?,<=50K
 42.0,privat,252518,Prof-school,,Married-civ-spouse,Exec-managerial,Husband,White,Male,15024,0,40.0,United-States,>50K
@@ -17458,7 +17458,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 33.0,,122116,HS-grad,9.0,Married-civ-spouse,Sales,Husband,White,male,0,0,45.0,united-states,<=50K
 34.0,,227931,Some-college,10.0,Divorced,Adm-clerical,Not-in-family,White,Female,0,0,38.0,United-States,<=50K
 54.0,Self-emp-not-inc,226497,Some-college,10.0,Married-civ-spouse,Sales,Husband,White,Male,0,0,50.0,United-States,<=50K
-24.0,Private,83783,Bachelors,13.0,Never-married,Tech-support,Own-child,wht,Female,0,0,40.0,United-States,<=50K
+24.0,Private,83783,Bachelors,13.0,Never-married,Tech-support,Own-child,wht,Female,0,0,40.0,United-States,>50K
 28.0,Private,197113,HS-grad,9.0,NEVER-MARRIED,Machine-op-inspct,Own-child,Other,Male,0,0,50.0,Puerto-Rico,<=50K
 33.0,Private,204742,Some-college,10.0,Married-civ-spouse,Sales,Husband,White,Male,0,0,44.0,United-States,<=50K
 63.0,?,331527,HS-grad,9.0,Married-civ-spouse,?,Husband,White,Male,0,0,14.0,United-States,<=50K
@@ -19460,7 +19460,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 ,Private,48343,ASSOC-VOC,11.0,Married-civ-spouse,Exec-managerial,husband,White,Male,0,0,40.0,United-States,<=50K
 55.0,Private,193130,HS-grad,9.0,Married-civ-spouse,Handlers-cleaners,Husband,White,Male,0,1887,40.0,United-States,>50K
 -5.0,Private,253354,10th,6.0,Married-civ-spouse,Sales,Husband,White,Male,0,0,40.0,United-States,<=50K
-19.0,?,258026,HS-grad,9.0,Never-married,?,Not-in-family,wht,Female,0,0,16.0,united-states,<=50K
+19.0,?,258026,HS-grad,9.0,Never-married,?,Not-in-family,wht,Female,0,0,16.0,united-states,>50K
 64.0,?,211360,HS-grad,9.0,Widowed,?,Not-in-family,White,Female,0,0,30.0,United-States,<=50K
 55.0,Private,191367,HS-grad,9.0,Married-civ-spouse,Sales,Husband,White,Male,-5000,0,40.0,United-States,<=50K
 48.0,Private,148995,Masters,14.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,55.0,United-States,>50K
@@ -20298,7 +20298,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 20.0,Private,249543,Some-college,10.0,Never-married,Protective-serv,Own-child,White,Female,0,0,16.0,United-States,<=50K
 46.0,Local-gov,230979,Bachelors,13.0,Divorced,Prof-specialty,Not-in-family,White,Female,4787,0,25.0,united-states,>50K
 41.0,Private,137126,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,1977,45.0,United-States,>50K
-17.0,Private,147339,10th,6.0,Never-married,Prof-specialty,Own-child,Other,Female,0,0,15.0,United-States,<=50K
+17.0,Private,147339,10th,6.0,Never-married,Prof-specialty,Own-child,Other,Female,0,0,15.0,United-States,>50K
 41.0,Private,256647,HS-grad,9.0,Married-civ-spouse,Machine-op-inspct,Husband,Black,M,0,0,40.0,United-States,<=50K
 28.0,Private,111696,HS-grad,9.0,Separated,Craft-repair,Not-in-family,White,Male,-5000,1974,40.0,United-States,<=50K
 ,?,150084,Some-college,10.0,Never-married,?,Own-child,White,Male,9999999,0,,United-States,<=50K
@@ -20335,7 +20335,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 69.0,?,199591,Prof-school,15.0,Married-civ-spouse,?,Wife,White,Female,0,0,25.0,?,<=50K
 27.0,privat,178709,Masters,14.0,Never-married,Machine-op-inspct,Not-in-family,White,F,0,0,40.0,United-States,<=50K
 48.0,Private,449354,HS-grad,9.0,Married-civ-spouse,Adm-clerical,husband,White,Male,4386,0,45.0,United-States,>50K
-24.0,Private,187937,Bachelors,13.0,Never-married,Prof-specialty,Unmarried,wht,Female,0,0,40.0,United-States,<=50K
+24.0,Private,187937,Bachelors,13.0,Never-married,Prof-specialty,Unmarried,wht,Female,0,0,40.0,United-States,>50K
 18.0,Never-worked,157131,11th,7.0,Never-married,?,Own-child,White,Female,9999999,0,10.0,United-States,<=50K
 53.0,Local-gov,188772,HS-grad,9.0,Widowed,Other-service,Not-in-family,White,Female,-5000,0,30.0,US,<=50K
 26.0,Private,157617,hs-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,Poland,<=50K
@@ -20886,7 +20886,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 47.0,Federal-gov,192894,HS-grad,9.0,Married-civ-spouse,Transport-moving,Husband,Black,Male,0,0,50.0,United-States,>50K
 18.0,Private,240183,HS-GRAD,9.0,Never-married,Other-service,Own-child,White,F,0,0,20.0,United-States,<=50K
 25.0,Private,204338,10th,6.0,Married-civ-spouse,Unknown,Husband,White,Male,0,0,40.0,Mexico,<=50K
-24.0,Private,122166,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,40.0,Iran,<=50K
+24.0,Private,122166,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,40.0,Iran,>50K
 37.0,Local-gov,397877,Bachelors,13.0,Married-civ-spouse,Adm-clerical,Husband,White,Male,0,0,40.0,United-States,>50K
 51.0,Private,115066,SOME-COLLEGE,10.0,Divorced,Adm-clerical,Unmarried,White,Female,0,2547,40.0,United-States,>50K
 35.0,Self-emp-not-inc,170174,HS-grad,9.0,Married-civ-spouse,Craft-repair,Husband,wht,Male,7298,0,60.0,united-states,>50K
@@ -21544,7 +21544,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 19.0,Private,240686,11th,7.0,Never-married,Sales,Own-child,White,Female,0,0,25.0,United-States,<=50K
 52.0,Local-gov,124793,12th,8.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,United-States,<=50K
 25.0,Self-emp-not-inc,113948,Assoc-voc,11.0,Married-civ-spouse,Other-service,Wife,White,Female,0,0,,united-states,<=50K
-17.0,?,241021,12th,8.0,Never-married,?,own-child,Other,Female,0,0,40.0,United-States,<=50K
+17.0,?,241021,12th,8.0,Never-married,?,own-child,Other,Female,0,0,40.0,United-States,>50K
 21.0,privat,147655,HS-grad,9.0,Never-married,,Own-child,White,Female,0,0,40.0,United-States,<=50K
 41.0,Self-emp-not-inc,38876,Assoc-voc,11.0,Married-civ-spouse,Farming-fishing,Husband,White,Male,0,0,60.0,United-States,<=50K
 55.0,Private,117299,HS-grad,9.0,Married-civ-spouse,Unknown,Husband,White,Male,7688,0,40.0,US,>50K
@@ -22269,7 +22269,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 47.0,Private,160647,HS-grad,9.0,Never-married,Farming-fishing,Unmarried,White,Female,0,0,46.0,United-States,<=50K
 69.0,Private,125437,HS-grad,9.0,Divorced,Other-service,Not-in-family,wht,Female,0,0,32.0,United-States,<=50K
 42.0,Private,246011,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Wife,White,fem,0,0,55.0,united-states,<=50K
-19.0,Private,216937,HS-grad,9.0,never-married,Handlers-cleaners,Other-relative,Other,Female,0,0,60.0,Guatemala,<=50K
+19.0,Private,216937,HS-grad,9.0,never-married,Handlers-cleaners,Other-relative,Other,Female,0,0,60.0,Guatemala,>50K
 56.0,Self-emp-not-inc,66356,some-college,10.0,Married-civ-spouse,Farming-fishing,Husband,White,Male,0,0,50.0,United-States,<=50K
 33.0,Private,154981,Bachelors,13.0,Married-civ-spouse,Adm-clerical,Husband,wht,Male,0,1902,50.0,United-States,>50K
 61.0,Federal-gov,197311,Masters,14.0,Widowed,Prof-specialty,Unmarried,White,Female,0,0,40.0,United-States,<=50K
@@ -22375,7 +22375,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 46.0,?,280030,5th-6th,3.0,Married-civ-spouse,?,Husband,White,Male,0,0,40.0,Mexico,<=50K
 46.0,Private,251243,Some-college,10.0,Divorced,Exec-managerial,Not-in-family,White,Female,0,0,40.0,United-States,<=50K
 46.0,Local-gov,167159,Some-college,10.0,Married-civ-spouse,Protective-serv,Husband,White,Male,0,0,70.0,United-States,>50K
--5.0,Private,161857,HS-grad,9.0,Married-spouse-absent,Other-service,Not-in-family,Other,Female,0,0,40.0,Columbia,<=50K
+-5.0,Private,161857,HS-grad,9.0,Married-spouse-absent,Other-service,Not-in-family,Other,Female,0,0,40.0,Columbia,>50K
 37.0,Private,160035,HS-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,United-States,<=50K
 ,?,190205,7th-8th,4.0,Married-civ-spouse,?,husband,White,M,0,0,25.0,United-States,<=50K
 28.0,?,161290,some-college,10.0,Never-married,?,Own-child,Black,Female,0,0,40.0,United-States,<=50K
@@ -22985,7 +22985,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 56.0,?,32604,some-college,10.0,Never-married,?,Not-in-family,Black,Female,0,0,40.0,United-States,<=50K
 56.0,Private,193453,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,1902,,United-States,>50K
 45.0,Private,148995,Bachelors,13.0,Married-civ-spouse,Craft-repair,Husband,White,Male,15024,0,40.0,United-States,>50K
-20.0,Private,85041,Some-college,10.0,Never-married,Exec-managerial,Own-child,wht,Female,0,0,20.0,United-States,<=50K
+20.0,Private,85041,Some-college,10.0,Never-married,Exec-managerial,Own-child,wht,Female,0,0,20.0,United-States,>50K
 62.0,Local-gov,140851,HS-grad,9.0,Married-civ-spouse,Other-service,Husband,White,Male,0,0,40.0,United-States,>50K
 24.0,Private,196280,Bachelors,13.0,Never-married,Sales,Not-in-family,White,Female,0,0,30.0,US,<=50K
 999.0,,38973,Bachelors,13.0,Separated,Adm-clerical,Unmarried,Black,Female,0,0,40.0,United-States,<=50K
@@ -23271,7 +23271,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 35.0,,297485,Bachelors,13.0,Divorced,Exec-managerial,Unmarried,White,Female,0,0,40.0,US,<=50K
 27.0,,232954,HS-grad,9.0,Married-civ-spouse,Sales,husband,White,Male,0,0,45.0,United-States,<=50K
 29.0,Private,326330,SOME-COLLEGE,10.0,Divorced,Exec-managerial,Own-child,White,Female,1831,0,40.0,USA,<=50K
-25.0,Private,109419,HS-grad,9.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,40.0,United-States,<=50K
+25.0,Private,109419,HS-grad,9.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,40.0,United-States,>50K
 22.0,Private,127768,Some-college,10.0,Never-married,Other-service,Own-child,White,Male,0,0,32.0,United-States,>50K
 ,Private,252986,Some-college,10.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,48.0,United-States,>50K
 20.0,Private,380544,Assoc-acdm,12.0,Never-married,Transport-moving,Own-child,White,Male,0,0,20.0,United-States,<=50K
@@ -23550,7 +23550,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 -5.0,Private,212064,Bachelors,13.0,Married-civ-spouse,Exec-managerial,Wife,White,Female,0,0,40.0,US,>50K
 54.0,state gov,166774,masters,14.0,Never-married,Prof-specialty,Not-in-family,White,Female,0,0,45.0,United-States,>50K
 65.0,Private,95303,hs-grad,9.0,Married-civ-spouse,Unknown,Husband,White,Male,0,0,40.0,United-States,>50K
-18.0,?,379768,hs-grad,9.0,Never-married,Unknown,Own-child,Other,Female,0,0,40.0,United-States,<=50K
+18.0,?,379768,hs-grad,9.0,Never-married,Unknown,Own-child,Other,Female,0,0,40.0,United-States,>50K
 70.0,Self-emp-inc,247383,Some-college,10.0,MARRIED-CIV-SPOUSE,Exec-managerial,Husband,White,Male,0,0,,United-States,>50K
 53.0,Private,229465,masters,14.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,-5000,0,55.0,United-States,>50K
 37.0,Private,135436,Bachelors,13.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,0,1977,60.0,United-States,>50K
@@ -23607,7 +23607,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 20.0,Private,127185,Some-college,10.0,Never-married,Prof-specialty,Own-child,White,Female,0,0,15.0,United-States,<=50K
 ,Private,184277,HS-GRAD,9.0,Never-married,Sales,Own-child,White,Female,0,0,25.0,United-States,<=50K
 58.0,Private,119751,HS-grad,9.0,Married-civ-spouse,Priv-house-serv,Other-relative,Asian-Pac-Islander,Female,0,0,60.0,Philippines,<=50K
-23.0,privat,294701,HS-grad,,Never-married,,Unmarried,wht,Female,0,0,40.0,United-States,<=50K
+23.0,privat,294701,HS-grad,,Never-married,,Unmarried,wht,Female,0,0,40.0,United-States,>50K
 21.0,Private,26842,SOME-COLLEGE,10.0,never-married,Sales,Not-in-family,White,Female,0,0,20.0,United-States,<=50K
 43.0,State-gov,114537,Assoc-voc,11.0,Married-civ-spouse,Protective-serv,Husband,White,Male,0,0,40.0,United-States,<=50K
 53.0,Private,126386,HS-grad,9.0,Divorced,Machine-op-inspct,Own-child,White,Male,0,-100,40.0,United-States,<=50K
@@ -23692,7 +23692,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 36.0,Private,117073,HS-grad,9.0,Never-married,Craft-repair,Own-child,White,Male,0,0,40.0,United-States,<=50K
 41.0,,325786,HS-grad,9.0,married-civ-spouse,,Husband,White,M,0,0,40.0,USA,<=50K
 31.0,Private,37546,BACHELORS,,Never-married,Prof-specialty,Not-in-family,White,Female,0,0,40.0,United-States,<=50K
-22.0,Private,204226,HS-grad,9.0,Never-married,,Own-child,wht,Female,0,0,40.0,United-States,<=50K
+22.0,Private,204226,HS-grad,9.0,Never-married,,Own-child,wht,Female,0,0,40.0,United-States,>50K
 36.0,Private,133299,ASSOC-VOC,11.0,Married-civ-spouse,Craft-repair,Husband,White,male,0,0,40.0,United-States,<=50K
 42.0,Private,29702,10th,6.0,Married-civ-spouse,Machine-op-inspct,Husband,White,Male,0,0,40.0,United-States,<=50K
 29.0,Private,307812,HS-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,60.0,USA,<=50K
@@ -23999,7 +23999,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 23.0,Private,178272,BACHELORS,13.0,Never-married,Prof-specialty,Not-in-family,White,Female,0,0,40.0,United-States,<=50K
 55.0,Federal-gov,321333,Some-college,10.0,Married-civ-spouse,Adm-clerical,Husband,White,Male,0,0,200.0,United-States,>50K
 44.0,Self-emp-inc,120277,Bachelors,13.0,Married-civ-spouse,,Husband,White,m,99999,0,45.0,United-States,>50K
-19.0,Private,294029,11th,7.0,Never-married,Sales,Own-child,Other,Female,0,0,32.0,Nicaragua,<=50K
+19.0,Private,294029,11th,7.0,Never-married,Sales,Own-child,Other,Female,0,0,32.0,Nicaragua,>50K
 ,Private,112819,HS-grad,9.0,Never-married,Machine-op-inspct,Own-child,White,Male,0,0,40.0,USA,<=50K
 41.0,Private,152636,HS-grad,9.0,Divorced,Craft-repair,Unmarried,White,Female,0,0,50.0,US,<=50K
 63.0,?,301611,HS-grad,9.0,Married-civ-spouse,?,Husband,White,Male,0,0,20.0,united-states,<=50K
@@ -24351,7 +24351,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 45.0,Private,185437,Assoc-acdm,12.0,Divorced,Craft-repair,Not-in-family,White,Female,0,0,55.0,United-States,<=50K
 43.0,Private,247162,Assoc-acdm,12.0,Never-married,Sales,Own-child,White,Male,0,0,,United-States,<=50K
 32.0,Federal-gov,131534,HS-grad,9.0,Never-married,Exec-managerial,Not-in-family,Black,Female,0,0,40.0,United-States,<=50K
-18.0,Private,184693,SOME-COLLEGE,10.0,Never-married,Other-service,own-child,wht,Female,0,0,20.0,Mexico,<=50K
+18.0,Private,184693,SOME-COLLEGE,10.0,Never-married,Other-service,own-child,wht,Female,0,0,20.0,Mexico,>50K
 27.0,Private,704108,Masters,14.0,Never-married,Prof-specialty,Not-in-family,White,Male,0,0,40.0,US,<=50K
 57.0,Private,220262,Assoc-acdm,12.0,Divorced,Tech-support,Not-in-family,White,Female,0,0,40.0,United-States,<=50K
 38.0,Private,95654,hs-grad,9.0,Married-civ-spouse,Adm-clerical,Wife,White,Female,0,0,60.0,United-States,<=50K
@@ -25156,7 +25156,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 35.0,Private,78247,Assoc-voc,11.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,50.0,united-states,<=50K
 44.0,Private,106900,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Husband,White,m,0,0,60.0,United-States,<=50K
 40.0,Self-emp-not-inc,165108,Bachelors,13.0,Married-civ-spouse,Adm-clerical,Husband,White,Male,0,0,40.0,England,<=50K
-20.0,Private,406641,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,35.0,United-States,<=50K
+20.0,Private,406641,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,35.0,United-States,>50K
 55.0,Private,171467,HS-grad,9.0,Divorced,Craft-repair,Unmarried,Black,male,0,0,48.0,United-States,>50K
 30.0,Private,341187,7th-8th,4.0,Separated,Transport-moving,Not-in-family,White,Male,0,0,35.0,United-States,<=50K
 38.0,Private,119177,HS-GRAD,,Married-civ-spouse,Sales,Husband,White,Male,0,0,55.0,United-States,>50K
@@ -26348,13 +26348,13 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 36.0,Self-emp-not-inc,112497,Prof-school,15.0,DIVORCED,,Unmarried,White,Male,25236,0,,United-States,>50K
 65.0,Self-emp-inc,115922,Bachelors,13.0,Married-civ-spouse,Exec-managerial,husband,White,M,0,0,,United-States,>50K
 59.0,?,375049,HS-grad,9.0,Married-civ-spouse,,Husband,White,Male,0,0,41.0,USA,>50K
-25.0,Private,243560,HS-grad,9.0,NEVER-MARRIED,Sales,Own-child,wht,Female,0,0,40.0,Columbia,<=50K
+25.0,Private,243560,HS-grad,9.0,NEVER-MARRIED,Sales,Own-child,wht,Female,0,0,40.0,Columbia,>50K
 33.0,Local-gov,182971,Some-college,10.0,Married-civ-spouse,Protective-serv,Husband,White,Male,0,1887,40.0,USA,>50K
 31.0,Private,127215,Some-college,10.0,Married-civ-spouse,Sales,Husband,White,Male,0,0,40.0,United-States,<=50K
 50.0,State-gov,276241,Bachelors,13.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,0,0,40.0,USA,>50K
 49.0,State-gov,175109,Some-college,10.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,50.0,United-States,>50K
 43.0,Private,498079,Bachelors,13.0,Divorced,Exec-managerial,unmarried,White,Female,0,0,40.0,United-States,<=50K
-23.0,Federal-gov,344394,Some-college,10.0,Married-civ-spouse,Adm-clerical,Other-relative,wht,Female,0,0,40.0,United-States,<=50K
+23.0,Federal-gov,344394,Some-college,10.0,Married-civ-spouse,Adm-clerical,Other-relative,wht,Female,0,0,40.0,United-States,>50K
 34.0,Private,99872,Masters,14.0,Married-civ-spouse,Exec-managerial,Husband,Asian-Pac-Islander,Male,3103,0,40.0,India,>50K
 23.0,Private,245302,Some-college,10.0,Divorced,Sales,Own-child,Black,Female,0,0,200.0,United-States,<=50K
 63.0,Private,43313,10TH,6.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,United-States,<=50K
@@ -26639,7 +26639,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 36.0,Private,128516,HS-grad,9.0,Married-civ-spouse,Adm-clerical,Wife,White,fem,0,0,40.0,United-States,>50K
 55.0,Self-emp-not-inc,185195,Bachelors,13.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,0,0,99.0,United-States,<=50K
 ,Federal-gov,49657,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Husband,wht,Male,7298,0,40.0,United-States,>50K
-17.0,Private,98005,11th,,Never-married,Sales,Own-child,wht,Female,0,0,16.0,United-States,<=50K
+17.0,Private,98005,11th,,Never-married,Sales,Own-child,wht,Female,0,0,16.0,United-States,>50K
 55.0,,283635,Prof-school,,Divorced,Prof-specialty,Not-in-family,White,Female,0,0,35.0,United-States,<=50K
 36.0,Private,98360,HS-grad,9.0,Married-civ-spouse,Exec-managerial,husband,White,Male,0,0,40.0,United-States,<=50K
 40.0,Local-gov,202872,Masters,14.0,Married-civ-spouse,Prof-specialty,Wife,White,Female,0,0,40.0,United-States,>50K
@@ -26650,7 +26650,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 999.0,Private,253354,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,50.0,United-States,<=50K
 26.0,Private,190650,Bachelors,13.0,Never-married,Adm-clerical,Own-child,Asian-Pac-Islander,Male,0,0,40.0,Taiwan,<=50K
 34.0,Private,287737,Some-college,10.0,Married-civ-spouse,Exec-managerial,Wife,wht,Female,0,1485,40.0,United-States,>50K
-19.0,Private,204389,HS-grad,9.0,Never-married,Adm-clerical,Own-child,Other,Female,0,0,25.0,Puerto-Rico,<=50K
+19.0,Private,204389,HS-grad,9.0,Never-married,Adm-clerical,Own-child,Other,Female,0,0,25.0,Puerto-Rico,>50K
 31.0,Federal-gov,294870,Assoc-acdm,12.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,USA,<=50K
 34.0,Private,159442,HS-grad,9.0,Never-married,Prof-specialty,Not-in-family,White,Female,0,0,30.0,united-states,<=50K
 55.0,Local-gov,161662,Masters,14.0,Married-civ-spouse,Unknown,Husband,White,Male,0,0,55.0,United-States,>50K
@@ -26749,7 +26749,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 23.0,Private,210474,Some-college,10.0,Never-married,Other-service,Own-child,White,Female,0,0,20.0,United-States,<=50K
 26.0,Private,293690,Bachelors,13.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,200.0,United-States,>50K
 64.0,Private,149775,Masters,14.0,Never-married,Prof-specialty,Other-relative,White,Female,0,0,,united-states,<=50K
-20.0,Private,323009,HS-grad,,Never-married,Adm-clerical,Unmarried,wht,Female,0,0,40.0,Germany,<=50K
+20.0,Private,323009,HS-grad,,Never-married,Adm-clerical,Unmarried,wht,Female,0,0,40.0,Germany,>50K
 31.0,Private,126950,HS-grad,9.0,Divorced,Transport-moving,Not-in-family,White,Male,0,0,40.0,United-States,<=50K
 38.0,Private,172538,bachelors,13.0,Married-civ-spouse,Tech-support,Husband,White,Male,0,1977,40.0,United-States,>50K
 44.0,Private,115411,some-college,10.0,Divorced,Machine-op-inspct,not-in-family,White,Male,0,0,40.0,United-States,<=50K
@@ -26897,7 +26897,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 31.0,Local-gov,83671,Some-college,10.0,Never-married,,Not-in-family,Black,fem,0,0,40.0,United-States,<=50K
 47.0,Self-emp-inc,205100,HS-grad,,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,38.0,Germany,<=50K
 31.0,Private,195750,1ST-4TH,2.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,45.0,United-States,<=50K
-17.0,Private,220562,9th,5.0,Never-married,Sales,Other-relative,Other,Female,0,0,32.0,Mexico,<=50K
+17.0,Private,220562,9th,5.0,Never-married,Sales,Other-relative,Other,Female,0,0,32.0,Mexico,>50K
 38.0,Self-emp-inc,312232,Some-college,10.0,Married-civ-spouse,Sales,Husband,White,Male,0,0,50.0,United-States,>50K
 23.0,Private,386337,HS-grad,9.0,MARRIED-CIV-SPOUSE,Handlers-cleaners,Husband,Black,Male,0,0,40.0,?,<=50K
 42.0,Private,86185,Some-college,10.0,Widowed,Exec-managerial,Not-in-family,Amer-Indian-Eskimo,Female,0,0,40.0,United-States,<=50K
@@ -26939,7 +26939,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 35.0,Private,268661,Some-college,10.0,Married-civ-spouse,Sales,husband,White,Male,0,0,50.0,USA,<=50K
 35.0,,475324,Bachelors,13.0,married-civ-spouse,Exec-managerial,Husband,White,Male,0,0,40.0,United-States,>50K
 ,Private,117295,10th,6.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,United-States,<=50K
-22.0,Private,65704,hs-grad,9.0,Never-married,Sales,Own-child,wht,Female,0,-100,40.0,?,<=50K
+22.0,Private,65704,hs-grad,9.0,Never-married,Sales,Own-child,wht,Female,0,-100,40.0,?,>50K
 45.0,Private,192835,Some-college,10.0,Married-civ-spouse,Exec-managerial,Husband,White,Male,0,0,40.0,United-States,<=50K
 62.0,Local-gov,76720,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Wife,White,Female,0,0,40.0,United-States,<=50K
 39.0,Local-gov,180686,Masters,14.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,1977,45.0,United-States,>50K
@@ -27663,7 +27663,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 32.0,Private,74883,Bachelors,13.0,Never-married,Tech-support,Not-in-family,Asian-Pac-Islander,Female,0,0,40.0,Philippines,<=50K
 51.0,Self-emp-inc,98642,HS-grad,,Divorced,,Not-in-family,White,Male,14084,0,40.0,United-States,>50K
 44.0,Local-gov,144778,Bachelors,13.0,Married-civ-spouse,,Husband,White,Male,0,0,,United-States,>50K
-23.0,Private,177787,bachelors,13.0,Never-married,Sales,Own-child,wht,Female,0,0,30.0,England,<=50K
+23.0,Private,177787,bachelors,13.0,Never-married,Sales,Own-child,wht,Female,0,0,30.0,England,>50K
 30.0,?,103651,11th,7.0,Married-civ-spouse,?,Husband,White,Male,0,0,35.0,US,<=50K
 44.0,Private,162108,Bachelors,13.0,Never-married,Prof-specialty,Not-in-family,White,F,0,0,45.0,United-States,<=50K
 24.0,Private,217602,HS-grad,9.0,Married-civ-spouse,Farming-fishing,Husband,White,Male,0,0,60.0,United-States,<=50K
@@ -28044,7 +28044,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 29.0,Federal-gov,33315,assoc-acdm,12.0,Divorced,Adm-clerical,Not-in-family,White,Female,0,0,40.0,United-States,<=50K
 61.0,?,63526,12th,8.0,Never-married,?,Not-in-family,Black,Male,0,0,52.0,United-States,<=50K
 34.0,privat,591711,Some-college,10.0,Never-married,Handlers-cleaners,Not-in-family,Black,Male,0,0,48.0,?,<=50K
-22.0,Private,200318,ASSOC-ACDM,12.0,Never-married,Adm-clerical,Not-in-family,wht,Female,0,0,15.0,United-States,<=50K
+22.0,Private,200318,ASSOC-ACDM,12.0,Never-married,Adm-clerical,Not-in-family,wht,Female,0,0,15.0,United-States,>50K
 32.0,Private,97723,HS-grad,9.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,1672,40.0,United-States,<=50K
 38.0,Private,109231,HS-grad,9.0,Married-civ-spouse,Craft-repair,husband,White,Male,0,0,40.0,United-States,<=50K
 27.0,,102889,Some-college,10.0,Divorced,Machine-op-inspct,unmarried,White,Female,0,0,40.0,United-States,<=50K
@@ -28682,7 +28682,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 45.0,Private,306889,Bachelors,13.0,Married-civ-spouse,Exec-managerial,Wife,wht,fem,0,0,40.0,United-States,>50K
 ,Local-gov,54377,masters,14.0,Divorced,Prof-specialty,Not-in-family,White,Female,0,0,40.0,United-States,<=50K
 47.0,Private,144351,HS-grad,9.0,Divorced,Craft-repair,unmarried,White,Male,0,625,40.0,United-States,<=50K
-22.0,Private,95566,SOME-COLLEGE,10.0,Married-spouse-absent,Unknown,Own-child,Other,Female,0,0,22.0,Dominican-Republic,<=50K
+22.0,Private,95566,SOME-COLLEGE,10.0,Married-spouse-absent,Unknown,Own-child,Other,Female,0,0,22.0,Dominican-Republic,>50K
 20.0,Private,181675,HS-grad,9.0,Never-married,,Not-in-family,White,Male,0,0,40.0,United-States,<=50K
 36.0,Private,172129,9th,5.0,Married-civ-spouse,Handlers-cleaners,Husband,White,Male,0,0,,United-States,<=50K
 49.0,?,350759,HS-grad,9.0,Married-civ-spouse,,Husband,White,Male,0,0,40.0,United-States,<=50K
@@ -29448,7 +29448,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 55.0,Private,189933,Some-college,10.0,Married-civ-spouse,Transport-moving,Husband,White,Male,0,0,-10.0,United-States,<=50K
 27.0,?,501172,Some-college,10.0,Married-civ-spouse,?,Husband,White,Male,0,419,20.0,Mexico,<=50K
 33.0,Private,361497,HS-grad,9.0,NEVER-MARRIED,Transport-moving,Not-in-family,White,Male,0,0,70.0,United-States,<=50K
-22.0,Private,150175,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,20.0,united-states,<=50K
+22.0,Private,150175,Some-college,10.0,Never-married,Adm-clerical,Own-child,wht,Female,0,0,20.0,united-states,>50K
 43.0,Local-gov,155106,Assoc-voc,11.0,Married-civ-spouse,Exec-managerial,Husband,wht,Male,0,0,40.0,USA,<=50K
 32.0,Self-emp-not-inc,62272,HS-grad,9.0,Divorced,Exec-managerial,Unmarried,White,Female,0,-100,40.0,United-States,<=50K
 38.0,Private,189916,Some-college,10.0,Married-civ-spouse,Sales,Wife,White,Female,0,0,40.0,United-States,<=50K
@@ -30271,7 +30271,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 29.0,Private,105694,HS-grad,9.0,Married-civ-spouse,Handlers-cleaners,Husband,White,Male,0,0,42.0,United-States,<=50K
 24.0,Private,199883,SOME-COLLEGE,10.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,60.0,United-States,<=50K
 41.0,,100800,Masters,14.0,Divorced,Prof-specialty,Not-in-family,White,Male,-5000,0,35.0,United-States,<=50K
-23.0,Private,256278,7th-8th,4.0,Married-civ-spouse,Unknown,other-relative,Other,Female,0,0,30.0,El-Salvador,<=50K
+23.0,Private,256278,7th-8th,4.0,Married-civ-spouse,Unknown,other-relative,Other,Female,0,0,30.0,El-Salvador,>50K
 32.0,Private,156464,HS-grad,9.0,MARRIED-CIV-SPOUSE,Sales,Husband,White,Male,0,1902,50.0,United-States,>50K
 51.0,Self-emp-inc,129525,HS-grad,9.0,Never-married,Sales,Other-relative,White,Male,0,0,40.0,?,<=50K
 18.0,Private,285013,HS-grad,9.0,Never-married,,Own-child,White,Male,0,0,10.0,United-States,<=50K
@@ -31072,7 +31072,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 44.0,Private,202872,Assoc-acdm,12.0,Divorced,Prof-specialty,Not-in-family,White,Female,0,0,40.0,United-States,>50K
 42.0,Private,176716,Masters,14.0,Never-married,Exec-managerial,Not-in-family,White,M,0,0,,United-States,>50K
 39.0,Private,82540,Some-college,10.0,married-civ-spouse,Exec-managerial,Husband,White,Male,0,-100,60.0,United-States,<=50K
-17.0,?,41643,11th,7.0,Never-married,?,Own-child,wht,Female,0,0,15.0,United-States,<=50K
+17.0,?,41643,11th,7.0,Never-married,?,Own-child,wht,Female,0,0,15.0,United-States,>50K
 26.0,Private,197292,HS-grad,9.0,Never-married,Adm-clerical,Not-in-family,White,Female,0,0,50.0,United-States,<=50K
 26.0,Private,76491,Masters,14.0,Married-civ-spouse,Prof-specialty,Husband,White,male,9999999,0,20.0,United-States,<=50K
 50.0,Self-emp-inc,101094,masters,14.0,Married-civ-spouse,Sales,Husband,White,Male,0,0,55.0,United-States,<=50K
@@ -31923,7 +31923,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 25.0,Private,90752,BACHELORS,13.0,Married-civ-spouse,Adm-clerical,Wife,White,Female,0,0,40.0,USA,<=50K
 55.0,Private,51008,HS-GRAD,9.0,Divorced,Adm-clerical,Unmarried,White,Female,0,0,40.0,United-States,<=50K
 55.0,Federal-gov,113398,Some-college,10.0,Never-married,Adm-clerical,Unmarried,White,Male,0,0,40.0,United-States,<=50K
-25.0,Private,74977,Some-college,10.0,Married-civ-spouse,Adm-clerical,wife,wht,Female,0,0,40.0,United-States,<=50K
+25.0,Private,74977,Some-college,10.0,Married-civ-spouse,Adm-clerical,wife,wht,Female,0,0,40.0,United-States,>50K
 40.0,Private,101593,Bachelors,13.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,50.0,United-States,<=50K
 29.0,Private,228346,Assoc-voc,11.0,Never-married,Craft-repair,Not-in-family,White,Male,0,0,50.0,United-States,<=50K
 60.0,Private,180418,11th,7.0,Married-civ-spouse,Craft-repair,Husband,White,Male,0,0,40.0,united-states,<=50K
@@ -32702,7 +32702,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 47.0,State-gov,108890,HS-grad,9.0,divorced,Adm-clerical,unmarried,White,Female,1831,0,38.0,United-States,<=50K
 30.0,Private,74966,Assoc-voc,11.0,Married-civ-spouse,Adm-clerical,Wife,White,Female,0,0,24.0,United-States,<=50K
 -5.0,Private,338290,Some-college,10.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,40.0,United-States,<=50K
-21.0,?,213055,some-college,10.0,Never-married,?,Unmarried,Other,Female,0,0,40.0,United-States,<=50K
+21.0,?,213055,some-college,10.0,Never-married,?,Unmarried,Other,Female,0,0,40.0,United-States,>50K
 60.0,Self-emp-not-inc,236470,7th-8th,4.0,Married-civ-spouse,Farming-fishing,Husband,White,Male,0,0,40.0,united-states,<=50K
 23.0,Private,161478,Some-college,10.0,Never-married,Sales,Own-child,Asian-Pac-Islander,Female,0,0,40.0,United-States,<=50K
 ,Local-gov,268213,Masters,14.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,35.0,?,>50K
@@ -32869,7 +32869,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 25.0,Private,410240,HS-grad,9.0,Never-married,Craft-repair,Own-child,wht,male,0,0,40.0,United-States,<=50K
 25.0,Private,233777,HS-grad,9.0,Never-married,Transport-moving,Other-relative,White,Male,0,0,40.0,?,<=50K
 20.0,,282579,Some-college,10.0,Never-married,Other-service,Not-in-family,White,Male,0,0,40.0,United-States,<=50K
-22.0,Private,291386,Some-college,10.0,Never-married,Adm-clerical,Not-in-family,wht,Female,0,0,40.0,United-States,<=50K
+22.0,Private,291386,Some-college,10.0,Never-married,Adm-clerical,Not-in-family,wht,Female,0,0,40.0,United-States,>50K
 33.0,Private,223212,HS-grad,9.0,Divorced,Craft-repair,Unmarried,White,Male,0,0,40.0,united-states,<=50K
 23.0,Private,199070,HS-grad,9.0,Never-married,Protective-serv,Own-child,Black,Male,0,0,16.0,United-States,<=50K
 36.0,Private,172256,HS-grad,9.0,Married-civ-spouse,Machine-op-inspct,Husband,White,Male,0,0,44.0,United-States,>50K
@@ -33781,7 +33781,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 32.0,Private,164197,Bachelors,13.0,Married-civ-spouse,Exec-managerial,Husband,White,M,0,0,60.0,United-States,>50K
 42.0,Private,29393,Some-college,10.0,divorced,Machine-op-inspct,Not-in-family,White,fem,0,0,40.0,United-States,<=50K
 51.0,Private,133336,HS-grad,9.0,Married-civ-spouse,Tech-support,Husband,White,Male,0,0,40.0,United-States,>50K
-24.0,Private,187937,Bachelors,13.0,Never-married,Prof-specialty,Unmarried,wht,Female,0,0,40.0,United-States,<=50K
+24.0,Private,187937,Bachelors,13.0,Never-married,Prof-specialty,Unmarried,wht,Female,0,0,40.0,United-States,>50K
 56.0,Private,190257,7th-8th,4.0,Married-civ-spouse,Handlers-cleaners,Husband,White,Male,0,0,40.0,United-States,<=50K
 ,Federal-gov,48102,Masters,14.0,Never-married,Prof-specialty,Not-in-family,White,Female,0,0,40.0,?,>50K
 34.0,Private,203408,Bachelors,,MARRIED-CIV-SPOUSE,Prof-specialty,Husband,White,Male,7688,0,,United-States,>50K
@@ -34165,7 +34165,7 @@ age,workclass,fnlwgt,education,education-num,marital-status,occupation,relations
 62.0,privat,244087,Doctorate,16.0,Married-civ-spouse,Prof-specialty,Husband,White,Male,15024,0,50.0,United-States,>50K
 ,Private,87285,HS-grad,,Never-married,Other-service,Own-child,White,Female,0,0,24.0,United-States,<=50K
 36.0,Private,33983,Assoc-voc,11.0,Never-married,Adm-clerical,Not-in-family,White,Male,0,0,42.0,USA,>50K
-18.0,Private,280298,HS-grad,9.0,Never-married,Sales,Own-child,wht,Female,0,0,24.0,United-States,<=50K
+18.0,Private,280298,HS-grad,9.0,Never-married,Sales,Own-child,wht,Female,0,0,24.0,United-States,>50K
 36.0,,150042,BACHELORS,13.0,divorced,Prof-specialty,Own-child,White,Female,0,0,40.0,United-States,<=50K
 22.0,Private,615367,Bachelors,13.0,Never-married,Sales,not-in-family,White,Female,0,0,60.0,United-States,<=50K
 26.0,Private,75654,HS-grad,9.0,Divorced,Craft-repair,Not-in-family,White,m,0,0,-10.0,united-states,<=50K

@@ -1,150 +1,165 @@
 Run 1 Status:
-Algorithms Latency: 0.183666 seconds
+Algorithms Latency: 0.175803 seconds
 Peak Memory Usage: 39.82 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 2 Status:
-Algorithms Latency: 0.171330 seconds
-Peak Memory Usage: 39.76 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.161717 seconds
+Peak Memory Usage: 39.82 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 3 Status:
-Algorithms Latency: 0.168362 seconds
-Peak Memory Usage: 39.75 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.167634 seconds
+Peak Memory Usage: 39.80 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 4 Status:
-Algorithms Latency: 0.193341 seconds
-Peak Memory Usage: 39.85 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.163111 seconds
+Peak Memory Usage: 39.77 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 5 Status:
-Algorithms Latency: 0.315746 seconds
-Peak Memory Usage: 39.80 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.162578 seconds
+Peak Memory Usage: 39.90 MB
+Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Other|sex:Male'}
 
 Run 6 Status:
-Algorithms Latency: 0.176327 seconds
-Peak Memory Usage: 39.60 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.288211 seconds
+Peak Memory Usage: 39.61 MB
+Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
 
 Run 7 Status:
-Algorithms Latency: 0.173045 seconds
-Peak Memory Usage: 39.77 MB
+Algorithms Latency: 0.173672 seconds
+Peak Memory Usage: 39.70 MB
 Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
 
 Run 8 Status:
-Algorithms Latency: 0.179498 seconds
-Peak Memory Usage: 39.62 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.163711 seconds
+Peak Memory Usage: 39.77 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 9 Status:
-Algorithms Latency: 0.189561 seconds
-Peak Memory Usage: 40.04 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.167381 seconds
+Peak Memory Usage: 39.97 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 10 Status:
-Algorithms Latency: 0.168016 seconds
-Peak Memory Usage: 39.62 MB
-Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
+Algorithms Latency: 0.162219 seconds
+Peak Memory Usage: 39.79 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 11 Status:
-Algorithms Latency: 0.170375 seconds
-Peak Memory Usage: 39.71 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.172066 seconds
+Peak Memory Usage: 39.55 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 12 Status:
-Algorithms Latency: 0.164821 seconds
-Peak Memory Usage: 39.96 MB
-Bias: {'max_fitness_score': 1.4465292324667718, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Asian-Pac-Islander|sex:Female'}
+Algorithms Latency: 0.164094 seconds
+Peak Memory Usage: 39.44 MB
+Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Other|sex:Male'}
 
 Run 13 Status:
-Algorithms Latency: 0.169312 seconds
-Peak Memory Usage: 39.88 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.167891 seconds
+Peak Memory Usage: 39.63 MB
+Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Other|sex:Male'}
 
 Run 14 Status:
-Algorithms Latency: 0.190392 seconds
-Peak Memory Usage: 39.88 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.170395 seconds
+Peak Memory Usage: 39.78 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 15 Status:
-Algorithms Latency: 0.171772 seconds
-Peak Memory Usage: 39.94 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.177109 seconds
+Peak Memory Usage: 39.66 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 16 Status:
-Algorithms Latency: 0.172252 seconds
-Peak Memory Usage: 39.97 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.170477 seconds
+Peak Memory Usage: 39.78 MB
+Bias: {'max_fitness_score': 1.4672858892101734, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Fix Format', 'demographic_group': 'age:(-5.001, 25.0]|race:Asian-Pac-Islander|sex:Female'}
 
 Run 17 Status:
-Algorithms Latency: 0.160652 seconds
-Peak Memory Usage: 39.91 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.161508 seconds
+Peak Memory Usage: 39.74 MB
+Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
 
 Run 18 Status:
-Algorithms Latency: 0.191955 seconds
-Peak Memory Usage: 39.80 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.172268 seconds
+Peak Memory Usage: 39.76 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 19 Status:
-Algorithms Latency: 0.172541 seconds
-Peak Memory Usage: 39.75 MB
-Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
+Algorithms Latency: 0.159086 seconds
+Peak Memory Usage: 39.89 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 20 Status:
-Algorithms Latency: 0.169438 seconds
-Peak Memory Usage: 39.95 MB
-Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
+Algorithms Latency: 0.176068 seconds
+Peak Memory Usage: 39.82 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 21 Status:
-Algorithms Latency: 0.165615 seconds
-Peak Memory Usage: 39.74 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.160285 seconds
+Peak Memory Usage: 39.83 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 22 Status:
-Algorithms Latency: 0.167026 seconds
-Peak Memory Usage: 39.52 MB
-Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
+Algorithms Latency: 0.162940 seconds
+Peak Memory Usage: 39.81 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 23 Status:
-Algorithms Latency: 0.162921 seconds
-Peak Memory Usage: 39.75 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.171305 seconds
+Peak Memory Usage: 39.51 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 24 Status:
-Algorithms Latency: 0.197374 seconds
-Peak Memory Usage: 39.86 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.161187 seconds
+Peak Memory Usage: 39.66 MB
+Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
 
 Run 25 Status:
-Algorithms Latency: 0.168661 seconds
-Peak Memory Usage: 39.91 MB
-Bias: {'max_fitness_score': 1.4883955600403633, 'script_name': 'handle_missing_data.py', 'transformation_name': 'Handle Missing Rows', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.281425 seconds
+Peak Memory Usage: 39.69 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 
 Run 26 Status:
-Algorithms Latency: 0.165645 seconds
-Peak Memory Usage: 39.91 MB
-Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
-
-Run 27 Status:
-Algorithms Latency: 0.242512 seconds
-Peak Memory Usage: 40.00 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
-
-Run 28 Status:
-Algorithms Latency: 0.166928 seconds
-Peak Memory Usage: 39.84 MB
-Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
-
-Run 29 Status:
-Algorithms Latency: 0.163714 seconds
+Algorithms Latency: 0.179884 seconds
 Peak Memory Usage: 39.89 MB
 Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
 
+Run 27 Status:
+Algorithms Latency: 0.162449 seconds
+Peak Memory Usage: 39.67 MB
+Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Other|sex:Male'}
+
+Run 28 Status:
+Algorithms Latency: 0.167993 seconds
+Peak Memory Usage: 39.86 MB
+Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
+
+Run 29 Status:
+Algorithms Latency: 0.292209 seconds
+Peak Memory Usage: 39.75 MB
+Bias: {'max_fitness_score': 1.5, 'script_name': 'outlier_remover.py', 'transformation_name': 'Num Outlier', 'demographic_group': 'age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Male'}
+
 Run 30 Status:
-Algorithms Latency: 0.213900 seconds
-Peak Memory Usage: 39.77 MB
-Bias: {'max_fitness_score': 1.5128205128205128, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Other|sex:Female'}
+Algorithms Latency: 0.165976 seconds
+Peak Memory Usage: 39.84 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
+
+Run 31 Status:
+Algorithms Latency: 0.171421 seconds
+Peak Memory Usage: 39.71 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
+
+Run 32 Status:
+Algorithms Latency: 0.203055 seconds
+Peak Memory Usage: 39.90 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
+
+Run 33 Status:
+Algorithms Latency: 0.232048 seconds
+Peak Memory Usage: 39.75 MB
+Bias: {'max_fitness_score': 1.4931500089249141, 'script_name': 'remove_duplicates_fix_format.py', 'transformation_name': 'Remove Duplicates', 'demographic_group': 'age:(-5.001, 25.0]|race:Black|sex:Female'}
 

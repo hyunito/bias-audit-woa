@@ -2,11 +2,11 @@
     {
         "script_name": "remove_duplicates_fix_format.py",
         "transformation_name": "Remove Duplicates",
-        "timestamp": "2026-06-06T20:27:52.108464",
-        "privileged_group": "age:(41.0, 51.0]|race:White|sex:male",
-        "highest_selection_rate": 0.5128205128205128,
+        "timestamp": "2026-06-07T14:20:09.965845",
+        "privileged_group": "age:(-5.001, 25.0]|race:Other|sex:Female",
+        "highest_selection_rate": 0.5294117647058824,
         "row_count_before": 34189,
-        "row_count_after": 32559,
+        "row_count_after": 32561,
         "intersectional_demographics": {
             "age:(-5.001, 25.0]|race:Amer-Indian-Eskimo|sex:Female": {
                 "total_count": 23,
@@ -149,11 +149,11 @@
                 "selection_rate_unfavorable_outcomes": 1.0
             },
             "age:(-5.001, 25.0]|race:Other|sex:Female": {
-                "total_count": 33,
-                "favorable_outcomes": 0,
-                "unfavorable_outcomes": 33,
-                "selection_rate_favorable_outcomes": 0.0,
-                "selection_rate_unfavorable_outcomes": 1.0
+                "total_count": 34,
+                "favorable_outcomes": 18,
+                "unfavorable_outcomes": 16,
+                "selection_rate_favorable_outcomes": 0.5294117647058824,
+                "selection_rate_unfavorable_outcomes": 0.47058823529411764
             },
             "age:(-5.001, 25.0]|race:Other|sex:M": {
                 "total_count": 3,
@@ -268,11 +268,11 @@
                 "selection_rate_unfavorable_outcomes": 1.0
             },
             "age:(-5.001, 25.0]|race:wht|sex:Female": {
-                "total_count": 99,
-                "favorable_outcomes": 1,
-                "unfavorable_outcomes": 98,
-                "selection_rate_favorable_outcomes": 0.010101010101010102,
-                "selection_rate_unfavorable_outcomes": 0.98989898989899
+                "total_count": 100,
+                "favorable_outcomes": 49,
+                "unfavorable_outcomes": 51,
+                "selection_rate_favorable_outcomes": 0.49,
+                "selection_rate_unfavorable_outcomes": 0.51
             },
             "age:(-5.001, 25.0]|race:wht|sex:M": {
                 "total_count": 8,
@@ -1497,11 +1497,11 @@
     {
         "script_name": "remove_duplicates_fix_format.py",
         "transformation_name": "Fix Format",
-        "timestamp": "2026-06-06T20:27:52.375681",
-        "privileged_group": "age:(41.0, 51.0]|race:White|sex:Male",
-        "highest_selection_rate": 0.4883955600403633,
-        "row_count_before": 32559,
-        "row_count_after": 32559,
+        "timestamp": "2026-06-07T14:20:10.274068",
+        "privileged_group": "age:(-5.001, 25.0]|race:Other|sex:Female",
+        "highest_selection_rate": 0.5294117647058824,
+        "row_count_before": 32561,
+        "row_count_after": 32561,
         "intersectional_demographics": {
             "age:(-5.001, 25.0]|race:Amer-Indian-Eskimo|sex:Fem": {
                 "total_count": 2,
@@ -1574,11 +1574,11 @@
                 "selection_rate_unfavorable_outcomes": 1.0
             },
             "age:(-5.001, 25.0]|race:Other|sex:Female": {
-                "total_count": 33,
-                "favorable_outcomes": 0,
-                "unfavorable_outcomes": 33,
-                "selection_rate_favorable_outcomes": 0.0,
-                "selection_rate_unfavorable_outcomes": 1.0
+                "total_count": 34,
+                "favorable_outcomes": 18,
+                "unfavorable_outcomes": 16,
+                "selection_rate_favorable_outcomes": 0.5294117647058824,
+                "selection_rate_unfavorable_outcomes": 0.47058823529411764
             },
             "age:(-5.001, 25.0]|race:Other|sex:Male": {
                 "total_count": 33,
@@ -1595,11 +1595,11 @@
                 "selection_rate_unfavorable_outcomes": 0.9833333333333333
             },
             "age:(-5.001, 25.0]|race:White|sex:Female": {
-                "total_count": 2194,
-                "favorable_outcomes": 33,
-                "unfavorable_outcomes": 2161,
-                "selection_rate_favorable_outcomes": 0.01504102096627165,
-                "selection_rate_unfavorable_outcomes": 0.9849589790337283
+                "total_count": 2195,
+                "favorable_outcomes": 81,
+                "unfavorable_outcomes": 2114,
+                "selection_rate_favorable_outcomes": 0.03690205011389522,
+                "selection_rate_unfavorable_outcomes": 0.9630979498861048
             },
             "age:(-5.001, 25.0]|race:White|sex:Male": {
                 "total_count": 3094,
@@ -2019,11 +2019,11 @@
     {
         "script_name": "handle_missing_data.py",
         "transformation_name": "Handle Missing Values",
-        "timestamp": "2026-06-06T20:27:52.663666",
-        "privileged_group": "age:(41.0, 51.0]|race:White|sex:Male",
-        "highest_selection_rate": 0.4883955600403633,
-        "row_count_before": 32559,
-        "row_count_after": 32559,
+        "timestamp": "2026-06-07T14:20:10.580323",
+        "privileged_group": "age:(-5.001, 25.0]|race:Other|sex:Female",
+        "highest_selection_rate": 0.5294117647058824,
+        "row_count_before": 32561,
+        "row_count_after": 32561,
         "intersectional_demographics": {
             "age:(-5.001, 25.0]|race:Amer-Indian-Eskimo|sex:Fem": {
                 "total_count": 2,
@@ -2096,11 +2096,11 @@
                 "selection_rate_unfavorable_outcomes": 1.0
             },
             "age:(-5.001, 25.0]|race:Other|sex:Female": {
-                "total_count": 33,
-                "favorable_outcomes": 0,
-                "unfavorable_outcomes": 33,
-                "selection_rate_favorable_outcomes": 0.0,
-                "selection_rate_unfavorable_outcomes": 1.0
+                "total_count": 34,
+                "favorable_outcomes": 18,
+                "unfavorable_outcomes": 16,
+                "selection_rate_favorable_outcomes": 0.5294117647058824,
+                "selection_rate_unfavorable_outcomes": 0.47058823529411764
             },
             "age:(-5.001, 25.0]|race:Other|sex:Male": {
                 "total_count": 33,
@@ -2117,11 +2117,11 @@
                 "selection_rate_unfavorable_outcomes": 0.9833333333333333
             },
             "age:(-5.001, 25.0]|race:White|sex:Female": {
-                "total_count": 2194,
-                "favorable_outcomes": 33,
-                "unfavorable_outcomes": 2161,
-                "selection_rate_favorable_outcomes": 0.01504102096627165,
-                "selection_rate_unfavorable_outcomes": 0.9849589790337283
+                "total_count": 2195,
+                "favorable_outcomes": 81,
+                "unfavorable_outcomes": 2114,
+                "selection_rate_favorable_outcomes": 0.03690205011389522,
+                "selection_rate_unfavorable_outcomes": 0.9630979498861048
             },
             "age:(-5.001, 25.0]|race:White|sex:Male": {
                 "total_count": 3094,
@@ -2541,11 +2541,11 @@
     {
         "script_name": "handle_missing_data.py",
         "transformation_name": "Handle Missing Rows",
-        "timestamp": "2026-06-06T20:27:52.793080",
-        "privileged_group": "age:(41.0, 51.0]|race:White|sex:Male",
-        "highest_selection_rate": 0.4883955600403633,
-        "row_count_before": 32559,
-        "row_count_after": 32559,
+        "timestamp": "2026-06-07T14:20:10.717667",
+        "privileged_group": "age:(-5.001, 25.0]|race:Other|sex:Female",
+        "highest_selection_rate": 0.5294117647058824,
+        "row_count_before": 32561,
+        "row_count_after": 32561,
         "intersectional_demographics": {
             "age:(-5.001, 25.0]|race:Amer-Indian-Eskimo|sex:Fem": {
                 "total_count": 2,
@@ -2618,11 +2618,11 @@
                 "selection_rate_unfavorable_outcomes": 1.0
             },
             "age:(-5.001, 25.0]|race:Other|sex:Female": {
-                "total_count": 33,
-                "favorable_outcomes": 0,
-                "unfavorable_outcomes": 33,
-                "selection_rate_favorable_outcomes": 0.0,
-                "selection_rate_unfavorable_outcomes": 1.0
+                "total_count": 34,
+                "favorable_outcomes": 18,
+                "unfavorable_outcomes": 16,
+                "selection_rate_favorable_outcomes": 0.5294117647058824,
+                "selection_rate_unfavorable_outcomes": 0.47058823529411764
             },
             "age:(-5.001, 25.0]|race:Other|sex:Male": {
                 "total_count": 33,
@@ -2639,11 +2639,11 @@
                 "selection_rate_unfavorable_outcomes": 0.9833333333333333
             },
             "age:(-5.001, 25.0]|race:White|sex:Female": {
-                "total_count": 2194,
-                "favorable_outcomes": 33,
-                "unfavorable_outcomes": 2161,
-                "selection_rate_favorable_outcomes": 0.01504102096627165,
-                "selection_rate_unfavorable_outcomes": 0.9849589790337283
+                "total_count": 2195,
+                "favorable_outcomes": 81,
+                "unfavorable_outcomes": 2114,
+                "selection_rate_favorable_outcomes": 0.03690205011389522,
+                "selection_rate_unfavorable_outcomes": 0.9630979498861048
             },
             "age:(-5.001, 25.0]|race:White|sex:Male": {
                 "total_count": 3094,
@@ -3063,11 +3063,11 @@
     {
         "script_name": "handle_missing_data.py",
         "transformation_name": "Remove Missing Target Variable",
-        "timestamp": "2026-06-06T20:27:52.911349",
-        "privileged_group": "age:(41.0, 51.0]|race:White|sex:Male",
-        "highest_selection_rate": 0.4883955600403633,
-        "row_count_before": 32559,
-        "row_count_after": 32559,
+        "timestamp": "2026-06-07T14:20:10.844604",
+        "privileged_group": "age:(-5.001, 25.0]|race:Other|sex:Female",
+        "highest_selection_rate": 0.5294117647058824,
+        "row_count_before": 32561,
+        "row_count_after": 32561,
         "intersectional_demographics": {
             "age:(-5.001, 25.0]|race:Amer-Indian-Eskimo|sex:Fem": {
                 "total_count": 2,
@@ -3140,11 +3140,11 @@
                 "selection_rate_unfavorable_outcomes": 1.0
             },
             "age:(-5.001, 25.0]|race:Other|sex:Female": {
-                "total_count": 33,
-                "favorable_outcomes": 0,
-                "unfavorable_outcomes": 33,
-                "selection_rate_favorable_outcomes": 0.0,
-                "selection_rate_unfavorable_outcomes": 1.0
+                "total_count": 34,
+                "favorable_outcomes": 18,
+                "unfavorable_outcomes": 16,
+                "selection_rate_favorable_outcomes": 0.5294117647058824,
+                "selection_rate_unfavorable_outcomes": 0.47058823529411764
             },
             "age:(-5.001, 25.0]|race:Other|sex:Male": {
                 "total_count": 33,
@@ -3161,11 +3161,11 @@
                 "selection_rate_unfavorable_outcomes": 0.9833333333333333
             },
             "age:(-5.001, 25.0]|race:White|sex:Female": {
-                "total_count": 2194,
-                "favorable_outcomes": 33,
-                "unfavorable_outcomes": 2161,
-                "selection_rate_favorable_outcomes": 0.01504102096627165,
-                "selection_rate_unfavorable_outcomes": 0.9849589790337283
+                "total_count": 2195,
+                "favorable_outcomes": 81,
+                "unfavorable_outcomes": 2114,
+                "selection_rate_favorable_outcomes": 0.03690205011389522,
+                "selection_rate_unfavorable_outcomes": 0.9630979498861048
             },
             "age:(-5.001, 25.0]|race:White|sex:Male": {
                 "total_count": 3094,
@@ -3585,11 +3585,11 @@
     {
         "script_name": "outlier_remover.py",
         "transformation_name": "Num Outlier",
-        "timestamp": "2026-06-06T20:27:53.037175",
+        "timestamp": "2026-06-07T14:20:10.974525",
         "privileged_group": "age:(41.0, 50.0]|race:Asian-Pac-Islander|sex:Male",
         "highest_selection_rate": 0.5,
-        "row_count_before": 32559,
-        "row_count_after": 30220,
+        "row_count_before": 32561,
+        "row_count_after": 30222,
         "intersectional_demographics": {
             "age:(16.999, 26.0]|race:Amer-Indian-Eskimo|sex:Fem": {
                 "total_count": 2,
@@ -3662,11 +3662,11 @@
                 "selection_rate_unfavorable_outcomes": 1.0
             },
             "age:(16.999, 26.0]|race:Other|sex:Female": {
-                "total_count": 37,
-                "favorable_outcomes": 0,
-                "unfavorable_outcomes": 37,
-                "selection_rate_favorable_outcomes": 0.0,
-                "selection_rate_unfavorable_outcomes": 1.0
+                "total_count": 38,
+                "favorable_outcomes": 16,
+                "unfavorable_outcomes": 22,
+                "selection_rate_favorable_outcomes": 0.42105263157894735,
+                "selection_rate_unfavorable_outcomes": 0.5789473684210527
             },
             "age:(16.999, 26.0]|race:Other|sex:Male": {
                 "total_count": 42,
@@ -3683,11 +3683,11 @@
                 "selection_rate_unfavorable_outcomes": 0.9918032786885246
             },
             "age:(16.999, 26.0]|race:White|sex:Female": {
-                "total_count": 2307,
-                "favorable_outcomes": 33,
-                "unfavorable_outcomes": 2274,
-                "selection_rate_favorable_outcomes": 0.014304291287386216,
-                "selection_rate_unfavorable_outcomes": 0.9856957087126138
+                "total_count": 2308,
+                "favorable_outcomes": 80,
+                "unfavorable_outcomes": 2228,
+                "selection_rate_favorable_outcomes": 0.03466204506065858,
+                "selection_rate_unfavorable_outcomes": 0.9653379549393414
             },
             "age:(16.999, 26.0]|race:White|sex:Male": {
                 "total_count": 3305,
@@ -4107,11 +4107,11 @@
     {
         "script_name": "outlier_remover.py",
         "transformation_name": "Categorical Outlier",
-        "timestamp": "2026-06-06T20:27:53.175759",
+        "timestamp": "2026-06-07T14:20:11.116871",
         "privileged_group": "age:(41.0, 50.0]|race:Asian-Pac-Islander|sex:Male",
         "highest_selection_rate": 0.5,
-        "row_count_before": 30220,
-        "row_count_after": 29675,
+        "row_count_before": 30222,
+        "row_count_after": 29676,
         "intersectional_demographics": {
             "age:(16.999, 26.0]|race:Asian-Pac-Islander|sex:Fem": {
                 "total_count": 4,
@@ -4163,11 +4163,11 @@
                 "selection_rate_unfavorable_outcomes": 0.9918032786885246
             },
             "age:(16.999, 26.0]|race:White|sex:Female": {
-                "total_count": 2304,
-                "favorable_outcomes": 32,
-                "unfavorable_outcomes": 2272,
-                "selection_rate_favorable_outcomes": 0.013888888888888888,
-                "selection_rate_unfavorable_outcomes": 0.9861111111111112
+                "total_count": 2305,
+                "favorable_outcomes": 79,
+                "unfavorable_outcomes": 2226,
+                "selection_rate_favorable_outcomes": 0.03427331887201735,
+                "selection_rate_unfavorable_outcomes": 0.9657266811279827
             },
             "age:(16.999, 26.0]|race:White|sex:Male": {
                 "total_count": 3303,
