@@ -4,7 +4,7 @@ import os
 
 def make_dirty():
     np.random.seed(42)
-    file_path = 'data/raw/adult_data.csv'
+    file_path = 'data/raw/ACSIncome_2018_100K.csv'
     
     if not os.path.exists(file_path):
         print(f"Error: {file_path} not found.")
@@ -100,16 +100,16 @@ def make_dirty():
 
     df = pd.concat([df, duplicates], ignore_index=True)
 
-    target_mask = (df['age'] <= 25) & (df['race'] == 'Other') & (df['sex'] == 'Female')
-    flip_indices = df[target_mask].sample(frac=0.5, random_state=42).index
-    df.loc[flip_indices, 'income'] = '>50K'
+    #target_mask = (df['age'] <= 25) & (df['race'] == 'Other') & (df['sex'] == 'Female')
+    #flip_indices = df[target_mask].sample(frac=0.5, random_state=42).index
+    #df.loc[flip_indices, 'income'] = '>50K'
 
-    target_mask = (df['age'] <= 25) & (df['race'] == 'wht') & (df['sex'] == 'Female')
-    flip_indices = df[target_mask].sample(frac=0.5, random_state=42).index
-    df.loc[flip_indices, 'income'] = '>50K'
+    #target_mask = (df['age'] <= 25) & (df['race'] == 'wht') & (df['sex'] == 'Female')
+    #flip_indices = df[target_mask].sample(frac=0.5, random_state=42).index
+    #df.loc[flip_indices, 'income'] = '>50K'
     
-    df.to_csv('data/raw/adult_data_dirty.csv', index=False)
-    print(f"Successfully injected noise and anomalies into data/raw/adult_data_dirty.csv")
+    df.to_csv('data/raw/ACSIncome_2018_100K_dirty.csv', index=False)
+    print(f"Successfully injected noise and anomalies into data/raw/ACSIncome_2018_100K_dirty.csv")
 
 if __name__ == '__main__':
     make_dirty()

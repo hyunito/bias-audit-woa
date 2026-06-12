@@ -22,9 +22,7 @@ class MetadataWOAAuditor:
         self.num_whales = num_whales
         self.max_iter = max_iter
         
-        # Load search space structure
         if metadata_logs is not None:
-            # Parse mock logs into the fitness module structure
             fitness._scripts = []
             fitness._transformations = {}
             fitness._demographics = {}
@@ -45,7 +43,7 @@ class MetadataWOAAuditor:
                 fitness._demographics[(script, trans)] = sorted(list(demos.keys()))
                 
             self.scripts, self.transformations, self.demographics = fitness._scripts, fitness._transformations, fitness._demographics
-            fitness._logs_cache = True # Prevent reloading database when mock is used
+            fitness._logs_cache = True
         else:
             self.scripts, self.transformations, self.demographics = fitness.get_space_dimensions()
             
@@ -83,9 +81,10 @@ class MetadataWOAAuditor:
         score, _, _, _ = fitness.calculate_3d_fitness(pos[0], pos[1], pos[2])
         return score
 
-    def run_audit(self):
+    def run_audit(self, target_script="outlier_remover.py"):
         """
         Executes the main WOA Scouting loop over the uneven 3D search space.
+        :param target_script: The script to track for the traceability rate metric.
         """
         if not self.scripts:
             print("No search space found. Verify database or fallback JSON path.")
@@ -118,18 +117,25 @@ class MetadataWOAAuditor:
         self.best_fitness = float('-inf')
         self.best_position = whales_pos[0].copy()
         
+        successful_trace_iterations = 0
+        
         for t in range(self.max_iter):
-            # Evaluate fitness for all whales
+           
             for i in range(self.num_whales):
                 whales_pos[i] = self.clip_position(whales_pos[i])
                 score = self.calculate_fitness(whales_pos[i])
                 
-                # We want to maximize the bias fitness score (higher score = more biased stage/demographic)
                 if score > self.best_fitness:
                     self.best_fitness = score
                     self.best_position = whales_pos[i].copy()
             
-            a = 2.0 - (t * (2.0 / self.max_iter)) # Linearly decreases from 2 to 0
+            _, curr_script, _, _ = fitness.calculate_3d_fitness(
+                self.best_position[0], self.best_position[1], self.best_position[2]
+            )
+            if curr_script == target_script:
+                successful_trace_iterations += 1
+            
+            a = 2.0 - (t * (2.0 / self.max_iter)) 
             
             for i in range(self.num_whales):
                 r1 = random.random()
@@ -160,7 +166,6 @@ class MetadataWOAAuditor:
                 
                 whales_pos[i] = self.clip_position(new_pos)
 
-        # Get final names and values from the best position found
         best_fitness, best_script, best_trans, best_demo = fitness.calculate_3d_fitness(
             self.best_position[0], self.best_position[1], self.best_position[2]
         )
@@ -169,7 +174,8 @@ class MetadataWOAAuditor:
             "max_fitness_score": best_fitness,
             "script_name": best_script,
             "transformation_name": best_trans,
-            "demographic_group": best_demo
+            "demographic_group": best_demo,
+            "traceability_rate": f"{successful_trace_iterations}/{self.max_iter} ({(successful_trace_iterations/self.max_iter)*100:.1f}%)"
         }
 
 if __name__ == "__main__":
