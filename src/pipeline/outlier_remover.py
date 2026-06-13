@@ -2,8 +2,15 @@ from src.pipeline.tracker_setup import tracker
 
 @tracker.track("Num Outlier")
 def num_outlier(df):
-    """Remove age outliers using Interquartile Range (IQR) method."""
+    """Remove numerical outliers and logical invalid values (e.g., negative values)."""
     df_cleaned = df.copy()
+    
+    # Remove logical invalid negative values first
+    if 'age' in df_cleaned.columns:
+        df_cleaned = df_cleaned[df_cleaned['age'] >= 0]
+    if 'hours-per-week' in df_cleaned.columns:
+        df_cleaned = df_cleaned[df_cleaned['hours-per-week'] >= 0]
+        
     if 'age' in df_cleaned.columns:
         Q1 = df_cleaned['age'].quantile(0.25)
         Q3 = df_cleaned['age'].quantile(0.75)
@@ -12,9 +19,6 @@ def num_outlier(df):
         lower_bound = Q1 - 1.5 * IQR
         upper_bound = Q3 + 1.5 * IQR
         
-        # Identify outliers
-        outliers = df_cleaned[(df_cleaned['age'] < lower_bound) | (df_cleaned['age'] > upper_bound)]
-    
         # Keep only rows within the IQR bounds
         df_cleaned = df_cleaned[(df_cleaned['age'] >= lower_bound) & (df_cleaned['age'] <= upper_bound)]
     return df_cleaned

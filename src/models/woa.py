@@ -8,10 +8,11 @@ import fitness
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 from src.utils.benchmark import get_peak_memory, log_audit_run
+from src.utils.audit_report import generate_text_report
 
 
 class MetadataWOAAuditor:
-    def __init__(self, metadata_logs=None, num_whales=15, max_iter=200):
+    def __init__(self, metadata_logs=None, num_whales=20, max_iter=400):
         """
         Initializes the WOA Auditor with a 3D search space.
         :param metadata_logs: Optional list of dictionaries representing the JSONB logs.
@@ -117,7 +118,7 @@ class MetadataWOAAuditor:
         self.best_fitness = float('-inf')
         self.best_position = whales_pos[0].copy()
         
-        successful_trace_iterations = 0
+        #successful_trace_iterations = 0
         
         for t in range(self.max_iter):
            
@@ -132,8 +133,8 @@ class MetadataWOAAuditor:
             _, curr_script, _, _ = fitness.calculate_3d_fitness(
                 self.best_position[0], self.best_position[1], self.best_position[2]
             )
-            if curr_script == target_script:
-                successful_trace_iterations += 1
+            #if curr_script == target_script:
+                #successful_trace_iterations += 1
             
             a = 2.0 - (t * (2.0 / self.max_iter)) 
             
@@ -170,12 +171,26 @@ class MetadataWOAAuditor:
             self.best_position[0], self.best_position[1], self.best_position[2]
         )
         
+        # Collect the final status of the entire whale population
+        whales_info = []
+        for i in range(self.num_whales):
+            w_pos = whales_pos[i]
+            w_fit, w_script, w_trans, w_demo = fitness.calculate_3d_fitness(w_pos[0], w_pos[1], w_pos[2])
+            whales_info.append({
+                "whale_id": i + 1,
+                "position": w_pos.tolist(),
+                "fitness_score": w_fit,
+                "script_name": w_script,
+                "transformation_name": w_trans,
+                "demographic_group": w_demo
+            })
+        
         return {
             "max_fitness_score": best_fitness,
             "script_name": best_script,
             "transformation_name": best_trans,
             "demographic_group": best_demo,
-            "traceability_rate": f"{successful_trace_iterations}/{self.max_iter} ({(successful_trace_iterations/self.max_iter)*100:.1f}%)"
+            "whales": whales_info
         }
 
 if __name__ == "__main__":
@@ -193,3 +208,6 @@ if __name__ == "__main__":
     
     # Log run output to performance logs using the external function
     log_audit_run(result_real, latency, peak_mem)
+    
+    # Generate the detailed plain text report
+    generate_text_report(result_real, latency, peak_mem)

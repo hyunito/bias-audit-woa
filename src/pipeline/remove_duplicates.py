@@ -48,7 +48,7 @@ def fix_format(df):
         
     if 'sex' in df.columns:
         df['sex'] = df['sex'].str.capitalize()
-        df['sex'] = df['sex'].replace({'m': 'Male', 'M': 'Male', 'f': 'Female', 'F': 'Female', 'fem': 'Female'}).infer_objects(copy=False)
+        df['sex'] = df['sex'].replace({'m': 'Male', 'M': 'Male', 'f': 'Female', 'F': 'Female', 'fem': 'Female', 'Fem': 'Female'}).infer_objects(copy=False)
         
     if 'place-of-birth' in df.columns:
         df['place-of-birth'] = df['place-of-birth'].str.capitalize()

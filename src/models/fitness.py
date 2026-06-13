@@ -1,27 +1,27 @@
 import psycopg2
 import os
-import numpy as np
 from dotenv import load_dotenv
 import json
 
 # Cache for the loaded logs hierarchy
 _logs_cache = None
 _scripts = []
-_transformations = {} # script_name -> list of trans_names
-_demographics = {}    # (script_name, trans_name) -> list of demo_keys
-_raw_records = {}     # (script_name, trans_name) -> log_data dict
+_transformations = {} 
+_demographics = {}    
+_raw_records = {}     
+_fitness_cache = {} 
 
 def load_provenance_data():
-    global _logs_cache, _scripts, _transformations, _demographics, _raw_records
+    global _logs_cache, _scripts, _transformations, _demographics, _raw_records, _fitness_cache
     if _logs_cache is not None:
         return
     
     load_dotenv()
-    db_name = os.getenv("DB_NAME")
-    db_user = os.getenv("DB_USER")
-    db_password = os.getenv("DB_PASSWORD")
-    db_host = os.getenv("DB_HOST", "localhost")
-    db_port = os.getenv("DB_PORT", "5432")
+    #db_name = os.getenv("DB_NAME")
+    #db_user = os.getenv("DB_USER")
+    #db_password = os.getenv("DB_PASSWORD")
+    #db_host = os.getenv("DB_HOST", "localhost")
+    #db_port = os.getenv("DB_PORT", "5432")
     
     rows = []
     try:
@@ -89,6 +89,21 @@ def load_provenance_data():
         valid_demos = [k for k, v in demos.items() if v.get("total_count", 0) >= 30]
         _demographics[(script, trans)] = sorted(valid_demos)
         
+        # pre-calculate
+        rate_priv = log_data.get("highest_selection_rate")
+        if rate_priv is None or rate_priv <= 0:
+            rate_priv = 1.0
+            
+        for demo_key in valid_demos:
+            target_data = demos.get(demo_key, {})
+            rate_target = target_data.get("selection_rate_favorable_outcomes")
+            if rate_target is None:
+                rate_target = target_data.get("selection_rate", 0.0)
+                
+            spd = abs(rate_target - rate_priv)
+            di = rate_target / (rate_priv + 1e-5)
+            _fitness_cache[(script, trans, demo_key)] = spd + abs(1 - di)
+        
     _logs_cache = True
 
 def get_space_dimensions():
@@ -101,60 +116,18 @@ def calculate_3d_fitness(s_idx, t_idx, d_idx):
     if not _scripts:
         return 0.0, "None", "None", "None"
         
-    # 1. Map s_idx to script
-    s_val = int(round(np.clip(s_idx, 0, len(_scripts) - 1)))
-    script_name = _scripts[s_val]
+    script_name = _scripts[int(s_idx)]
     
-    # 2. Map t_idx to transformation within script
     trans_list = _transformations.get(script_name, [])
     if not trans_list:
         return 0.0, script_name, "None", "None"
-    t_val = int(round(np.clip(t_idx, 0, len(trans_list) - 1)))
-    trans_name = trans_list[t_val]
-    
-    # 3. Map d_idx to demographic key within transformation
+    trans_name = trans_list[int(t_idx)]
+
     demo_list = _demographics.get((script_name, trans_name), [])
     if not demo_list:
         return 0.0, script_name, trans_name, "None"
-    d_val = int(round(np.clip(d_idx, 0, len(demo_list) - 1)))
-    demo_key = demo_list[d_val]
+    demo_key = demo_list[int(d_idx)]
     
-    # Fetch raw record and check total_count
-    log_data = _raw_records[(script_name, trans_name)]
-    target_data = log_data.get("intersectional_demographics", {}).get(demo_key, {})
-    
-    total_count = target_data.get("total_count", 0)
-    # Ignore if total_count < 30
-    if total_count < 30:
-        return -999.0, script_name, trans_name, demo_key
-        
-    # Get privileged information
-    rate_priv = log_data.get("highest_selection_rate")
-    privileged_group_key = log_data.get("privileged_group")
-    
-    # Fallback to compute privileged group if not stored
-    if rate_priv is None or privileged_group_key is None:
-        highest_rate = -1.0
-        for g_key, g_metrics in log_data.get("intersectional_demographics", {}).items():
-            if g_metrics.get("total_count", 0) >= 30:
-                curr_rate = g_metrics.get("selection_rate_favorable_outcomes", 0.0)
-                if curr_rate > highest_rate:
-                    highest_rate = curr_rate
-                    privileged_group_key = g_key
-        rate_priv = highest_rate
-        
-    if rate_priv is None or rate_priv <= 0:
-        rate_priv = 1.0
-        
-    rate_target = target_data.get("selection_rate_favorable_outcomes")
-    if rate_target is None:
-        rate_target = target_data.get("selection_rate", 0.0)
-        
-    # Calculate SPD and DI
-    spd = abs(rate_target - rate_priv)
-    di = rate_target / (rate_priv + 1e-5)
-    
-    # Fitness Function: f(X) = |SPD| + |1 - DI|
-    fitness_score = spd + abs(1 - di)
+    fitness_score = _fitness_cache.get((script_name, trans_name, demo_key), -999.0)
     
     return fitness_score, script_name, trans_name, demo_key
