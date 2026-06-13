@@ -20,10 +20,10 @@ def make_dirty():
     
     #workclass column
     df['workclass'] = df['workclass'].astype(str)
-    private_idx = df[df['workclass'] == 'Private'].index
+    private_idx = df[df['workclass'] == 'Federal Government'].index
     if len(private_idx) > 0:
-        df.loc[np.random.choice(private_idx, int(len(private_idx)*0.05), replace=False), 'workclass'] = 'privat'
-    stategov_idx = df[df['workclass'] == 'State-gov'].index
+        df.loc[np.random.choice(private_idx, int(len(private_idx)*0.05), replace=False), 'workclass'] = 'federal gov'
+    stategov_idx = df[df['workclass'] == 'State Government'].index
     if len(stategov_idx) > 0:
         df.loc[np.random.choice(stategov_idx, int(len(stategov_idx)*0.05), replace=False), 'workclass'] = 'state gov'
     df.loc[np.random.choice(n, int(n*0.05), replace=False), 'workclass'] = np.nan
@@ -34,9 +34,6 @@ def make_dirty():
     df.loc[idx, 'education'] = df.loc[idx, 'education'].str.lower()
     idx = np.random.choice(n, int(n*0.1), replace=False)
     df.loc[idx, 'education'] = df.loc[idx, 'education'].str.upper()
-    
-    #education-num column
-    df.loc[np.random.choice(n, int(n*0.05), replace=False), 'education-num'] = np.nan
     
     #marital-status column
     df['marital-status'] = df['marital-status'].astype(str)
@@ -74,27 +71,17 @@ def make_dirty():
         df.loc[np.random.choice(female_idx, int(len(female_idx)*0.05), replace=False), 'sex'] = 'F'
         df.loc[np.random.choice(female_idx, int(len(female_idx)*0.05), replace=False), 'sex'] = 'fem'
     
-    #capital-gain column
-    df.loc[np.random.choice(n, int(n*0.02), replace=False), 'capital-gain'] = -5000
-    df.loc[np.random.choice(n, int(n*0.01), replace=False), 'capital-gain'] = 9999999
-    
-    #capital-lose column
-    df.loc[np.random.choice(n, int(n*0.02), replace=False), 'capital-lose'] = -100
-    
     #hours-per-week column
     df.loc[np.random.choice(n, int(n*0.02), replace=False), 'hours-per-week'] = 200
     df.loc[np.random.choice(n, int(n*0.01), replace=False), 'hours-per-week'] = -10
     df.loc[np.random.choice(n, int(n*0.05), replace=False), 'hours-per-week'] = np.nan
     
-    #native-country column
-    df['native-country'] = df['native-country'].astype(str)
-    usa_idx = df[df['native-country'] == 'United-States'].index
-    if len(usa_idx) > 0:
-        df.loc[np.random.choice(usa_idx, int(len(usa_idx)*0.05), replace=False), 'native-country'] = 'USA'
-        df.loc[np.random.choice(usa_idx, int(len(usa_idx)*0.05), replace=False), 'native-country'] = 'US'
-        df.loc[np.random.choice(usa_idx, int(len(usa_idx)*0.05), replace=False), 'native-country'] = 'united-states'
-    
-
+    #place-of-birth column
+    df['place-of-birth'] = df['place-of-birth'].astype(str)
+    idx = np.random.choice(n, int(n*0.1), replace=False)
+    df.loc[idx, 'place-of-birth'] = df.loc[idx, 'place-of-birth'].str.lower()
+    idx = np.random.choice(n, int(n*0.1), replace=False)
+    df.loc[idx, 'place-of-birth'] = df.loc[idx, 'place-of-birth'].str.upper()
 
     duplicates = df.sample(n=int(n*0.05), replace=True)
 
@@ -108,8 +95,8 @@ def make_dirty():
     #flip_indices = df[target_mask].sample(frac=0.5, random_state=42).index
     #df.loc[flip_indices, 'income'] = '>50K'
     
-    df.to_csv('data/raw/ACSIncome_2018_100K_dirty.csv', index=False)
-    print(f"Successfully injected noise and anomalies into data/raw/ACSIncome_2018_100K_dirty.csv")
+    df.to_csv('data/raw/dirty_ACSIncome_2018_100K.csv', index=False)
+    print(f"Successfully injected noise and anomalies into data/raw/dirty_ACSIncome_2018_100K.csv")
 
 if __name__ == '__main__':
     make_dirty()

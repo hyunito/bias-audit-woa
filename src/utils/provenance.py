@@ -6,6 +6,8 @@ import inspect
 import psycopg2
 from psycopg2.extras import Json
 import os
+pd.set_option('future.no_silent_downcasting', True)
+
 class ProvenanceMetadataTracker:
     """
     A wrapper class for data transformations that generates summary statistics 
@@ -29,10 +31,19 @@ class ProvenanceMetadataTracker:
                     f"Invalid type '{attr_type}' for protected attribute '{attr.get('name', 'Unknown')}'. "
                     f"Type must be either 'categorical' or 'continuous'."
                 )
-
-        self.protected_attributes = protected_attributes
         self.target_variable = target_variable
+        self.protected_attributes = protected_attributes
         self.metadata_records = []
+        
+        if isinstance(target_variable, dict):
+            self.target_col = target_variable.get('name')
+            self.user_pos = str(target_variable.get('positive')).strip().upper()
+            self.user_neg = str(target_variable.get('negative')).strip().upper()
+        else:
+            self.target_col = target_variable
+            self.user_pos = None
+            self.user_neg = None
+
 
     def _standardize_missing(self, df, columns):
         """
@@ -44,7 +55,7 @@ class ProvenanceMetadataTracker:
         
         for col in columns:
             if col in df_meta.columns:
-                df_meta[col] = df_meta[col].replace(missing_vals, "Unknown")
+                df_meta[col] = df_meta[col].replace(missing_vals, "Unknown").infer_objects(copy=False)
                 df_meta[col] = df_meta[col].astype(object)
                 df_meta[col] = df_meta[col].astype(str)
         return df_meta
@@ -64,7 +75,7 @@ class ProvenanceMetadataTracker:
                     binned_series = pd.qcut(numeric_series, q=5, duplicates='drop')
                     df_meta.loc[~is_unknown, col] = binned_series
                     
-                    df_meta[col] = df_meta[col].replace(["nan", "NaN"], "Unknown")
+                    df_meta[col] = df_meta[col].replace(["nan", "NaN"], "Unknown").infer_objects(copy=False)
         return df_meta
 
     def _generate_snapshot(self, df):
@@ -78,7 +89,9 @@ class ProvenanceMetadataTracker:
 
         df_meta = self._standardize_missing(df, attrs)
         df_meta = self._bin_continuous(df_meta)
-        
+        if self.target_col in df_meta.columns:
+            df_meta[self.target_col] = df_meta[self.target_col].astype(str).str.strip().str.upper()
+
         groups = df_meta.groupby(attrs)
         intersectional_demographics = {}
         privileged_group = None
@@ -95,16 +108,11 @@ class ProvenanceMetadataTracker:
             favorable = 0
             unfavorable = 0
             
-            target_col = self.target_variable.get('name') if isinstance(self.target_variable, dict) else self.target_variable
-            
-            if target_col in df.columns:
-                target_series = group[target_col]
-                
-                if isinstance(self.target_variable, dict):
-                    pos_val = self.target_variable.get('positive')
-                    neg_val = self.target_variable.get('negative')
-                    favorable = int((target_series == pos_val).sum())
-                    unfavorable = int((target_series == neg_val).sum())
+            if self.target_col in df.columns:
+                target_series = group[self.target_col]
+                if self.user_pos is not None:
+                    favorable = int((target_series == self.user_pos).sum())
+                    unfavorable = int((target_series == self.user_neg).sum())
                 else:
                     favorable = int(((target_series == 1) | (target_series == '1') | (target_series == 1.0) | (target_series == True)).sum())
                     unfavorable = int(((target_series == 0) | (target_series == '0') | (target_series == 0.0) | (target_series == False)).sum())
@@ -145,13 +153,12 @@ class ProvenanceMetadataTracker:
                             
                 row_count_before = len(input_df) if input_df is not None else None
 
-                target_col = self.target_variable.get('name') if isinstance(self.target_variable, dict) else self.target_variable
-                if input_df is not None and target_col in input_df.columns:
-                    unique_targets = input_df[target_col].dropna().unique()
+                if input_df is not None and self.target_col in input_df.columns:
+                    unique_targets = input_df[self.target_col].dropna().unique()
                     
                     unique_targets = [val for val in unique_targets if val != "Unknown"]
                     if len(unique_targets) > 2:
-                        error_msg = f"Fairness metrics (SPD/DI) require a binary target. Target variable '{target_col}' contains more than 2 unique values (excluding 'Unknown')."
+                        error_msg = f"Fairness metrics (SPD/DI) require a binary target. Target variable '{self.target_col}' contains more than 2 unique values (excluding 'Unknown')."
                         print(f"Ethical Constraint Error: {error_msg}")
                         raise ValueError(error_msg)
 

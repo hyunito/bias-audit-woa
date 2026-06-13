@@ -6,5 +6,5 @@ tracker = ProvenanceMetadataTracker(
         {'name': 'race', 'type': 'categorical'}, 
         {'name': 'sex', 'type': 'categorical'}
     ],
-    target_variable={'name': 'income', 'positive': '>50K', 'negative': '<=50K'}
+    target_variable={'name': 'income', 'positive': 'TRUE', 'negative': 'FALSE'}
 )

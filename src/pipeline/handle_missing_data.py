@@ -11,10 +11,10 @@ def handle_missing(df):
     """
     df = df.copy()
     
-    df = df.replace(r'^\s*$', np.nan, regex=True)
-    df = df.replace('?', np.nan)
+    df = df.replace(r'^\s*$', np.nan, regex=True).infer_objects(copy=False)
+    df = df.replace('?', np.nan).infer_objects(copy=False)
     
-    df = df.replace('Unknown', np.nan)
+    df = df.replace('Unknown', np.nan).infer_objects(copy=False)
     return df
 
 @tracker.track("Handle Missing Rows")

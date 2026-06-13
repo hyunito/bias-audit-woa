@@ -47,6 +47,6 @@ def run_outlier_removal(df):
     cleaned_df = cat_outlier(df, cat_threshold=0.01)
     print(f"Shape after step 3: {df.shape}")
 
-    cleaned_df.to_csv('data/adult_data_final.csv', index=False)
+    cleaned_df.to_csv('data/cleaned_ACSIncome_2018_100K.csv', index=False)
 
     return cleaned_df

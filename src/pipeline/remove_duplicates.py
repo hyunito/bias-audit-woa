@@ -18,21 +18,21 @@ def fix_format(df):
     """
     print("fix_format started")
     
-    numeric_cols = ['age', 'fnlwgt', 'education-num', 'capital-gain', 'capital-lose', 'hours-per-week']
+    numeric_cols = ['age', 'hours-per-week']
     for col in numeric_cols:
         if col in df.columns:
             if df[col].dtype == 'object':
-                df[col] = df[col].apply(lambda x: str(x).replace(',', '') if pd.notnull(x) else x)
+                df[col] = df[col].apply(lambda x: str(x).replace(',', '').infer_objects(copy=False) if pd.notnull(x) else x)
             df[col] = pd.to_numeric(df[col], errors='coerce').astype('Int64')
 
-    cat_cols = ['workclass', 'education', 'marital-status', 'occupation', 'relationship', 'race', 'sex', 'native-country', 'income']
+    cat_cols = ['workclass', 'education', 'marital-status', 'occupation', 'relationship', 'race', 'sex', 'place-of-birth', 'income']
     for col in cat_cols:
         if col in df.columns:
             df[col] = df[col].apply(lambda x: str(x).strip() if pd.notnull(x) else x)
-            df[col] = df[col].replace('nan', pd.NA)
+            df[col] = df[col].replace('nan', pd.NA).infer_objects(copy=False)
 
     if 'workclass' in df.columns:
-        df['workclass'] = df['workclass'].replace({'privat': 'Private', 'state gov': 'State-gov'})
+        df['workclass'] = df['workclass'].replace({'federal gov': 'Federal Government', 'state gov': 'State GGovernment'}).infer_objects(copy=False)
     
     if 'education' in df.columns:
         df['education'] = df['education'].str.capitalize()
@@ -44,14 +44,14 @@ def fix_format(df):
         df['relationship'] = df['relationship'].str.capitalize()
         
     if 'race' in df.columns:
-        df['race'] = df['race'].replace({'wht': 'White', 'blk': 'Black'})
+        df['race'] = df['race'].replace({'wht': 'White', 'blk': 'Black'}).infer_objects(copy=False)
         
     if 'sex' in df.columns:
         df['sex'] = df['sex'].str.capitalize()
-        df['sex'] = df['sex'].replace({'m': 'Male', 'M': 'Male', 'f': 'Female', 'F': 'Female', 'fem': 'Female'})
+        df['sex'] = df['sex'].replace({'m': 'Male', 'M': 'Male', 'f': 'Female', 'F': 'Female', 'fem': 'Female'}).infer_objects(copy=False)
         
-    if 'native-country' in df.columns:
-        df['native-country'] = df['native-country'].replace({'USA': 'United-States', 'US': 'United-States', 'united-states': 'United-States'})
+    if 'place-of-birth' in df.columns:
+        df['place-of-birth'] = df['place-of-birth'].str.capitalize()
         
     return df
 

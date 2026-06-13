@@ -16,7 +16,7 @@ def find_ground_truth_max_fitness():
     
     # Overwrite the ground_truth.txt file with a clean header
     with open(log_path, "w", encoding="utf-8") as f:
-        f.write("Truth Bias\n\n")
+        f.write("Highest Bias In Each Transformation\n\n")
     
     for stage in stages:
         script_name = stage.get("script_name", "Unknown")
@@ -90,6 +90,6 @@ def find_ground_truth_max_fitness():
 if __name__ == "__main__":
     
     results = find_ground_truth_max_fitness()
-    print(f"\nLinear Search Complete! Found {len(results)} hotspots:")
+    print(f"\nSearch Complete! Found {len(results)} hotspots:")
     for res in results:
         print(res)
