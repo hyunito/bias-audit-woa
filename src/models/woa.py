@@ -118,7 +118,7 @@ class MetadataWOAAuditor:
         self.best_fitness = float('-inf')
         self.best_position = whales_pos[0].copy()
         
-        #successful_trace_iterations = 0
+        successful_trace_iterations = 0
         
         for t in range(self.max_iter):
            
@@ -133,8 +133,8 @@ class MetadataWOAAuditor:
             _, curr_script, _, _ = fitness.calculate_3d_fitness(
                 self.best_position[0], self.best_position[1], self.best_position[2]
             )
-            #if curr_script == target_script:
-                #successful_trace_iterations += 1
+            if curr_script == target_script:
+                successful_trace_iterations += 1
             
             a = 2.0 - (t * (2.0 / self.max_iter)) 
             
@@ -190,6 +190,7 @@ class MetadataWOAAuditor:
             "script_name": best_script,
             "transformation_name": best_trans,
             "demographic_group": best_demo,
+            "successful_trace_iterations": f"{successful_trace_iterations}/{self.max_iter}",
             "whales": whales_info
         }
 
