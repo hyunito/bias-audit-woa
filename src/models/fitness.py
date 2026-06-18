@@ -7,16 +7,15 @@ import json
 _logs_cache = None
 _scripts = []
 _transformations = {} 
-_demographics = {}    
-_raw_records = {}     
+_demographics = {}       
 _fitness_cache = {} 
 
 def load_provenance_data():
-    global _logs_cache, _scripts, _transformations, _demographics, _raw_records, _fitness_cache
+    global _logs_cache, _scripts, _transformations, _demographics,  _fitness_cache
     if _logs_cache is not None:
         return
     
-    load_dotenv()
+    #load_dotenv()
     #db_name = os.getenv("DB_NAME")
     #db_user = os.getenv("DB_USER")
     #db_password = os.getenv("DB_PASSWORD")
@@ -25,28 +24,28 @@ def load_provenance_data():
     
     rows = []
     try:
-        conn = psycopg2.connect(
-            dbname=db_name,
-            user=db_user,
-            password=db_password,
-            host=db_host,
-            port=db_port
-        )
-        cursor = conn.cursor()
-        cursor.execute("SELECT log_data FROM provenance_logs ORDER BY id ASC")
-        for r in cursor.fetchall():
-            val = r[0]
-            if isinstance(val, str):
-                rows.append(json.loads(val))
-            else:
-                rows.append(val)
-        cursor.close()
-        conn.close()
+        if 'db_name' in locals() or 'db_name' in globals():
+            conn = psycopg2.connect(
+                dbname=db_name,
+                user=db_user,
+                password=db_password,
+                host=db_host,
+                port=db_port
+            )
+            cursor = conn.cursor()
+            cursor.execute("SELECT log_data FROM provenance_logs ORDER BY id ASC")
+            for r in cursor.fetchall():
+                val = r[0]
+                if isinstance(val, str):
+                    rows.append(json.loads(val))
+                else:
+                    rows.append(val)
+            cursor.close()
+            conn.close()
     except Exception as e:
         print(f"Database connection failed, falling back to JSON: {e}")
         
     if not rows:
-        # Try local JSON files as fallbacks
         possible_paths = [
             os.path.join(os.path.dirname(__file__), "..", "..", "data", "provenance_metadata.json"),
             os.path.join(os.path.dirname(__file__), "provenance_metadata.json"),
@@ -63,11 +62,9 @@ def load_provenance_data():
                 except Exception as json_err:
                     pass
                 
-    # Build hierarchy from rows
     _scripts = []
     _transformations = {}
     _demographics = {}
-    _raw_records = {}
     
     for log_data in rows:
         script = log_data.get("script_name")
@@ -83,7 +80,6 @@ def load_provenance_data():
         if trans not in _transformations[script]:
             _transformations[script].append(trans)
             
-        _raw_records[(script, trans)] = log_data
         
         demos = log_data.get("intersectional_demographics", {})
         valid_demos = [k for k, v in demos.items() if v.get("total_count", 0) >= 30]
@@ -93,7 +89,6 @@ def load_provenance_data():
         rate_priv = log_data.get("highest_selection_rate")
         if rate_priv is None or rate_priv <= 0:
             rate_priv = 1.0
-            
         for demo_key in valid_demos:
             target_data = demos.get(demo_key, {})
             rate_target = target_data.get("selection_rate_favorable_outcomes")

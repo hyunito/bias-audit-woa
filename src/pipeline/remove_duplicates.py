@@ -16,8 +16,7 @@ def fix_format(df):
     """
     Type cast certain columns and fix formatting like number commas and typos.
     """
-    print("fix_format started")
-    
+
     numeric_cols = ['age', 'hours-per-week']
     for col in numeric_cols:
         if col in df.columns:

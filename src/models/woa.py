@@ -27,7 +27,6 @@ class MetadataWOAAuditor:
             fitness._scripts = []
             fitness._transformations = {}
             fitness._demographics = {}
-            fitness._raw_records = {}
             
             for log in metadata_logs:
                 script = log.get("script_name", "mock_script.py")
@@ -38,8 +37,6 @@ class MetadataWOAAuditor:
                     fitness._transformations[script] = []
                 if trans not in fitness._transformations[script]:
                     fitness._transformations[script].append(trans)
-                
-                fitness._raw_records[(script, trans)] = log
                 demos = log.get("intersectional_demographics", {})
                 fitness._demographics[(script, trans)] = sorted(list(demos.keys()))
                 
@@ -206,9 +203,6 @@ if __name__ == "__main__":
     t_end = time.perf_counter()
     latency = t_end - t_start
     peak_mem = get_peak_memory()
-    
-    # Log run output to performance logs using the external function
+
     log_audit_run(result_real, latency, peak_mem)
-    
-    # Generate the detailed plain text report
     generate_text_report(result_real, latency, peak_mem)
