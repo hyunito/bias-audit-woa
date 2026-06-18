@@ -20,3 +20,4 @@ project_plan.md
 # Scripts to keep local only
 src/utils/make_dirty.py
 src/utils/benchmark.py
+linear_search.py
