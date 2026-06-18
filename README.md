@@ -87,7 +87,3 @@ The GUI allows you to:
 - View real-time graphs showing the highest bias hotspots detected across the preprocessing stages.
 
 ---
-
-## Local Scripts
-The repository also includes:
-* `linear_search.py`: Evaluates every possible demographic intersection sequentially across all pipeline steps to verify and benchmark the WOA agent's output.
