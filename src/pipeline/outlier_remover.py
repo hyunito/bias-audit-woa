@@ -5,7 +5,6 @@ def num_outlier(df):
     """Remove numerical outliers and logical invalid values (e.g., negative values)."""
     df_cleaned = df.copy()
     
-    # Remove logical invalid negative values first
     if 'age' in df_cleaned.columns:
         df_cleaned = df_cleaned[df_cleaned['age'] >= 0]
     if 'hours-per-week' in df_cleaned.columns:
@@ -19,7 +18,6 @@ def num_outlier(df):
         lower_bound = Q1 - 1.5 * IQR
         upper_bound = Q3 + 1.5 * IQR
         
-        # Keep only rows within the IQR bounds
         df_cleaned = df_cleaned[(df_cleaned['age'] >= lower_bound) & (df_cleaned['age'] <= upper_bound)]
     return df_cleaned
 

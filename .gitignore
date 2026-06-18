@@ -14,4 +14,9 @@ venv/
 # Data
 data/
 *.csv
+!data/raw/dirty_ACSIncome_2018_100K.csv
 project_plan.md
+
+# Scripts to keep local only
+src/utils/make_dirty.py
+src/utils/benchmark.py

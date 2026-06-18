@@ -1,85 +1,93 @@
-# Demographic Bias Auditing Baseline
+# Demographic Bias Auditing Baseline (WOA)
 
-## Overview
-This project tracks and audits data transformations during the preprocessing stage of machine learning pipelines. It utilizes a `ProvenanceMetadataTracker` to capture intersectional demographic data before and after every pipeline step. These metadata logs are pushed to a PostgreSQL JSONB database, where the Whale Optimization Algorithm (WOA) is utilized as a baseline to search for silent bias clusters.
+This repository implements a data preprocessing pipeline combined with an auditing tool designed to detect demographic bias propagation across data transformations. It uses a **Whale Optimization Algorithm (WOA)** agent to scan intersectional demographic combinations and identify hidden bias hotspots within the data pipeline steps.
 
-## Prerequisites
-Before running the pipeline, ensure you have the following installed:
-1. **Python 3.x**
-2. **PostgreSQL** and **pgAdmin 4** (for managing the database)
+---
 
-## 1. Database Setup (PostgreSQL)
-To run this project, you must have a local PostgreSQL database configured to receive the metadata logs.
+## Folder Structure
 
-1. Open **pgAdmin 4** and connect to your local server.
-2. Create a new database named `bias_audit_db` (or a name of your choice).
-3. Open the **Query Tool** for your new database and run the following SQL command to create the required table:
-   ```sql
-   CREATE TABLE provenance_logs (
-       id SERIAL PRIMARY KEY,
-       log_data JSONB NOT NULL
-   );
-   ```
-
-## 2. Environment Configuration
-For security, database credentials are not hardcoded in the Python scripts. Every group member needs to create their own local environment file.
-
-1. In the root directory of this project, create a new file named exactly **`.env`**.
-2. Add the following lines to your `.env` file, replacing `your_pgadmin_password_here` with your actual PostgreSQL master password:
-   ```env
-   DB_NAME=bias_audit_db
-   DB_USER=postgres
-   DB_PASSWORD=your_pgadmin_password_here
-   DB_HOST=localhost
-   DB_PORT=5432
-   ```
-*(Note: The `.env` file is included in `.gitignore` to prevent uploading passwords to GitHub. Do not commit your password!)*
-
-## 3. Python Setup
-Open your terminal in the project folder and install the required Python libraries. This includes `psycopg2-binary` for database connection, `python-dotenv` for reading the environment variables, and `psutil` which will be used for evaluating memory scalability.
-
-```bash
-pip install pandas psycopg2-binary python-dotenv psutil numpy
+```text
+bias-audit-woa/
+├── data/
+│   ├── raw/
+│   │   └── dirty_ACSIncome_2018_100K.csv  # Sample raw dataset with noise, duplicates, and outliers
+│   └── provenance_metadata.json           # Output file containing tracked pipeline provenance logs
+├── src/
+│   ├── pipeline/                          # Steps of the data preprocessing pipeline
+│   │   ├── __init__.py
+│   │   ├── remove_duplicates.py           # Handles duplicate removal and initial text cleaning
+│   │   ├── handle_missing_data.py         # Imputes/removes missing rows and target variables
+│   │   └── outlier_remover.py             # Removes numerical and categorical outliers
+│   ├── models/                            # Auditing models and search algorithms
+│   │   ├── __init__.py
+│   │   ├── fitness.py                     # Computes demographic bias/disparate impact fitness score
+│   │   └── woa.py                         # Whale Optimization Algorithm (WOA) agent implementation
+│   └── utils/                             # Auditing utilities and tracker classes
+│       ├── __init__.py
+│       ├── audit_report.py                # Formatting and writing bias reports
+│       └── provenance.py                  # Provenance metadata snapshot collector
+├── gui.py                                 # Tkinter Graphical User Interface for pipeline control & auditing
+├── main.py                                # Script to run the data preprocessing pipeline
+├── linear_search.py                       # Script to run a grid search (linear scan) for auditing comparison
+└── README.md                              # This project documentation file
 ```
 
-## Running the Pipeline
-Once your database and environment variables are set up, you can execute the main script:
+---
+
+## Prerequisites & Installation
+
+To run the pipeline and GUI, ensure you have Python 3.x installed. 
+
+Install the required Python libraries using pip:
+```bash
+pip install pandas python-dotenv psutil numpy
+```
+*(Note: Database connections are commented out; the system operates directly on local metadata logs, so PostgreSQL is not required.)*
+
+---
+
+## How it Works
+
+### 1. Data Preprocessing Pipeline
+Running the pipeline processes the raw sample dataset through standard cleaning operations and records metadata for auditability.
 
 ```bash
 python main.py
 ```
 
-This script will:
-1. Load the raw demographic dataset.
-2. Run data through the preprocessing pipelines (e.g., removing duplicates, fixing formats, handling missing values, and outliers).
-3. Generate active metadata provenance snapshots to identify privileged demographic groups dynamically.
-4. Export the resulting logs to `data/provenance/provenance_metadata.json` AND push them securely to your PostgreSQL database.
+This command will:
+1. Load `data/raw/dirty_ACSIncome_2018_100K.csv`.
+2. Run data through three stages:
+   * **Step 1:** Remove Duplicates & Fix Formatting.
+   * **Step 2:** Handle Missing Values, Missing Rows, and Drop missing target labels.
+   * **Step 3:** Remove Numerical and Categorical Outliers.
+3. Automatically capture demographic snapshots (selection rates, positive outcomes) at each step.
+4. Export the resulting provenance records to `data/provenance_metadata.json`.
 
-## Running the WOA Bias Auditor
-To run the Whale Optimization Algorithm (WOA) to scan your pipeline logs for bias hotspots:
+### 2. Whale Optimization Algorithm (WOA) Auditor
+To run the WOA search agent to locate bias hotspots:
 
 ```bash
 python src/models/woa.py
 ```
 
-This script executes the standalone WOA search agent:
-1. First, on a simulated/mock metadata log set to verify the optimization mechanics.
-2. Second, on the actual pipeline logs fetched from your local PostgreSQL database (falling back to `data/provenance_metadata.json` if the database is unreachable).
+This auditor reads the logs directly from `data/provenance_metadata.json` and uses the WOA algorithm to optimize a fitness function representing demographic bias (selection rate disparity). It reports the demographic group and step experiencing the highest relative bias.
 
-The auditor will output the unprivileged demographic group that experienced the highest relative bias throughout the pipeline transformations.
+### 3. Graphical User Interface (GUI)
+You can run the interactive desktop app to visual and run the pipeline/audits:
 
-## Viewing and Managing Logs
-To verify the logs were saved successfully:
-1. Open **pgAdmin 4**.
-2. Navigate to `bias_audit_db` -> **Schemas** -> **public** -> **Tables**.
-3. Right-click on `provenance_logs` -> **View/Edit Data** -> **All Rows**.
-4. Alternatively, you can run the following query in the Query Tool:
-   ```sql
-   SELECT * FROM public.provenance_logs ORDER BY id ASC;
-   ```
-
-**Resetting the Database for Testing:**
-If you want to clear the logs and start from a fresh slate (resetting the ID counter back to 1), run this command in the pgAdmin 4 Query Tool:
-```sql
-TRUNCATE TABLE provenance_logs RESTART IDENTITY;
+```bash
+python gui.py
 ```
+
+The GUI allows you to:
+- Browse and select the input dataset (defaulting to the sample dataset).
+- Run the preprocessing pipeline steps sequentially.
+- Trigger the WOA Search to scan the generated provenance file.
+- View real-time graphs showing the highest bias hotspots detected across the preprocessing stages.
+
+---
+
+## Local Scripts
+The repository also includes:
+* `linear_search.py`: Evaluates every possible demographic intersection sequentially across all pipeline steps to verify and benchmark the WOA agent's output.

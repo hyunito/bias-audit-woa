@@ -3,8 +3,8 @@ import datetime
 import functools
 import json
 import inspect
-import psycopg2
-from psycopg2.extras import Json
+# import psycopg2
+# from psycopg2.extras import Json
 import os
 pd.set_option('future.no_silent_downcasting', True)
 
@@ -204,24 +204,25 @@ class ProvenanceMetadataTracker:
         """
         Exports the tracked metadata records to a PostgreSQL JSONB table
         """
-        try:
-            conn = psycopg2.connect(
-                dbname=db_name,
-                user=db_user,
-                password=db_password,
-                host=db_host,
-                port=db_port
-            )
-            cursor = conn.cursor()
-            for record in self.metadata_records:
-                cursor.execute(
-                    "INSERT INTO provenance_logs (log_data) VALUES (%s)", [Json(record)]) 
-            conn.commit()
-            cursor.close()
-            conn.close()
-            print(f"Successfully exported {len(self.metadata_records)} provenance records to PostgreSQL JSONB")
-        except Exception as e:
-            print(f"Error exporting to PostgreSQL: {e}")
+        # try:
+        #     conn = psycopg2.connect(
+        #         dbname=db_name,
+        #         user=db_user,
+        #         password=db_password,
+        #         host=db_host,
+        #         port=db_port
+        #     )
+        #     cursor = conn.cursor()
+        #     for record in self.metadata_records:
+        #         cursor.execute(
+        #             "INSERT INTO provenance_logs (log_data) VALUES (%s)", [Json(record)]) 
+        #     conn.commit()
+        #     cursor.close()
+        #     conn.close()
+        #     print(f"Successfully exported {len(self.metadata_records)} provenance records to PostgreSQL JSONB")
+        # except Exception as e:
+        #     print(f"Error exporting to PostgreSQL: {e}")
+        pass
 
     def export_to_json(self, filepath="provenance_metadata.json"):
         """
