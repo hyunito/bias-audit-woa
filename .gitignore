@@ -12,7 +12,8 @@ venv/
 .venv/
 
 # Data
-data/
+data/*
+!data/raw/
 *.csv
 !data/raw/dirty_ACSIncome_2018_100K.csv
 project_plan.md
