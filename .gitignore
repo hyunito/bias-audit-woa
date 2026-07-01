@@ -14,6 +14,7 @@ venv/
 # Data
 data/
 *.csv
+!data/raw/dirty_ACSIncome_2018_100K.csv
 project_plan.md
 
 # Scripts to keep local only
